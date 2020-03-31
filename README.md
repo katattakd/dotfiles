@@ -22,7 +22,8 @@ Kat's dotfiles.
 - imv
 - rxvt-unicode
   - xfonts-terminus
- 
+- kitty
+  - font-fira-code
  ## CLI Dependencies
 - nvim
   - vim-plugged (installed manually, not through package manager)
