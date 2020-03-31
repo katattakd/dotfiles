@@ -1,0 +1,11 @@
+gtk-can-change-accels = 1
+
+gtk-icon-theme-name = "Papirus"
+gtk-theme-name = "Adapta-Nokto-Eta"
+
+style "user-font"
+{
+        font_name="Roboto 11"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "Roboto 11"

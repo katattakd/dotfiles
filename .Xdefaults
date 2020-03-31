@@ -1,0 +1,61 @@
+*foreground:   #afafaf
+*background:   #262626
+*cursorColor:  #afafaf
+
+*color0:       #262626
+*color8:       #303030
+*color7:       #5f5f5f
+*color15:      #afafaf
+
+*color1:       #ff386a
+*color9:       #ff5f87
+
+*color2:       #6acd6a
+*color10:      #87d787
+
+*color3:       #d7875f
+*color11:      #d7af87
+
+*color4:       #00afff
+*color12:      #61cdff
+
+*color5:       #d75fd7
+*color13:      #e285f9
+
+*color6:       #00d6d6
+*color14:      #00ffff
+
+URxvt.depth: 24
+#URxvt.depth: 32
+#URxvt.background: [70]black
+
+#URxvt.font: xft:Fira Code:size=16
+URxvt.font: terminus-18
+URxvt.boldFont: terminus-bold-18
+URxvt.skipBuiltinGlyphs: true
+
+URxvt.visualBell: false
+URxvt.insecure: true
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+URxvt.scrollBar: false
+URxvt.jumpScroll: true
+URxvt.skipScroll: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollTtyKeypress: true
+URxvt.saveLines: 2048
+URxvt.loginShell: true
+
+rofi.theme: sidebar
+rofi.sidebar-mode: true
+rofi.show-icons: true
+rofi.click-to-exit: true
+
+rofi.sort: true
+rofi.threads: 6
+rofi.max-history.size: 5
+
+rofi.combi-modi: ssh,run
+rofi.modi: drun,window,combi
+rofi.parse-known-hosts: true
