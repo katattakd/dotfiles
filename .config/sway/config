@@ -1,5 +1,4 @@
 # make things look nice
-#set $bg ~/.config/sway/background.jpg
 output * bg #191919 solid_color
 default_border none
 default_floating_border none
@@ -15,7 +14,6 @@ exec swayidle -w \
 
 # top bar
 bar {
-	#swaybar_command waybar
 	position top
 	status_command while bash ~/.config/sway/status.sh; do sleep 1; done
 	separator_symbol |
