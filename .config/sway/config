@@ -15,7 +15,7 @@ exec swayidle -w \
 # top bar
 bar {
 	position top
-	status_command while; do bash ~/.config/sway/status.sh; done
+	status_command bash ~/.config/sway/status.sh
 	separator_symbol |
 	colors {
 		statusline #afafaf
