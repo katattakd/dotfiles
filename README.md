@@ -11,12 +11,11 @@ Kat's dotfiles.
     - wl-clipboard
   - brightnessctl
   - fonts-terminus
-  - sysstat lm_sensors
+  - sysstat
+  - lm_sensors
 - rofi
   - papirus-icon-theme
-  - fonts-font-awesome
 - firefox
-  - fonts-croscore
   - adapta-gtk-theme
   - hunspell
 - mpv
