@@ -9,11 +9,10 @@ Kat's dotfiles.
   - grim
     - slurp
     - wl-clipboard
+  - brightnessctl
 - rofi
   - papirus-icon-theme
-- waybar
   - fonts-font-awesome
-  - brightnessctl
 - firefox
   - fonts-croscore
   - adapta-gtk-theme
