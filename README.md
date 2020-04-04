@@ -9,7 +9,6 @@ Kat's dotfiles.
   - grim
     - slurp
     - wl-clipboard
-  - brightnessctl
   - fonts-terminus
   - sysstat
   - lm_sensors

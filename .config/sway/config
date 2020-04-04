@@ -57,7 +57,7 @@ bindsym $mod+p exec grim -g \"$(slurp)" - | wl-copy
 bindsym $mod+Shift+p exec grim - | wl-copy
 bindsym $mod+l exec swaylock
 
-bindsym $mod+c border toggle
+bindsym $mod+c layout toggle
 bindsym $mod+s sticky toggle
 bindsym $mod+f floating toggle
 bindsym $mod+Shift+f fullscreen
@@ -88,9 +88,6 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 mode "resize" {
 	bindsym Left resize shrink width 20px
