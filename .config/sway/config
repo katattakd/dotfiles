@@ -23,7 +23,7 @@ bar {
 		urgent_workspace #ff386a #ff386a #262626
 		focused_workspace #00ffff #00ffff #262626
 		active_workspace #00d6d6 #00d6d6 #262626
-		inactive_workspace #303030 #303030 #afafaf
+		inactive_workspace #5f5f5f #5f5f5f #afafaf
 	}
 	status_padding 4
 	status_edge_padding 10
