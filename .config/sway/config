@@ -1,21 +1,35 @@
 # make things look nice
-set $bg ~/.config/sway/background.jpg
-output * bg $bg fill
+#set $bg ~/.config/sway/background.jpg
+output * bg #191919 solid_color
 default_border none
 default_floating_border none
-gaps inner 15
+gaps inner 10
 gaps outer -2
 
 # screen locking
 exec swayidle -w \
-	timeout 600 'swaylock -f -i $bg --indicator-idle-visible' \
+	timeout 600 'swaylock' \
 	timeout 660 'swaymsg "output * dpms off"' \
 		resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -i $bg --indicator-idle-visible'
+	before-sleep 'swaylock'
 
 # top bar
 bar {
-        swaybar_command waybar
+	#swaybar_command waybar
+	position top
+	status_command while bash ~/.config/sway/status.sh; do sleep 1; done
+	separator_symbol |
+	colors {
+		statusline #afafaf
+		background #262626
+		urgent_workspace #ff386a #ff386a #262626
+		focused_workspace #00ffff #00ffff #262626
+		active_workspace #00d6d6 #00d6d6 #262626
+		inactive_workspace #303030 #303030 #afafaf
+	}
+	status_padding 4
+	status_edge_padding 10
+	font pango:Terminus (TTF) 12
 }
 
 # fix input methods
@@ -43,6 +57,7 @@ bindsym $mod+q kill
 bindsym $mod+Return exec "killall rofi; rofi -show drun"
 bindsym $mod+p exec grim -g \"$(slurp)" - | wl-copy
 bindsym $mod+Shift+p exec grim - | wl-copy
+bindsym $mod+l exec swaylock
 
 bindsym $mod+c border toggle
 bindsym $mod+s sticky toggle
@@ -76,11 +91,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db
-#bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-#bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-#bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 mode "resize" {
 	bindsym Left resize shrink width 20px
