@@ -10,6 +10,8 @@ Kat's dotfiles.
     - slurp
     - wl-clipboard
   - brightnessctl
+  - fonts-terminus
+  - sysstat lm_sensors
 - rofi
   - papirus-icon-theme
   - fonts-font-awesome
