@@ -18,7 +18,7 @@ Kat's dotfiles.
   - hunspell
 - mpv
 - imv
-- rxvt-unicode
+- rxvt-unicode OR alacritty
   - xfonts-terminus
 - kitty
   - font-fira-code

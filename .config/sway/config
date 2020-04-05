@@ -49,7 +49,7 @@ bindswitch --reload lid:off output $laptop enable
 # keybinds
 set $mod Mod4
 
-bindsym $mod+t exec rxvt-unicode
+bindsym $mod+t exec alacritty
 bindsym $mod+Shift+t exec 'XDG_DESKTOP_DIR=~/Downloads MOZ_ENABLE_WAYLAND=1 firefox --no-remote'
 bindsym $mod+q kill
 bindsym $mod+Return exec 'killall rofi; rofi -show drun'
