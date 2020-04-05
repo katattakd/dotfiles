@@ -11,7 +11,6 @@ Kat's dotfiles.
     - wl-clipboard
   - fonts-terminus
   - sysstat
-  - lm_sensors
 - rofi
   - papirus-icon-theme
 - firefox

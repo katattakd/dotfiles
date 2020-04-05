@@ -1,5 +1,5 @@
 # make things look nice
-output * bg #191919 solid_color
+#output * bg #191919 solid_color
 default_border none
 default_floating_border none
 gaps inner 10
@@ -50,11 +50,11 @@ bindswitch --reload lid:off output $laptop enable
 set $mod Mod4
 
 bindsym $mod+t exec rxvt-unicode
-bindsym $mod+Shift+t exec firefox
+bindsym $mod+Shift+t exec 'XDG_DESKTOP_DIR=~/Downloads MOZ_ENABLE_WAYLAND=1 firefox --no-remote'
 bindsym $mod+q kill
-bindsym $mod+Return exec "killall rofi; rofi -show drun"
-bindsym $mod+p exec grim -g \"$(slurp)" - | wl-copy
-bindsym $mod+Shift+p exec grim - | wl-copy
+bindsym $mod+Return exec 'killall rofi; rofi -show drun'
+bindsym $mod+p exec 'grim -g \"$(slurp)" - | wl-copy'
+bindsym $mod+Shift+p exec 'grim - | wl-copy'
 bindsym $mod+l exec swaylock
 
 bindsym $mod+c layout toggle
