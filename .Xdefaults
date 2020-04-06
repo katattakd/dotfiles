@@ -56,6 +56,4 @@ rofi.sort: true
 rofi.threads: 6
 rofi.max-history.size: 5
 
-rofi.combi-modi: ssh,run
-rofi.modi: drun,window,combi
-rofi.parse-known-hosts: true
+rofi.modi: drun,run
