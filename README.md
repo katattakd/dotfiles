@@ -5,24 +5,21 @@ Kat's dotfiles.
 - sway
   - swayidle
   - swaylock
-  - xwayland
   - grim
     - slurp
     - wl-clipboard
   - fonts-terminus
-  - sysstat
 - rofi
   - papirus-icon-theme
+  - xwayland
 - firefox
-  - adapta-gtk-theme
   - hunspell
 - mpv
 - imv
-- rxvt-unicode OR alacritty
-  - xfonts-terminus
-- kitty
-  - font-fira-code
- ## CLI Dependencies
+- alacritty OR rxvt-unicode OR kitty
+  - [alacritty/rxvt-uncode] xfonts-terminus
+  - [kitty] font-fira-code
+## CLI Dependencies
 - nvim
   - vim-plugged (installed manually, not through package manager)
 - zsh
@@ -31,11 +28,3 @@ Kat's dotfiles.
 - neofetch
 - curl
 
-## Optional CLI dependencies
-- mosh
-- ufw
-- nmap
-- dnsutils
-- alsa-utils
-- golang
-- cargo
