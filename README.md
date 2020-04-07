@@ -1,13 +1,12 @@
 # dotfiles
 Kat's dotfiles.
 
-## GUI Dependencies
+## GUI Dependencies (profile 1)
 - sway
   - swayidle
   - swaylock
   - grim
     - slurp
-    - wl-clipboard
   - fonts-terminus
   - j4-dmenu-desktop
     - fzf
@@ -15,9 +14,17 @@ Kat's dotfiles.
   - hunspell
 - mpv
 - imv
-- alacritty (required for sway) OR kitty (recommended for non-sway setup)
-  - [alacritty/rxvt-uncode] xfonts-terminus
-  - [kitty] font-fira-code
+- alacritty
+  - xfonts-terminus
+
+## GUI Dependencies (profile 2)
+- firefox
+  - hunspell
+- mpv
+- imv
+- kitty
+  - font-fira-code
+
 ## CLI Dependencies
 - nvim
   - vim-plugged (installed manually, not through package manager)
