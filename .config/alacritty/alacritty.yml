@@ -1,7 +1,7 @@
 window:
   padding:
     x: 8
-    y: 6
+    y: 8
   dynamic_padding: true
 font:
   normal:
