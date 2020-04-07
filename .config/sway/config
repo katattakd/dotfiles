@@ -1,7 +1,7 @@
 # make things look nice
 #output * bg #191919 solid_color
 default_border none
-default_floating_border normal 2
+default_floating_border normal
 gaps inner 10
 gaps outer -2
 font pango:Terminus (TTF) 12
@@ -15,10 +15,10 @@ exec swayidle -w \
 	before-sleep 'swaylock'
 
 # status bar
-client.focused #00ffff #00ffff #262626
-client.focused_inactive #00d6d6 #00d6d6 #262626
-client.unfocused #5f5f5f #5f5f5f #afafaf
-client.urgent #ff386a #ff386a #262626
+client.focused #00ffff #00ffff #262626 #00ffff
+client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
+client.unfocused #5f5f5f #5f5f5f #afafaf #5f5f5f
+client.urgent #ff386a #ff386a #262626 #ff386a
 
 # top bar
 bar {
@@ -56,7 +56,7 @@ bindswitch --reload lid:off output $laptop enable
 
 # fix app launcher
 for_window [title="katlauncher-sway"] floating enable
-for_window [title="katlauncher-sway"] border pixel 2
+for_window [title="katlauncher-sway"] border pixel 1
 
 # keybinds
 set $mod Mod4
