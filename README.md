@@ -11,7 +11,6 @@ Kat's dotfiles.
   - j4-dmenu-desktop
     - fzf
 - firefox
-  - hunspell
 - mpv
 - imv
 - alacritty
@@ -19,7 +18,6 @@ Kat's dotfiles.
 
 ## GUI Dependencies (profile 2)
 - firefox
-  - hunspell
 - mpv
 - imv
 - kitty
