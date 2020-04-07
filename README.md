@@ -9,14 +9,13 @@ Kat's dotfiles.
     - slurp
     - wl-clipboard
   - fonts-terminus
-- rofi
-  - papirus-icon-theme
-  - xwayland
+  - j4-dmenu-desktop
+    - fzf
 - firefox
   - hunspell
 - mpv
 - imv
-- alacritty OR rxvt-unicode OR kitty
+- alacritty (required for sway) OR kitty (recommended for non-sway setup)
   - [alacritty/rxvt-uncode] xfonts-terminus
   - [kitty] font-fira-code
 ## CLI Dependencies
