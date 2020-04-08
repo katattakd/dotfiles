@@ -9,6 +9,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias lsblk='lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT,LABEL'
+alias uname='uname -sr'
 
 alias rm='rm -ir'
 alias cp='cp -ir'
