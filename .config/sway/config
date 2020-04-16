@@ -62,8 +62,9 @@ set $mod Mod4
 
 bindsym $mod+t exec alacritty
 bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote'
-bindsym $mod+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --ProfileManager'
 bindsym $mod+Return exec 'alacritty -t katlauncher-sway -e bash ~/.config/sway/launcher.sh'
+bindsym $mod+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --private-window'
+bindsym $mod+Shift+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --ProfileManager'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/screenshot_$(date +%s).png'
 bindsym $mod+l exec swaylock
