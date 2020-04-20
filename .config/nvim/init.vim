@@ -13,6 +13,8 @@ set linebreak
 set mouse=a
 set smartcase
 set lazyredraw
+set list
+autocmd FileType * setlocal noexpandtab
 
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
