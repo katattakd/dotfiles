@@ -48,7 +48,6 @@ setopt correct_all
 unsetopt flow_control
 setopt interactive_comments
 setopt path_dirs
-setopt print_exit_value
 
 alias cp='nocorrect cp'
 alias man='nocorrect man'

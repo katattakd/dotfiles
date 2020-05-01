@@ -60,7 +60,7 @@ set $mod Mod4
 
 bindsym $mod+t exec termite
 bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote'
-bindsym $mod+Return exec 'termite -t katlauncher-sway -e bash ~/.config/sway/launcher.sh'
+bindsym $mod+Return exec 'termite -t katlauncher-sway -e "$HOME/.config/sway/launcher.sh"'
 bindsym $mod+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --private-window'
 bindsym $mod+Shift+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --ProfileManager'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/screenshot_$(date +%s).png'
