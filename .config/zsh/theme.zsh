@@ -1,10 +1,7 @@
-# Below is a more "normal" prompt, if you don't want the fancy minimal one.
-#export PROMPT='%(?..%F{202}%? )%F{245}%n%F{255}@%F{172}%m%F{255}:%F{5}%~%F{255}%#%E '
-
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-	export PROMPT='%(!.%F{202}.%F{245})%n%F{255}@%F{172}%m %F{5}%~ %(?.%F{255}.%F{202})>%F{255} '
+	export PROMPT='%(!.%F{202}.%F{245})%n%F{255}@%F{172}%m %F{5}%~ %(?.%F{15}.%F{202})>%E '
 else
-	export PROMPT='%(1000#..%(!.%F{202}.%F{245})%n) %F{5}%~ %(?.%F{255}.%F{202})>%F{255} '
+	export PROMPT='%('$(id -u katattakd)'#..%(!.%F{202}.%F{245})%n) %F{5}%~ %(?.%F{15}.%F{202})>%E '
 fi
 
 export GREP_COLORS='ms=01;38;5;202:mc=01;31:sl=:cx=:fn=01;38;5;132:ln=32:bn=32:se=00;38;5;242'
