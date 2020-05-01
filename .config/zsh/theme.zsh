@@ -1,5 +1,5 @@
 # Below is a more "normal" prompt, if you don't want the fancy minimal one.
-#export PROMPT='%(?..%F{202}%? )%F{245}%n%F{255}@%F{172}%m%F{255}:%F{5}%~%F{255}%# '
+#export PROMPT='%(?..%F{202}%? )%F{245}%n%F{255}@%F{172}%m%F{255}:%F{5}%~%F{255}%#%E '
 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 	export PROMPT='%(!.%F{202}.%F{245})%n%F{255}@%F{172}%m %F{5}%~ %(?.%F{255}.%F{202})>%F{255} '

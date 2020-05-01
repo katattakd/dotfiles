@@ -25,7 +25,9 @@ Note that this repo contains the dotfiles for two completely different computers
 - nvim
   - vim-plugged (installed manually, not through package manager)
 - zsh
-  - zsh-antigen
+  - zsh-syntax-highlightling
+  - zsh-autosuggestions
+  - zsh-history-substring-search
   - fzf
 - neofetch
 - curl

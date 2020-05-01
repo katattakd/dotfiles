@@ -1,4 +1,4 @@
-alias lsd='ls -d */ .*/'
+alias lsd='ls -d */'
 alias ls='ls -Ab --color=auto --si'
 alias l='ls -o'
 
