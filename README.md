@@ -8,14 +8,12 @@ Note that this repo contains the dotfiles for two completely different computers
   - swaylock
   - grim
     - slurp
-  - fonts-terminus
   - j4-dmenu-desktop
     - fzf
 - firefox
 - mpv
 - imv
-- alacritty
-  - xfonts-terminus
+- termite
 
 ## GUI Dependencies (profile 2)
 - firefox

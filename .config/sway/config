@@ -4,7 +4,6 @@ default_border none
 default_floating_border none
 gaps inner 10
 gaps outer -2
-font pango:Terminus (TTF) 12
 
 # screen locking
 exec swayidle -w \
@@ -34,7 +33,6 @@ bar {
 	}
 	status_padding 4
 	status_edge_padding 10
-	font pango:Terminus (TTF) 12
 }
 
 # fix input methods
@@ -60,9 +58,9 @@ for_window [title="katlauncher-sway"] border pixel 1
 # keybinds
 set $mod Mod4
 
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec termite
 bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote'
-bindsym $mod+Return exec 'alacritty -t katlauncher-sway -e bash ~/.config/sway/launcher.sh'
+bindsym $mod+Return exec 'termite -t katlauncher-sway -e bash ~/.config/sway/launcher.sh'
 bindsym $mod+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --private-window'
 bindsym $mod+Shift+y exec 'MOZ_ENABLE_WAYLAND=1 firefox --no-remote --ProfileManager'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/screenshot_$(date +%s).png'
