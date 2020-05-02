@@ -10,8 +10,14 @@ sudo apk add zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substri
 sudo apk add neovim curl
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s ~/dotfiles/.config/* ~/.config
-ln -s ~/dotfiles/.ssh/* ~/.ssh
-ln -s ~/dotfiles/.z* ~
+sh setup.sh
 
+sudo rc-update del sshd
+sudo apk add ufw ufw-openrc
+sudo ufw enable
+sudo rc-update add ufw
+
+sudo apk add iwd
+sudo rc-update del wpa_supplicant
+sudo rc-update add iwd
 echo "Please reboot for changes to take effect."

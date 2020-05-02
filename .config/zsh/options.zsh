@@ -2,6 +2,11 @@ HISTFILE="$HOME/.cache/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "${terminfo[khome]/O/[}" beginning-of-line
+bindkey "${terminfo[kend]/O/[}" end-of-line
+
 setopt auto_cd
 setopt auto_pushd
 setopt cdable_vars
