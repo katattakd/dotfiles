@@ -4,7 +4,7 @@ sudo adduser katattakd video
 sudo adduser katattakd audio
 sudo apk add sway xkeyboard-config
 
-sudo apk add swaylock termite j4-dmenu-desktop
+sudo apk add swaylock termite j4-dmenu-desktop grim slurp
 
 sudo apk add zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search fzf fzf-zsh-completion
 
