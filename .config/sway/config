@@ -5,13 +5,6 @@ default_floating_border none
 gaps inner 10
 gaps outer -2
 
-# screen locking
-exec swayidle -w \
-	timeout 600 'swaylock' \
-	timeout 660 'swaymsg "output * dpms off"' \
-		resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock'
-
 # status bar
 client.focused #00ffff #00ffff #262626 #00ffff
 client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
