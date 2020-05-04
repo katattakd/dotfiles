@@ -42,6 +42,7 @@ sudo rc-update add ufw
 #sudo apk add iwd
 #sudo rc-update del wpa_supplicant
 #sudo rc-update add iwd
+#printf "\n[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/NetworkManager.conf
 
 # CLI multimedia tools
 sudo apk add ffmpeg imagemagick sox youtube-dl
