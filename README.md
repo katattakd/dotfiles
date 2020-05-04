@@ -24,10 +24,6 @@ Note that this repo contains the dotfiles for two completely different computers
 ## CLI Dependencies
 - nvim
   - vim-plugged (installed manually, not through package manager)
-- zsh
-  - zsh-syntax-highlightling
-  - zsh-autosuggestions
-  - zsh-history-substring-search
-  - fzf
+- fish
 - neofetch
 - curl
