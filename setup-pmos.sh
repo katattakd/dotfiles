@@ -13,13 +13,13 @@ sudo apk add swaylock termite grim slurp
 sudo apk add firefox imv mpv
 
 # CLI essentials
-sudo apk add coreutils htop util-linux procps
+sudo apk add coreutils curl htop
 
 # Additional CLI things
-sudo apk add alpine-sdk rust iproute2 diffutils
+sudo apk add git iproute2 diffutils less
 
 # Fish shell
-sudo apk add fish-tools mandoc less
+sudo apk add fish-tools mandoc
 
 # Neovim
 sudo apk add neovim
@@ -32,20 +32,23 @@ sh setup.sh
 sudo rc-update del sshd
 
 # Additional security improvements
-#sudo apk add ufw ufw-openrc
-#sudo ufw enable
-#sudo rc-update add ufw
+sudo apk add ufw ufw-openrc
+sudo ufw enable
+sudo rc-update add ufw
 
-# Wireless improvements
+# FIXME: Wireless improvements
 #sudo apk add iwd
 #sudo rc-update del wpa_supplicant
 #sudo rc-update add iwd
 
 # CLI multimedia tools
-sudo apk add ffmpeg imagemagick sox
+sudo apk add ffmpeg imagemagick sox youtube-dl
 
 # Audio tools
-#sudo apk add pulseaudio pulseaudio-alsa
-#sudo apk add pulsemixer alsa-utils
+sudo apk add pulseaudio pulseaudio-alsa
+sudo apk add pulsemixer alsa-utils
+
+# Software dev tools
+sudo apk add alpine-sdk rust rust-src cargo docs go pmbootstrap
 
 echo "Please reboot for changes to take effect."
