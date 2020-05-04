@@ -30,7 +30,7 @@ SETUVAR _fish_abbr_lsd:ls\x20\x2dd\x20\x2a/
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
 SETUVAR _fish_abbr_mv:mv\x20\x2di
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
-SETUVAR _fish_abbr_uname:uname\x20\x2dsr
+SETUVAR _fish_abbr_uname:uname\x20\x2dsrm
 SETUVAR fish_color_autosuggestion:white
 SETUVAR fish_color_cancel:brblack
 SETUVAR fish_color_command:brmagenta
