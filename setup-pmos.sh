@@ -6,7 +6,7 @@ sudo apk add sway xkeyboard-config
 
 sudo apk add swaylock termite fzf j4-dmenu-desktop grim slurp
 
-sudo apk add fish bash
+sudo apk add fish-dev bash mandoc
 
 sudo apk add neovim curl
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -14,9 +14,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 sh setup.sh
 
 sudo rc-update del sshd
-sudo apk add ufw ufw-openrc
-sudo ufw enable
-sudo rc-update add ufw
+#sudo apk add ufw-extras ufw-openrc
+#sudo ufw enable
+#sudo rc-update add ufw
 
 #sudo apk add iwd
 #sudo rc-update del wpa_supplicant
