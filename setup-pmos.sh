@@ -1,4 +1,6 @@
 #!/bin/sh
+# TODO: Switch back to Alacritty once it gets GLES2 support.
+# TODO: Use rustup package once it gets aarch64 support.
 
 # Setup before installing Sway
 sudo adduser katattakd input
@@ -49,6 +51,8 @@ sudo apk add pulseaudio pulseaudio-alsa
 sudo apk add pulsemixer alsa-utils
 
 # Software dev tools
-sudo apk add alpine-sdk rust rust-src cargo docs go pmbootstrap
+sudo apk add alpine-sdk cargo
+curl -sSf https://sh.rustup.rs | sh
+#sudo apk add rust-src docs go pmbootstrap
 
 echo "Please reboot for changes to take effect."
