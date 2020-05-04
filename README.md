@@ -8,8 +8,6 @@ Note that this repo contains the dotfiles for two completely different computers
   - swaylock
   - grim
     - slurp
-  - j4-dmenu-desktop
-    - fzf
 - firefox
 - mpv
 - imv

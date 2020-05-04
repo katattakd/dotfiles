@@ -53,7 +53,6 @@ set $mod Mod4
 
 bindsym $mod+t exec termite
 bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox'
-bindsym $mod+Return exec 'termite -t katlauncher-sway -e "$HOME/.config/sway/launcher.sh"'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/screenshot_$(date +%s).png'
 bindsym $mod+l exec swaylock
