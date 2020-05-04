@@ -56,4 +56,7 @@ sudo apk add alpine-sdk cargo
 curl -sSf https://sh.rustup.rs | sh
 #sudo apk add rust-src docs go pmbootstrap
 
+# Networking tools
+sudo apk add bind-tools nmap nmap-scripts netcat-openbsd net-tools
+
 echo "Please reboot for changes to take effect."
