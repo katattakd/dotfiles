@@ -8,7 +8,7 @@ sudo adduser katattakd video
 sudo adduser katattakd audio
 
 # Sway
-sudo apk add sway xkeyboard-config
+sudo apk add sway i3status xkeyboard-config
 
 # Additional GUI things
 sudo apk add swaylock termite grim slurp

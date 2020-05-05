@@ -4,7 +4,7 @@ Note that this repo contains the dotfiles for two completely different computers
 
 ## GUI Dependencies (profile 1)
 - sway
-  - swayidle
+  - i3status
   - swaylock
   - grim
     - slurp

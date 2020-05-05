@@ -1,0 +1,54 @@
+general {
+	colors = true
+	color_good = "#87D787"
+	color_degraded = "#D7AF87"
+	color_bad = "#FF5F87"
+	interval = 5
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "load"
+order += "memory"
+order += "disk /"
+order += "battery 0"
+order += "tztime local"
+
+wireless _first_ {
+	format_up = " W: (%quality @ %essid, %bitrate) %ip "
+	format_down = ""
+	format_quality = "%d%s"
+}
+
+ethernet _first_ {
+	format_up = " E: %ip (%speed) "
+	format_down = ""
+}
+
+load {
+	format = " C: %1min "
+	max_threshold = 4
+}
+
+memory {
+	format = " M: %percentage_used "
+	threshold_degraded = "15%"
+	threshold_critical = "10%"
+}
+
+disk / {
+	format = " D: %percentage_used "
+	low_threshold = 15
+}
+
+battery 0 {
+	format = " %status %percentage %consumption "
+	format_down = ""
+	low_threshold = 30
+	threshold_type = "percentage"
+	path = "/sys/class/power_supply/cw2015-battery/uevent"
+}
+
+tztime local {
+	format = " %a %D %R %Z"
+}

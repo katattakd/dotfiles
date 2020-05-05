@@ -14,7 +14,7 @@ client.urgent #ff386a #ff386a #262626 #ff386a
 # top bar
 bar {
 	position top
-	status_command bash ~/.config/sway/status.sh
+	status_command i3status
 	separator_symbol |
 	colors {
 		statusline #afafaf
