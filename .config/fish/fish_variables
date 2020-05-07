@@ -15,6 +15,7 @@ SETUVAR --export PAGER:less
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_chown:chown\x20\x2dhR
 SETUVAR _fish_abbr_cp:cp\x20\x2dir
+SETUVAR _fish_abbr_curl:curl\x20\x2dLvvv
 SETUVAR _fish_abbr_df:df\x20\x2dT\x20\x2d\x2dsi
 SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor\x3dauto
 SETUVAR _fish_abbr_du:du\x20\x2dd\x201\x20\x2d\x2dsi
