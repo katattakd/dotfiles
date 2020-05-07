@@ -1,4 +1,4 @@
-call plug#begin('~/.cache/nvim-plugins')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
