@@ -1,7 +1,5 @@
 #!/bin/sh
 # TODO: Switch back to Alacritty once it gets GLES2 support.
-# TODO: Use rustup package once it gets aarch64 support.
-# TODO: Replace most of these commands with .nix configuration.
 
 # Setup before installing Sway
 sudo adduser katattakd input
@@ -11,6 +9,11 @@ sudo adduser katattakd audio
 # Sway
 sudo apk add sway xkeyboard-config bash
 
+# ----- User customizations ------
+
+# Create config symlinks
+sh setup.sh
+
 # Nix setup
 sudo apk add curl
 sudo mkdir /nix
@@ -18,29 +21,25 @@ sudo chown katattakd /nix
 curl https://nixos.org/nix/install -o /tmp/install.sh
 sh /tmp/install.sh --no-daemon
 
-# Replace Alpine packages with Nix ones
-nix-env -i curl git
+# Install additional packages
+alias addpkg="nix-env -f '<nixpkgs>' -iA"
+addpkg i3status swaylock termite grim slurp mpv firefox-wayland		# GUI things
+addpkg coreutils-full curlFull htop tree gitMinimal diffutils less	# CLI essentials
+addpkg fish mandoc neovim						# CLI tweaks
+addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
+addpkg apulse alsaUtils							# Audio
+addpkg binutils file automake gnumake rustup go				# Dev tools
+	nix-env --set-flag priority 0 binutils
+	addpkg gcc
+addpkg iproute dnsutils nmap netcat-gnu nettools			# Networking tools
+
+# Remove unused dependencies
 sudo apk del curl git
 
-# Additional GUI things
-nix-env -i i3status swaylock termite grim slurp
-niv-env -i firefox imv mpv
-
-# CLI essentials
-nix-env -i coreutils htop tree
-
-# Additional CLI things
-nix-env -i iproute2 diffutils less
-
-# Fish shell
-nix-env -i fish mandoc
-
-# Neovim
-nix-env -i neovim
+# Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Create config symlinks
-sh setup.sh
+# ----- System tweaks ------
 
 # Security improvements
 sudo rc-update del sshd
@@ -55,18 +54,5 @@ sudo rc-update add ufw
 #sudo rc-update del wpa_supplicant
 #sudo rc-update add iwd
 #printf "\n[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/NetworkManager.conf
-
-# CLI multimedia tools
-nix-env -i ffmpeg imagemagick sox youtube-dl
-
-# Audio tools
-sudo apk add pulseaudio pulseaudio-alsa
-nix-env -i pulsemixer alsa-utils
-
-# Software dev tools
-nix-env -i binutils file gcc gnumake cargo go
-
-# Networking tools
-nix-env -i bind nmap netcat-gnu net-tools
 
 echo "Please reboot for changes to take effect."
