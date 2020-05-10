@@ -25,7 +25,7 @@ sh /tmp/install.sh --no-daemon
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 addpkg i3status swaylock termite grim slurp mpv firefox-wayland		# GUI things
 addpkg coreutils-full curlFull htop tree gitMinimal diffutils less	# CLI essentials
-addpkg fish mandoc neovim						# CLI tweaks
+addpkg fish mandoc neovim neofetch					# CLI tweaks
 addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
 addpkg apulse alsaUtils							# Audio
 addpkg binutils file automake gnumake rustup go				# Dev tools
