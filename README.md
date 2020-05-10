@@ -25,3 +25,24 @@ Note that this repo contains the dotfiles for two completely different computers
 - fish
 - neofetch
 - curl
+
+## Setup instructions (profile 1)
+1. Install postmarketOS with the Sway UI to your device.
+2. Connect to the internet.
+3. Create a single-user installation of Nix. This can be accomplished with the below commands:
+```
+sudo apk add curl
+
+sudo mkdir /nix
+sudo chown katattakd /nix
+echo "#!/bin/sh" > ~/.profile
+
+curl https://nixos.org/nix/install -o /tmp/install.sh
+sh /tmp/install.sh --no-daemon
+
+source ~/.profile
+sudo apk del curl
+```
+4. Run the below command:
+```sh setup-pmos-sway.sh```
+5. Reboot
