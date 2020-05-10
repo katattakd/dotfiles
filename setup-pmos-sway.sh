@@ -5,7 +5,7 @@
 
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
-addpkg i3status swaylock termite grim slurp mpv firefox-wayland		# GUI things
+addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
 addpkg bash coreutils-full curlFull htop tree git diffutils less	# CLI essentials
 addpkg fish mandoc neovim neofetch					# CLI tweaks
 addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
