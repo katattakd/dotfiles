@@ -1,25 +1,18 @@
 #!/bin/sh
 # TODO: Switch back to Alacritty once it gets GLES2 support.
 
-# Setup before installing Sway
-sudo adduser katattakd input
-sudo adduser katattakd video
-sudo adduser katattakd audio
-
-# Sway
-sudo apk add sway xkeyboard-config bash
-
 # ----- User customizations ------
 
 # Create config symlinks
 sh setup.sh
 
 # Nix setup
-sudo apk add curl
+sudo apk add curl ca-certificates
 sudo mkdir /nix
 sudo chown katattakd /nix
 curl https://nixos.org/nix/install -o /tmp/install.sh
 sh /tmp/install.sh --no-daemon
+source ~/.profile
 
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
@@ -34,7 +27,7 @@ addpkg binutils file automake gnumake rustup go				# Dev tools
 addpkg iproute dnsutils nmap netcat-gnu nettools			# Networking tools
 
 # Remove unused dependencies
-sudo apk del curl git
+sudo apk del curl git ca-certificates
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
