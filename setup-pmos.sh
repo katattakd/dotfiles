@@ -27,7 +27,7 @@ nix-env -i i3status swaylock termite grim slurp
 niv-env -i firefox imv mpv
 
 # CLI essentials
-nix-env -i coreutils htop
+nix-env -i coreutils htop tree
 
 # Additional CLI things
 nix-env -i iproute2 diffutils less
