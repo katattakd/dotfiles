@@ -3,31 +3,20 @@
 
 # ----- User customizations ------
 
-# Create config symlinks
-sh setup.sh
-
-# Nix setup
-sudo apk add curl ca-certificates
-sudo mkdir /nix
-sudo chown katattakd /nix
-curl https://nixos.org/nix/install -o /tmp/install.sh
-sh /tmp/install.sh --no-daemon
-source ~/.profile
-
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 addpkg i3status swaylock termite grim slurp mpv firefox-wayland		# GUI things
-addpkg coreutils-full curlFull htop tree gitMinimal diffutils less	# CLI essentials
+addpkg coreutils-full curlFull htop tree git diffutils less		# CLI essentials
 addpkg fish mandoc neovim neofetch					# CLI tweaks
 addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
 addpkg apulse alsaUtils							# Audio
 addpkg binutils file automake gnumake rustup go				# Dev tools
-	nix-env --set-flag priority 0 binutils
+	nix-env --set-flag priority 0 binutils-wrapper
 	addpkg gcc
 addpkg iproute dnsutils nmap netcat-gnu nettools			# Networking tools
 
-# Remove unused dependencies
-sudo apk del curl git ca-certificates
+# Create config symlinks
+sh setup.sh
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
