@@ -1,6 +1,7 @@
 #!/bin/sh
 # TODO: Switch back to Alacritty once it gets GLES2 support.
 # TODO: Use rustup package once it gets aarch64 support.
+# TODO: Replace most of these commands with .nix configuration.
 
 # Setup before installing Sway
 sudo adduser katattakd input
@@ -8,23 +9,34 @@ sudo adduser katattakd video
 sudo adduser katattakd audio
 
 # Sway
-sudo apk add sway i3status xkeyboard-config
+sudo apk add sway xkeyboard-config bash
+
+# Nix setup
+sudo apk add curl
+sudo mkdir /nix
+sudo chown katattakd /nix
+curl https://nixos.org/nix/install -o /tmp/install.sh
+sh /tmp/install.sh --no-daemon
+
+# Replace Alpine packages with Nix ones
+nix-env -i curl git
+sudo apk del curl git
 
 # Additional GUI things
-sudo apk add swaylock termite grim slurp
-sudo apk add firefox imv mpv
+nix-env -i i3status swaylock termite grim slurp
+niv-env -i firefox imv mpv
 
 # CLI essentials
-sudo apk add coreutils curl htop
+nix-env -i coreutils htop
 
 # Additional CLI things
-sudo apk add git iproute2 diffutils less
+nix-env -i iproute2 diffutils less
 
 # Fish shell
-sudo apk add fish-tools mandoc
+nix-env -i fish mandoc
 
 # Neovim
-sudo apk add neovim
+nix-env -i neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Create config symlinks
@@ -45,18 +57,16 @@ sudo rc-update add ufw
 #printf "\n[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/NetworkManager.conf
 
 # CLI multimedia tools
-sudo apk add ffmpeg imagemagick sox youtube-dl
+nix-env -i ffmpeg imagemagick sox youtube-dl
 
 # Audio tools
 sudo apk add pulseaudio pulseaudio-alsa
-sudo apk add pulsemixer alsa-utils
+nix-env -i pulsemixer alsa-utils
 
 # Software dev tools
-sudo apk add alpine-sdk cargo
-curl -sSf https://sh.rustup.rs | sh
-#sudo apk add rust-src docs go pmbootstrap
+nix-env -i binutils file gcc gnumake cargo go
 
 # Networking tools
-sudo apk add bind-tools nmap nmap-scripts netcat-openbsd net-tools
+nix-env -i bind nmap netcat-gnu net-tools
 
 echo "Please reboot for changes to take effect."
