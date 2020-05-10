@@ -5,6 +5,9 @@ default_floating_border none
 gaps inner 10
 gaps outer -2
 
+# performance improvements
+xwayland disable
+
 # status bar
 client.focused #00ffff #00ffff #262626 #00ffff
 client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
