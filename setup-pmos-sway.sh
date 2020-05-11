@@ -26,8 +26,6 @@ addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Network
 
 nix-env --set-flag priority 9 bash coreutils gnutar xxd killall
 addpkg busybox
-nix-env --set-flag priority 30 busybox
-nix-env --set-flag priority 10 bash coreutils gnutar xxd killall
 
 nix-collect-garbage -d
 
