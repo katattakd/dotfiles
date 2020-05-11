@@ -5,15 +5,30 @@
 
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
+nix-env -e inetutils binutils-wrapper
 addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
-addpkg bash coreutils-full curlFull htop tree git diffutils less	# CLI essentials
-addpkg fish mandoc neovim neofetch					# CLI tweaks
+addpkg bash coreutils-full findutils unixtools gnugrep gnused libcap	# CLI essentials
+	nix-env --set-flag priority 11 hostname
+	addpkg openssh mosh xdg_utils
+addpkg htop fish tree less mandoc neovim neofetch			# CLI tweaks
+addpkg git diffutils patchutils						# Git tools
+addpkg zstd lz4 gzip brotli bzip2 lzma gnutar cpio unzip		# Archive tools
+addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup		# Filesystem tools
+addpkg kmod pciutils usbutils sysfsutils utillinux			# Kernel tools
 addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
 addpkg apulse alsaUtils							# Audio
-addpkg binutils file automake gnumake rustup go				# Dev tools
-	nix-env --set-flag priority 0 binutils-wrapper
-	addpkg gcc
-addpkg iproute dnsutils nmap netcat-gnu nettools			# Networking tools
+addpkg gcc patchutils file automake cmake gnumake rustup go		# Dev tools
+	nix-env --set-flag priority 9 gcc-wrapper
+	addpkg binutils
+addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Networking tools
+	nix-env --set-flag priority 9 nettools
+	addpkg inetutils
+
+nix-env --set-flag priority 9 bash coreutils gnutar xxd killall
+addpkg busybox
+nix-env --set-flag priority 30 busybox
+nix-env --set-flag priority 10 bash coreutils gnutar xxd killall
+
 nix-collect-garbage -d
 
 # Create config symlinks
