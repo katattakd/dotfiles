@@ -7,25 +7,27 @@
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 nix-env -e inetutils binutils-wrapper
 addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
-addpkg bash coreutils-full findutils unixtools gnugrep gnused libcap	# CLI essentials
+addpkg bash coreutils-full unixtools debianutils ncurses openssh procps	# CLI essentials
 	nix-env --set-flag priority 11 hostname
-	addpkg openssh mosh xdg_utils
+	addpkg sysstat expect mosh xdg_utils powertop
 addpkg htop fish tree less mandoc neovim neofetch			# CLI tweaks
-addpkg git diffutils patchutils						# Git tools
-addpkg zstd lz4 gzip brotli bzip2 lzma gnutar cpio unzip		# Archive tools
-addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup		# Filesystem tools
-addpkg kmod pciutils usbutils sysfsutils utillinux			# Kernel tools
+addpkg git diffutils gnupatch						# Git tools
+addpkg dos2unix gawk bc gnused gnugrep ed				# Text tools
+addpkg file patchutils findutils libcap sharutils			# File tools
+addpkg zstd lz4 lzop gzip brotli bzip2 lzma gnutar cpio unzip		# Archive tools
+addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup hdparm		# Filesystem tools
+addpkg kmod pciutils usbutils sysfsutils utillinux kbd lsof		# Kernel tools
+addpkg microcom setserial						# Serial tools
 addpkg ffmpeg-full imagemagickBig sox youtube-dl exiftool		# Multimedia tools
-addpkg apulse alsaUtils							# Audio
-addpkg gcc patchutils file automake cmake gnumake rustup go		# Dev tools
+addpkg apulse alsaUtils beep						# Audio
+addpkg gcc automake cmake gnumake rustup go				# Dev tools
 	nix-env --set-flag priority 9 gcc-wrapper
 	addpkg binutils
 addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Networking tools
 	nix-env --set-flag priority 9 nettools
-	addpkg inetutils
+	addpkg inetutils bridge-utils ipcalc
 
-nix-env --set-flag priority 9 bash coreutils gnutar xxd killall
-addpkg busybox
+# TODO: Replace Busybox with full-featured commands.
 
 nix-collect-garbage -d
 
@@ -41,9 +43,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 sudo rc-update del sshd
 
 # Additional security improvements
-sudo apk add ufw ufw-openrc
-sudo ufw enable
-sudo rc-update add ufw
+#sudo apk add ufw ufw-openrc
+#sudo ufw enable
+#sudo rc-update add ufw
 
 # FIXME: Wireless improvements
 #sudo apk add iwd
