@@ -31,7 +31,7 @@ bar {
 	status_edge_padding 10
 }
 
-# fix input methods
+# input methods
 input type:touchpad {
 	dwt enabled
 	tap enabled
@@ -42,14 +42,14 @@ input type:pointer {
 	accel_profile flat
 }
 
-# fix multi-display
+# multi-display
 set $laptop eDP-1
 bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
-# fix app launcher
-for_window [title="katlauncher-sway"] floating enable
-for_window [title="katlauncher-sway"] border pixel 1
+# lock screen on sleep
+exec swayidle -w \
+	before-sleep 'swaylock'
 
 # keybinds
 set $mod Mod4
@@ -58,6 +58,7 @@ bindsym $mod+t exec 'termite -e "env --chdir=Desktop fish"'
 bindsym $mod+Shift+t exec 'apulse firefox'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/Desktop/screenshot_$(date +%s).png'
+bindsym $mod+l exec 'swaylock'
 
 bindsym $mod+q kill
 bindsym $mod+c layout toggle
