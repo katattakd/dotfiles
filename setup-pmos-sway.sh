@@ -7,8 +7,9 @@
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 nix-env -e inetutils binutils-wrapper
 
-addpkg bash coreutils-full unixtools debianutils man ncurses expect	# Coreutils
+addpkg coreutils-full unixtools debianutils man man-pages expect	# Coreutils
 	nix-env --set-flag priority 11 hostname
+addpkg bash ncurses dialog readline less				# Console tools
 addpkg dos2unix gawk bc gnused gnugrep ed				# Text tools
 addpkg git diffutils openssh						# Git tools
 addpkg file gnupatch patchutils findutils libcap sharutils		# File tools
@@ -26,7 +27,7 @@ addpkg microcom setserial						# Serial tools
 addpkg apulse alsaUtils beep						# Audio
 addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup hdparm		# Filesystem tools
 
-addpkg fish tree less neovim neofetch					# CLI tweaks
+addpkg fish tree neovim neofetch					# CLI tweaks
 addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
 
 nix-collect-garbage -d
@@ -52,5 +53,9 @@ sudo apk add iwd
 printf "[device]\nwifi.backend=iwd\n" | sudo tee /etc/NetworkManager/conf.d/01-iwd.conf
 sudo rc-update del wpa_supplicant
 sudo rc-update add iwd
+
+# Battery life improvements
+sudo apk add tlp
+sudo rc-update add tlp
 
 echo "Please reboot for changes to take effect."
