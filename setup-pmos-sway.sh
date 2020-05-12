@@ -43,14 +43,14 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 sudo rc-update del sshd
 
 # Additional security improvements
-#sudo apk add ufw ufw-openrc
-#sudo ufw enable
-#sudo rc-update add ufw
+sudo apk add ufw ufw-openrc
+sudo ufw enable
+sudo rc-update add ufw
 
-# FIXME: Wireless improvements
-#sudo apk add iwd
-#sudo rc-update del wpa_supplicant
-#sudo rc-update add iwd
-#printf "\n[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/NetworkManager.conf
+# Wireless improvements
+sudo apk add iwd
+printf "[device]\nwifi.backend=iwd\n" | sudo tee /etc/NetworkManager/conf.d/01-iwd.conf
+sudo rc-update del wpa_supplicant
+sudo rc-update add iwd
 
 echo "Please reboot for changes to take effect."
