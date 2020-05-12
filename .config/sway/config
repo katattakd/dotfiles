@@ -48,10 +48,10 @@ set $laptop eDP-1
 bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
-# lock screen on sleep
-exec swayidle -w \
-	before-sleep 'swaylock' \
-	resume 'swaymsg "output * dpms on"'
+# FIXME: lock screen on sleep
+#exec swayidle -w \
+#	before-sleep 'swaylock' \
+#	resume 'swaymsg "output * dpms on"'
 
 # keybinds
 set $mod Mod4
