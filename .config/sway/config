@@ -55,7 +55,7 @@ for_window [title="katlauncher-sway"] border pixel 1
 set $mod Mod4
 
 bindsym $mod+t exec 'termite -e "env --chdir=Desktop TERM=xterm-256color fish"'
-bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox'
+bindsym $mod+Shift+t exec 'apulse firefox'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/Desktop/screenshot_$(date +%s).png'
 
