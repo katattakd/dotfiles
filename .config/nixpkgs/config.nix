@@ -1,10 +1,12 @@
 {
 	auto-optimise-store = true;
-	cores = 0;
-	http-connections = 50;
+	cores = 2;
+	max-jobs = 2;
+	http-connections = 20;
 	keep-build-log = false;
 	keep-derivations = false;
-	substitute = true;
-	allowBroken = true;
-	allowUnsupportedSystem = true;
+	#substitute = false;
+	#allowBroken = true;
+	#allowUnsupportedSystem = true;
+	#allowUnfree = true;
 }

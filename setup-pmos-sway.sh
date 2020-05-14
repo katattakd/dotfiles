@@ -3,6 +3,9 @@
 
 # ----- User customizations ------
 
+# Create config symlinks
+sh setup.sh
+
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 nix-env -e inetutils binutils-wrapper
@@ -31,9 +34,6 @@ addpkg fish tree neovim neofetch					# CLI tweaks
 addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
 
 nix-collect-garbage -d
-
-# Create config symlinks
-sh setup.sh
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
