@@ -9,6 +9,9 @@ sh setup.sh
 # Install additional packages
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 nix-env -e inetutils binutils-wrapper
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --add https://nixos.org/channels/nixos-20.03
+nix-channel --update
 
 addpkg coreutils-full unixtools debianutils man man-pages expect	# Coreutils
 	nix-env --set-flag priority 11 hostname
@@ -29,9 +32,9 @@ addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Network
 addpkg microcom setserial						# Serial tools
 addpkg apulse alsaUtils beep						# Audio
 addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup hdparm		# Filesystem tools
-
 addpkg fish tree neovim neofetch					# CLI tweaks
-addpkg i3status termite grim slurp mpv firefox-wayland			# GUI things
+addpkg i3status termite grim slurp mpv					# GUI things
+	nix-env -f '<nixos-20.03>' -iA firefox-wayland
 
 nix-collect-garbage -d
 
@@ -53,9 +56,5 @@ sudo apk add iwd
 printf "[device]\nwifi.backend=iwd\n" | sudo tee /etc/NetworkManager/conf.d/01-iwd.conf
 sudo rc-update del wpa_supplicant
 sudo rc-update add iwd
-
-# Battery life improvements
-sudo apk add tlp
-sudo rc-update add tlp
 
 echo "Please reboot for changes to take effect."

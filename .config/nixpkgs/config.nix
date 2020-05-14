@@ -1,7 +1,6 @@
 {
 	auto-optimise-store = true;
-	cores = 2;
-	max-jobs = 2;
+	cores = 1;
 	http-connections = 20;
 	keep-build-log = false;
 	keep-derivations = false;
