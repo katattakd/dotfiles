@@ -1,5 +1,6 @@
 #!/bin/sh
 # TODO: Switch back to Alacritty once it gets GLES2 support.
+# TODO: Add imv once it works on Nix aarch64.
 
 # ----- User customizations ------
 
@@ -34,7 +35,7 @@ addpkg apulse alsaUtils beep						# Audio
 addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup hdparm		# Filesystem tools
 addpkg fish tree neovim neofetch					# CLI tweaks
 addpkg i3status termite grim slurp mpv					# GUI things
-	nix-env -f '<nixos-20.03>' -iA firefox-wayland
+	nix-env -f '<nixos-20.03>' -iA firefox
 
 nix-collect-garbage -d
 

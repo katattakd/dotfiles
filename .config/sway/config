@@ -57,7 +57,7 @@ bindswitch --reload lid:off output $laptop enable
 set $mod Mod4
 
 bindsym $mod+t exec 'termite -e "env --chdir=Desktop fish"'
-bindsym $mod+Shift+t exec 'apulse firefox'
+bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 apulse firefox'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+l exec 'swaylock'
