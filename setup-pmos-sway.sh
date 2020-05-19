@@ -32,7 +32,7 @@ addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Network
 	addpkg inetutils bridge-utils ipcalc
 addpkg microcom setserial						# Serial tools
 addpkg apulse alsaUtils beep						# Audio
-addpkg parted dosfstools e2fsprogs f2fs-tools cryptsetup hdparm		# Filesystem tools
+addpkg parted dosfstools e2fsprogs mtd-utils cryptsetup hdparm		# Filesystem tools
 addpkg fish tree neovim neofetch					# CLI tweaks
 addpkg i3status termite grim slurp mpv					# GUI things
 	nix-env -f '<nixos-20.03>' -iA firefox
