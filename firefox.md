@@ -1,18 +1,16 @@
 ## Steps to setup Firefox
-These steps assume that you've already added the required user.js file in the dotfiles repo.
+These steps assume that you've already added the required user.js file in the dotfiles repo. If you haven't done this yet, reset Firefox, open and close it once, and then run the setup.sh script.
 
 ### Firefox setup
 - Go to Preferences
-  - Set language to "English (United States)", enable "Check your spelling as you type"
   - Go to Network Settings
     - Enable DNS over HTTPS
   - Set default search engine to DuckDuckGo
   - Clear all history
-  - Enable "prevent accessibility services from accessing your browser"
 - Go to Customize
   - Set theme to Dark, and density to Compact
   - Remove Flexible Space from toolbar
-  - Replace Home, Library and Sidebars icons
+  - Remove Home, Library and Sidebars icons
   - Add "Open File" to corner of window
 - Add the below extensions (add uMatrix last):
   - uMatrix - Block everything by default
