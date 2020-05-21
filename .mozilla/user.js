@@ -1,4 +1,4 @@
-// This borrows a LOT from ghacks-user.js (commit bb1e5bfd54c5281f372e596712b91c8444c1c785)
+// This borrows a LOT from ghacks-user.js (commit 4bc5b89cfe6f599747ba50160fc4aa3bded421d1)
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 // Get rid of some annoyances
