@@ -24,6 +24,8 @@ These steps assume that you've already added the required user.js file in the do
 ### uMatrix setup
 - Enable and update all Hosts files assets, except those that use HTTP.
 - Open the Matrix and go to the global scope.
+  - Enable "Forbid web forkers", "Forbid mixed content", "Spoof referer header", and "Spoof <noscript> tags"
+  - Set all css/images/media to allowed by default.
   - Set all scripts to blocked by default.
 - Load per-site rulesets as needed.
 
