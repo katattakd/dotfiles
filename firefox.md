@@ -4,7 +4,7 @@ These steps assume that you've already added the required user.js file in the do
 ### Firefox setup
 - Go to Preferences
   - Go to Network Settings
-    - Enable DNS over HTTPS
+    - Disable DNS over HTTPS (explained here: https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond/ )
   - Set default search engine to DuckDuckGo
   - Clear all history
 - Go to Customize

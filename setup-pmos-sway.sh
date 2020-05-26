@@ -29,7 +29,7 @@ addpkg kmod pciutils usbutils sysfsutils utillinux kbd lsof		# Kernel tools
 addpkg htop procps sysstat powertop					# Monitoring tools
 addpkg wget curlFull iproute dnsutils nmap netcat-gnu iptables iputils	# Networking tools
 	nix-env --set-flag priority 9 nettools
-	addpkg inetutils bridge-utils ipcalc
+	addpkg inetutils bridge-utils ipcalc wireshark-cli
 addpkg microcom setserial						# Serial tools
 addpkg apulse alsaUtils beep						# Audio
 addpkg parted dosfstools e2fsprogs mtd-utils cryptsetup hdparm		# Filesystem tools
