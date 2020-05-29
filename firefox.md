@@ -16,21 +16,18 @@ These steps assume that you've already added the required user.js file in the do
   - uMatrix - Block everything by default
   - uBlock Origin - Block stuff whitelisted by uMatrix
   - Privacy Badger - Block stuff that uBlock Origin doesn't catch
-  - Decentraleyes - Prevent some requests from reaching the internet, handle them locally
-- Remove the Decentraleyes icon from the toolbar
 - Change the order of toolbar extensions to uMatrix, uBlock Origin, Privacy Badger.
 - Remove the favorite icon from the address bar
 
 ### uMatrix setup
 - Enable and update all Hosts files assets, except those that use HTTP.
 - Open the Matrix and go to the global scope.
-  - Enable "Forbid web forkers", "Forbid mixed content", "Spoof referer header", and "Spoof <noscript> tags"
   - Set all css/images/media to allowed by default.
   - Set all scripts to blocked by default.
+- Save all temporary changes.
 - Load per-site rulesets as needed.
 
 ### uBlock Origin setup
-- Enable "Block CSP reports"
 - Enable and update the rulesets in these categories:
   - Built-in
   - Ads
