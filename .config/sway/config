@@ -69,6 +69,15 @@ bindsym $mod+Shift+minus scratchpad show
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+q exec swaymsg exit
 
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -104,18 +113,3 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-mode "cursor" {
-	bindsym Left focus left
-	bindsym Down focus down
-	bindsym Up focus up
-	bindsym Right focus right
-	bindsym Shift+Left move left
-	bindsym Shift+Down move down
-	bindsym Shift+Up move up
-	bindsym Shift+Right move right
-	bindsym t focus mode_toggle
-	bindsym p focus parent
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-bindsym $mod+x mode "cursor"
