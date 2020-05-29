@@ -43,9 +43,9 @@ input type:pointer {
 }
 
 # multi-display
-set $laptop eDP-1
-bindswitch --reload lid:on output $laptop disable
-bindswitch --reload lid:off output $laptop enable
+#set $laptop eDP-1
+#bindswitch --reload lid:on output $laptop disable
+#bindswitch --reload lid:off output $laptop enable
 
 # keybinds
 set $mod Mod4
