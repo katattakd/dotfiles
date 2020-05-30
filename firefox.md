@@ -22,7 +22,7 @@ These steps assume that you've already added the required user.js file in the do
 ### uMatrix setup
 - Enable and update all Hosts files assets, except those that use HTTP.
 - Open the Matrix and go to the global scope.
-  - Set all css/images/media to allowed by default.
+  - Set all css/images to allowed by default.
   - Set all scripts to blocked by default.
 - Save all temporary changes.
 - Load per-site rulesets as needed.
