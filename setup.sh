@@ -14,3 +14,6 @@ ln -s ~/.config ~/Desktop/
 ln -s ~/.mozilla/firefox ~/.config/firefox
 ln -s ~/.asoundrc ~/.config/
 ln -s ~/dotfiles ~/Desktop/
+
+sudo ln -s ~/dotfiles/local.d/cpu_balanced.start /etc/local.d/
+sudo chmod +x /etc/local.d/cpu_balanced.start
