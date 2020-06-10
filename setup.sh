@@ -6,7 +6,7 @@ ln -sf /dev/null ~/.ash_history
 ln -sf /dev/null ~/.bash_history
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.ssh/* ~/.ssh
-ln -s ~/dotfiles/.mozilla/user.js $(ls -d ~/.mozilla/firefox/*/)user.js
+ln -s ~/dotfiles/.mozilla/user.js $(ls -d ~/.mozilla/firefox/*.default-default/)
 ln -s ~/.nix-profile/share/terminfo ~/.terminfo
 
 ln -s ~/Downloads ~/Desktop/

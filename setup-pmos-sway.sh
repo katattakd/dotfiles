@@ -37,7 +37,7 @@ sudo apk add cmd:exiftool cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
 sudo apk add cmd:brotli cmd:bzip2 cmd:cpio cmd:gzip cmd:lz4 cmd:unzip cmd:xz cmd:zstd
 
 # Dev tools
-nix-env -f '<nixpkgs>' -iA automake cmake rustup go
+nix-env -f '<nixpkgs>' -iA rustup
 
 # Monitoring tools
 sudo apk add cmd:htop cmd:powertop
