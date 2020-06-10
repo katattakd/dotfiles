@@ -6,7 +6,7 @@ gaps inner 10
 gaps outer -2
 
 # performance improvements
-xwayland disable
+#xwayland disable
 
 # status bar
 client.focused #00ffff #00ffff #262626 #00ffff
