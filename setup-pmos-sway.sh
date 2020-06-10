@@ -7,21 +7,7 @@
 sh setup.sh
 set -euo pipefail
 
-# Install Nix
-sudo apk add curl
-sudo mkdir /nix
-sudo chown katattakd /nix
-echo "#!/bin/sh" > ~/.profile
-
-curl https://nixos.org/nix/install -o /tmp/install.sh
-sh /tmp/install.sh --no-daemon
-
-source ~/.profile
-sudo apk del curl
-
 # Update installed packages
-nix-channel --update
-nix-env -u
 sudo apk upgrade -a
 
 # Coreutils
@@ -34,9 +20,6 @@ sudo apk add cmd:brotli cmd:diff cmd:grep
 # Multimedia tools
 sudo apk add cmd:exiftool cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
 
-# Dev tools
-nix-env -f '<nixpkgs>' -iA rustup
-
 # Monitoring tools
 sudo apk add cmd:htop cmd:powertop
 
@@ -46,7 +29,6 @@ sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 
 # Audio tools
 sudo apk add cmd:alsamixer
-nix-env -f '<nixpkgs>' -iA apulse
 
 # ClI tweaks
 sudo apk add cmd:fish cmd:neofetch cmd:nvim
@@ -54,6 +36,18 @@ sudo apk add cmd:fish cmd:neofetch cmd:nvim
 # GUI things
 sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
 
+# Setup Nix
+sudo mkdir /nix
+sudo chown katattakd /nix
+echo "#!/bin/sh" > ~/.profile
+
+curl https://nixos.org/nix/install -o /tmp/install.sh
+sh /tmp/install.sh --no-daemon
+source ~/.profile
+
+nix-channel --update
+nix-env -u
+nix-env -f '<nixpkgs>' -iA rustup apulse
 nix-store --optimise
 nix-collect-garbage -d
 
