@@ -25,16 +25,14 @@ nix-env -u
 sudo apk upgrade -a
 
 # Coreutils
-sudo apk add alpine-sdk docs pmbootstrap usbutils cmd:find cmd:less cmd:tree
+sudo apk add alpine-sdk pmboostrap postmarketos-base
+sudo apk add docs usbutils cmd:less cmd:tree
 
 # Text tools
-sudo apk add cmd:awk cmd:diff cmd:grep cmd:sed
+sudo apk add cmd:awk cmd:brotli cmd:diff cmd:grep cmd:sed
 
 # Multimedia tools
 sudo apk add cmd:exiftool cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
-
-# Archive tools
-sudo apk add cmd:brotli cmd:bzip2 cmd:cpio cmd:gzip cmd:lz4 cmd:unzip cmd:xz cmd:zstd
 
 # Dev tools
 nix-env -f '<nixpkgs>' -iA rustup
@@ -43,16 +41,13 @@ nix-env -f '<nixpkgs>' -iA rustup
 sudo apk add cmd:htop cmd:powertop
 
 # Networking tools
-sudo apk add net-tools iputils iproute2 bridge-utils ipcalc
-sudo apk add cmd:dig cmd:ssh cmd:tshark cmd:ufw cmd:whois ufw-openrc
+sudo apk add iproute2 ipcalc
+sudo apk add cmd:dig cmd:tshark cmd:ufw ufw-openrc
 sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 
 # Audio tools
 sudo apk add cmd:alsamixer
 nix-env -f '<nixpkgs>' -iA apulse
-
-# Filesystem tools
-sudo apk add cmd:cryptsetup cmd:parted dosfstools e2fsprogs f2fs-tools
 
 # ClI tweaks
 sudo apk add cmd:neofetch cmd:nvim fish-tools
