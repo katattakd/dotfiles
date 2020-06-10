@@ -8,7 +8,7 @@ sh setup.sh
 set -euo pipefail
 
 # Update installed packages
-sudo apk upgrade -a
+sudo apk -U upgrade -a
 
 # Coreutils
 sudo apk add alpine-sdk docs postmarketos-base
@@ -28,7 +28,7 @@ sudo apk add cmd:dig cmd:ip cmd:tshark cmd:ufw ufw-openrc
 sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 
 # Audio tools
-sudo apk add cmd:alsamixer
+sudo apk add cmd:alsamixer cmd:pactl cmd:pulseaudio cmd:pulsemixer
 
 # ClI tweaks
 sudo apk add cmd:fish cmd:neofetch cmd:nvim
@@ -36,18 +36,15 @@ sudo apk add cmd:fish cmd:neofetch cmd:nvim
 # GUI things
 sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
 
-# Setup Nix
-sudo mkdir /nix
-sudo chown katattakd /nix
-echo "#!/bin/sh" > ~/.profile
+# Setup rustup
+# TODO: Figure out a way to do this on aarch64 without Nix.
+touch ~/.profile
 
 curl https://nixos.org/nix/install -o /tmp/install.sh
 sh /tmp/install.sh --no-daemon
-source ~/.profile
 
-nix-channel --update
-nix-env -u
-nix-env -f '<nixpkgs>' -iA rustup apulse
+source ~/.profile
+nix-env -f '<nixpkgs>' -iA rustup
 nix-store --optimise
 nix-collect-garbage -d
 

@@ -202,7 +202,7 @@ user_pref("dom.webnotifications.serviceworker.enabled", false);
 user_pref("dom.event.clipboardevents.enabled", false); // Can break copy/paste on some online text editors
 user_pref("dom.battery.enabled", false);
 // user_pref("media.navigator.enabled", false); // Breaks WebRTC
-user_pref("accessibility.force_disabled", 1)
+user_pref("accessibility.force_disabled", 1);
 user_pref("beacon.enabled", false);
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("browser.pagethumbnails.capturing_disabled", true);
@@ -301,9 +301,3 @@ user_pref("security.ssl3.dhe_rsa_aes_128_sha", false);
 user_pref("security.ssl3.dhe_rsa_aes_256_sha", false);
 user_pref("security.ssl3.rsa_aes_128_sha", false);
 user_pref("security.ssl3.rsa_aes_256_sha", false);
-
-// Fix apulse
-// (Taken from https://codelab.wordpress.com/2017/12/11/firefox-drops-alsa-apulse-to-the-rescue/)
-user_pref("security.sandbox.content.read_path_whitelist", "/dev/snd/,/home/katattakd/.asounrdc");
-user_pref("security.sandbox.content.write_path_whitelist", "/dev/snd/");
-user_pref("security.sandbox.content.syscall_whitelist", 54);
