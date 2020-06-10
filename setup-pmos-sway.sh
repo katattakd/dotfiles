@@ -13,7 +13,7 @@ sudo apk -U upgrade -a
 
 # Coreutils
 sudo apk add alpine-sdk docs postmarketos-base
-sudo apk add cmd:less cmd:pmbootstrap cmd:tree cmd:usb-devices
+sudo apk add cmd:less cmd:pmbootstrap cmd:posixtz cmd:tree cmd:usb-devices
 
 # Text tools
 sudo apk add cmd:brotli cmd:diff cmd:grep
