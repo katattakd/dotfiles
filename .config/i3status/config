@@ -51,4 +51,5 @@ battery 0 {
 
 tztime local {
 	format = " %a %D %R %Z"
+	timezone = "America/Los_Angeles"
 }
