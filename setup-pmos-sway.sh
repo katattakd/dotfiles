@@ -1,5 +1,6 @@
 #!/bin/sh
 # TODO: Switch back to Alacritty once it gets GLES2 support.
+# TODO: Setup rustup on aarch64 without requiring Nix.
 
 # ----- User customizations ------
 
@@ -37,7 +38,6 @@ sudo apk add cmd:fish cmd:neofetch cmd:nvim
 sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
 
 # Setup rustup
-# TODO: Figure out a way to do this on aarch64 without Nix.
 touch ~/.profile
 
 curl https://nixos.org/nix/install -o /tmp/install.sh
