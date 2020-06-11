@@ -38,10 +38,6 @@ sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 # Audio tools
 sudo apk add cmd:alsamixer cmd:pactl cmd:pulsemixer pulseaudio
 
-# RTL-SDR tools
-sudo apk add cmd:rtl_sdr
-nix-env -f '<nixpkgs>' -iA gqrx
-
 # Dev tools
 nix-env -f '<nixpkgs>' -iA rustup
 
