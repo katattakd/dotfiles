@@ -7,20 +7,12 @@
 sh setup.sh
 set -euo pipefail
 
-# Setup Nix
-touch ~/.profile
-
-curl https://nixos.org/nix/install -o /tmp/install.sh
-sh /tmp/install.sh --no-daemon
-
-source ~/.profile
-
 # Update installed packages
 sudo apk -U upgrade -a
 
 # Coreutils
 sudo apk add alpine-sdk docs postmarketos-base
-sudo apk add cmd:less cmd:pmbootstrap cmd:posixtz cmd:tree cmd:usb-devices
+sudo apk add cmd:less cmd:posixtz cmd:tree cmd:usb-devices
 
 # Text tools
 sudo apk add cmd:brotli cmd:diff cmd:grep
@@ -39,7 +31,7 @@ sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 sudo apk add cmd:alsamixer cmd:pactl cmd:pulsemixer pulseaudio
 
 # Dev tools
-nix-env -f '<nixpkgs>' -iA rustup
+sudo apk add cmd:cargo cmd:pmbootstrap
 
 # ClI tweaks
 sudo apk add cmd:fish cmd:neofetch cmd:nvim
@@ -50,8 +42,6 @@ sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
 # Finishing touches
 sudo rm -r /etc/apk/cache
 sudo rm /var/cache/apk/*.apk
-nix-store --optimise
-nix-collect-garbage -d
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
