@@ -50,14 +50,18 @@ input type:pointer {
 # keybinds
 set $mod Mod4
 
-bindsym $mod+t exec 'termite -e "env --chdir=Desktop fish"'
-bindsym $mod+Shift+t exec 'MOZ_ENABLE_WAYLAND=1 firefox'
+bindsym $mod+Return exec 'termite -e "env --chdir=Desktop fish"'
+bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/Desktop/screenshot_$(date +%s).png'
-bindsym $mod+l exec 'swaylock'
+bindsym $mod+Shift+l exec 'swaylock'
 
 bindsym $mod+q kill
-bindsym $mod+c layout toggle
+
+bindsym $mod+v splitv
+bindsym $mod+h splith
+bindsym $mod+l layout toggle tabbed split
+
 bindsym $mod+b border toggle
 bindsym $mod+s sticky toggle
 bindsym $mod+f floating toggle
@@ -69,6 +73,8 @@ bindsym $mod+Shift+minus scratchpad show
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+q exec swaymsg exit
 
+bindsym $mod+Escape focus parent
+bindsym $mod+Space focus mode_toggle
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -112,4 +118,5 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+floating_modifier $mod
 
