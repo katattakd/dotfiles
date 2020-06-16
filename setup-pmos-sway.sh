@@ -11,7 +11,7 @@ set -euo pipefail
 sudo apk -U upgrade -a
 
 # Coreutils
-sudo apk add alpine-sdk docs postmarketos-base
+sudo apk add alpine-sdk docs postmarketos-base postmarketos-ui-sway
 sudo apk add cmd:less cmd:posixtz cmd:tree cmd:usb-devices
 
 # Text tools
@@ -24,7 +24,7 @@ sudo apk add cmd:exiftool cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
 sudo apk add cmd:htop cmd:powertop
 
 # Networking tools
-sudo apk add cmd:dig cmd:ip cmd:tshark cmd:ufw ufw-openrc
+sudo apk add cmd:dig cmd:ip cmd:tshark ufw
 sudo apk add cmd:nmap cmd:ncat cmd:nping nmap-scripts
 
 # Audio tools
