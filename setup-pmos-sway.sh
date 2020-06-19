@@ -21,13 +21,13 @@ sudo apk add cmd:exiv2 cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
 sudo apk add cmd:ip cmd:tshark cmd:nmap nmap-scripts iptables ip6tables
 
 # Audio tools
-sudo apk add cmd:alsamixer cmd:pactl cmd:pulsemixer pulseaudio
+sudo apk add cmd:alsamixer cmd:pulsemixer pulseaudio
 
 # Dev tools
 sudo apk add cmd:cargo
 
 # ClI tweaks
-sudo apk add cmd:fish cmd:neofetch cmd:nvim cmd:htop
+sudo apk add cmd:fish cmd:neofetch cmd:nvim cmd:htop cmd:ytop
 
 # GUI things
 sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
