@@ -11,8 +11,8 @@ set -euo pipefail
 sudo apk -U upgrade -a
 
 # Core system
-sudo apk add alpine-sdk coreutils docs postmarketos-base postmarketos-ui-sway
-sudo apk add cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
+sudo apk add alpine-sdk docs postmarketos-base postmarketos-ui-sway
+sudo apk add cmd:coreutils cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
 
 # Multimedia tools
 sudo apk add cmd:exiv2 cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
@@ -41,12 +41,14 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 
 # ----- System tweaks ------
 
-# Security improvements
+# Disable unnecessary services
+sudo rc-update del haveged
 sudo rc-update del sshd
-sudo ufw enable
+sudo rc-update del swapfile
+
+# Setup firewall
 sudo rc-update add iptables
 sudo rc-update add ip6tables
-
 sudo iptables-restore firewall.rules
 sudo /etc/init.d/iptables save
 sudo ip6tables-restore firewall.rules
