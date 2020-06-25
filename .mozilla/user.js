@@ -1,4 +1,4 @@
-// This borrows a LOT from ghacks-user.js (commit 4bc5b89cfe6f599747ba50160fc4aa3bded421d1)
+// This borrows a LOT from ghacks-user.js (commit 4be0a80720f4d7af22bc103b3dc075ef55d47d88)
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 // Get rid of some annoyances
@@ -29,7 +29,6 @@ user_pref("dom.disable_open_during_load", true);
 user_pref("dom.popup_allowed_events", "click dblclick");
 user_pref("dom.disable_beforeunload", true);
 user_pref("dom.vibrator.enabled", false);
-user_pref("dom.targetBlankNoOpener.enabled", true);
 user_pref("middlemouse.contentLoadURL", false);
 user_pref("network.http.redirection-limit", 10);
 user_pref("permissions.default.shortcuts", 2);
@@ -153,7 +152,7 @@ user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.ftp.enabled", false);
-user_pref("network.file.disable_unc_paths", true);
+//user_pref("network.file.disable_unc_paths", true); Broken in FF 77
 user_pref("network.gio.supported-protocols", "");
 user_pref("layout.css.visited_links_enabled", false);
 user_pref("browser.search.suggest.enabled", false);
@@ -206,10 +205,8 @@ user_pref("accessibility.force_disabled", 1);
 user_pref("beacon.enabled", false);
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("browser.pagethumbnails.capturing_disabled", true);
-user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.url", "");
-user_pref("devtools.debugger.remote-enabled", false);
 user_pref("mathml.disabled", true);
 user_pref("permissions.manager.defaultsUrl", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
@@ -297,7 +294,5 @@ user_pref("security.tls.version.min", 3);
 user_pref("security.ssl3.rsa_des_ede3_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
 user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
-user_pref("security.ssl3.dhe_rsa_aes_128_sha", false);
-user_pref("security.ssl3.dhe_rsa_aes_256_sha", false);
 user_pref("security.ssl3.rsa_aes_128_sha", false);
 user_pref("security.ssl3.rsa_aes_256_sha", false);
