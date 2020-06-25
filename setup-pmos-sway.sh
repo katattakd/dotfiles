@@ -11,8 +11,8 @@ set -euo pipefail
 sudo apk -U upgrade -a
 
 # Core system
-sudo apk add alpine-sdk docs postmarketos-base
-sudo apk add cmd:coreutils cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
+sudo apk add cmd:coreutils docs postmarketos-base
+sudo apk add cmd:curl cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
 
 # Multimedia tools
 sudo apk add cmd:exiv2 cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
@@ -24,7 +24,7 @@ sudo apk add cmd:ip cmd:tshark cmd:nmap nmap-scripts iptables ip6tables
 sudo apk add cmd:alsamixer cmd:pulsemixer pulseaudio
 
 # Dev tools
-sudo apk add cmd:cargo
+sudo apk add build-base cmd:git cmd:cargo
 
 # ClI tweaks
 sudo apk add cmd:fish cmd:neofetch cmd:nvim cmd:htop cmd:ytop
