@@ -11,7 +11,7 @@ set -euo pipefail
 sudo apk -U upgrade -a
 
 # Core system
-sudo apk add alpine-sdk docs postmarketos-base postmarketos-ui-sway
+sudo apk add alpine-sdk docs postmarketos-base
 sudo apk add cmd:coreutils cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
 
 # Multimedia tools
@@ -30,7 +30,8 @@ sudo apk add cmd:cargo
 sudo apk add cmd:fish cmd:neofetch cmd:nvim cmd:htop cmd:ytop
 
 # GUI things
-sudo apk add cmd:i3status cmd:termite cmd:grim cmd:slurp cmd:mpv cmd:imv firefox
+sudo apk add cmd:sway cmd:swaylock cmd:i3status cmd:grim cmd:slurp
+sudo apk add cmd:termite cmd:mpv cmd:imv firefox
 
 # Finishing touches
 sudo rm -r /etc/apk/cache

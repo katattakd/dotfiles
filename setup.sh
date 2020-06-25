@@ -3,6 +3,7 @@ mkdir -p ~/.config ~/.ssh ~/Downloads ~/Desktop
 
 ln -sf /dev/null ~/.ash_history
 ln -sf /dev/null ~/.bash_history
+ln -s ~/dotfiles/.profile ~/.profile
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 ln -s ~/dotfiles/.mozilla/user.js $(ls -d ~/.mozilla/firefox/*.default-default/)
