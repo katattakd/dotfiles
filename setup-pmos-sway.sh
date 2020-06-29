@@ -1,5 +1,13 @@
 #!/bin/sh
-# TODO: Switch back to Alacritty once it gets GLES2 support.
+# FIXME: Use Alacritty instead of Termite.
+# - https://github.com/alacritty/alacritty/issues/128
+# FIXME: Get Imv working.
+# - https://github.com/NixOS/nixpkgs/issues/77653
+# FIXME: Install Firefox through Nix.
+# - https://github.com/NixOS/nixpkgs/issues/83049
+# Additional issues to watch:
+# - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1863
+# - https://bugzilla.mozilla.org/show_bug.cgi?id=1422891
 
 # ----- User customizations ------
 
@@ -9,17 +17,14 @@ set -euo pipefail
 
 # Update installed packages
 sudo apk -U upgrade -a
-
-# Setup Nix channels
-alias addpkg="nix-env -f '<nixpkgs>' -iA"
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-channel --add https://nixos.org/channels/nixos-20.03
 nix-channel --update
 nix-env -u
 
+
+alias addpkg="nix-env -f '<nixpkgs>' -iA"
+
 # Core system
-sudo apk del curl
-addpkg coreutils curl gnugrep less man tree # Look into using uutils-coreutils
+addpkg coreutils curl gnugrep less man tree
 
 # Multimedia tools
 addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
@@ -38,14 +43,9 @@ addpkg diffutils git rustup
 addpkg fish htop neofetch neovim ytop
 
 # GUI things
-addpkg grim i3status slurp # TODO: Try i3status-rust
+addpkg grim i3status slurp
 addpkg mpv-unwrapped termite
-# Imv is broken, see https://github.com/NixOS/nixpkgs/issues/77653
-sudo apk add firefox # Broken on NixOS, see https://github.com/NixOS/nixpkgs/issues/83049
-
-# Finishing touches
-sudo rm -r /etc/apk/cache
-sudo rm /var/cache/apk/*.apk
+sudo apk add firefox
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -55,6 +55,10 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 # Shrink Nix store
 nix-collect-garbage -d
 nix-store --optimize
+
+# Disable APK cache
+sudo rm -r /etc/apk/cache
+sudo rm /var/cache/apk/*.apk
 
 # Disable unnecessary services
 sudo rc-update del haveged
