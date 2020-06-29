@@ -1,2 +1,0 @@
-#!/bin/sh
-echo 70000 | tee /sys/devices/virtual/thermal/thermal_zone0/trip_point_0_temp

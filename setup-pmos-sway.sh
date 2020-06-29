@@ -10,28 +10,38 @@ set -euo pipefail
 # Update installed packages
 sudo apk -U upgrade -a
 
+# Setup Nix channels
+alias addpkg="nix-env -f '<nixpkgs>' -iA"
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --add https://nixos.org/channels/nixos-20.03
+nix-channel --update
+nix-env -u
+
 # Core system
-sudo apk add cmd:coreutils docs postmarketos-base
-sudo apk add cmd:curl cmd:diff cmd:grep cmd:less cmd:posixtz cmd:tree cmd:usb-devices
+sudo apk del curl
+addpkg coreutils curl gnugrep less man tree # Look into using uutils-coreutils
 
 # Multimedia tools
-sudo apk add cmd:exiv2 cmd:ffmpeg cmd:magick cmd:sox cmd:youtube-dl
+addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 
 # Networking tools
-sudo apk add cmd:ip cmd:tshark cmd:nmap nmap-scripts iptables ip6tables
+addpkg iproute nmap wireshark-cli
 
 # Audio tools
-sudo apk add cmd:alsamixer cmd:pulsemixer pulseaudio
+addpkg alsaUtils apulse
 
 # Dev tools
-sudo apk add build-base cmd:git cmd:cargo
+addpkg binutils file gcc-unwrapped gnumake patch
+addpkg diffutils git rustup
 
 # ClI tweaks
-sudo apk add cmd:fish cmd:neofetch cmd:nvim cmd:htop cmd:ytop
+addpkg fish htop neofetch neovim ytop
 
 # GUI things
-sudo apk add cmd:sway cmd:swaylock cmd:i3status cmd:grim cmd:slurp
-sudo apk add cmd:termite cmd:mpv cmd:imv firefox
+addpkg grim i3status slurp # TODO: Try i3status-rust
+addpkg mpv-unwrapped termite
+# Imv is broken, see https://github.com/NixOS/nixpkgs/issues/77653
+sudo apk add firefox # Broken on NixOS, see https://github.com/NixOS/nixpkgs/issues/83049
 
 # Finishing touches
 sudo rm -r /etc/apk/cache
@@ -42,12 +52,17 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 
 # ----- System tweaks ------
 
+# Shrink Nix store
+nix-collect-garbage -d
+nix-store --optimize
+
 # Disable unnecessary services
 sudo rc-update del haveged
 sudo rc-update del sshd
 sudo rc-update del swapfile
 
 # Setup firewall
+sudo apk add iptables ip6tables
 sudo rc-update add iptables
 sudo rc-update add ip6tables
 sudo iptables-restore firewall.rules
