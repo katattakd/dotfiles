@@ -31,22 +31,25 @@ alias addpkg="nix-env -f '<nixpkgs>' -iA"
 addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 
 # Networking tools
-addpkg curl iproute nmap wireshark-cli
+addpkg curl nmap wireshark-cli
 
 # Audio tools
 addpkg alsaUtils apulse
 
 # Dev tools
-addpkg binutils file gcc-unwrapped gnumake patch
-addpkg diffutils git man rustup
+addpkg binutils file gcc-unwrapped gnumake gnupatch
+addpkg man git rustup
 
 # ClI tweaks
-addpkg curlie exa fish htop neofetch neovim ripgrep ytop
+addpkg curlie duc exa fish htop neofetch neovim ripgrep ytop
 
 # GUI things
 addpkg grim i3status slurp
 addpkg mpv-unwrapped termite
 sudo apk add firefox
+
+# Setup git
+git config --global color.ui auto
 
 # Setup vim-plugged
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
