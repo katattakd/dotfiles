@@ -27,9 +27,6 @@ nix-env -u
 
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 
-# Core system
-addpkg less man
-
 # Multimedia tools
 addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 
@@ -41,7 +38,7 @@ addpkg alsaUtils apulse
 
 # Dev tools
 addpkg binutils file gcc-unwrapped gnumake patch
-addpkg diffutils git rustup
+addpkg diffutils git man rustup
 
 # ClI tweaks
 addpkg curlie exa fish htop neofetch neovim sift ytop

@@ -50,7 +50,7 @@ input type:pointer {
 # keybinds
 set $mod Mod4
 
-bindsym $mod+Return exec 'termite -e "env --chdir=Desktop fish"'
+bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 apulse firefox'
 bindsym $mod+p exec 'grim -g \"$(slurp)" ~/Desktop/screenshot_$(date +%s).png'
 bindsym $mod+Shift+p exec 'grim -c ~/Desktop/screenshot_$(date +%s).png'
