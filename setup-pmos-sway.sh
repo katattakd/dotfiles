@@ -5,9 +5,13 @@
 # - https://github.com/NixOS/nixpkgs/issues/77653
 # FIXME: Install Firefox through Nix.
 # - https://github.com/NixOS/nixpkgs/issues/83049
+# FIXME: Get Anbox working.
+# - https://gitlab.com/postmarketOS/pmaports/-/issues/327
 # Additional issues to watch:
 # - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1863
 # - https://bugzilla.mozilla.org/show_bug.cgi?id=1422891
+# - https://gitlab.com/postmarketOS/pmaports/-/issues/570
+# - https://gitlab.com/postmarketOS/pmaports/-/issues/628
 
 # ----- User customizations ------
 
