@@ -28,13 +28,13 @@ nix-env -u
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 
 # Core system
-addpkg coreutils curl gnugrep less man tree
+addpkg less man
 
 # Multimedia tools
 addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 
 # Networking tools
-addpkg iproute nmap wireshark-cli
+addpkg curl iproute nmap wireshark-cli
 
 # Audio tools
 addpkg alsaUtils apulse
@@ -44,7 +44,7 @@ addpkg binutils file gcc-unwrapped gnumake patch
 addpkg diffutils git rustup
 
 # ClI tweaks
-addpkg fish htop neofetch neovim ytop
+addpkg curlie exa fish htop neofetch neovim sift ytop
 
 # GUI things
 addpkg grim i3status slurp
