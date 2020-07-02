@@ -41,7 +41,7 @@ addpkg binutils file gcc-unwrapped gnumake gnupatch
 addpkg man git rustup
 
 # ClI tweaks
-addpkg curlie duc exa fd fish htop neofetch neovim ripgrep ytop
+addpkg curlie duc exa fd fish hexyl htop neofetch neovim ripgrep termshark ytop
 
 # GUI things
 addpkg grim i3status slurp
