@@ -3,7 +3,7 @@
 # - https://github.com/alacritty/alacritty/issues/128
 # FIXME: Get Imv working.
 # - https://github.com/NixOS/nixpkgs/issues/77653
-# FIXME: Install Firefox through Nix.
+# FIXME: Install Firefox/Krita through Nix.
 # - https://github.com/NixOS/nixpkgs/issues/83049
 # FIXME: Get Anbox working.
 # - https://gitlab.com/postmarketOS/pmaports/-/issues/327
@@ -27,25 +27,38 @@ nix-env -u
 
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 
-# Multimedia tools
+# Media encoding tools
 addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 
-# Networking tools
-addpkg curl nmap wireshark-cli
+# Office tools
+#addpkg libreoffice speedcrunch giac-with-xcas
 
-# Audio tools
-addpkg alsaUtils apulse
+# Media editing tools
+#addpkg ardour gimp inkscape openshot-qt rawtherapee
+
+# Auditing tools
+#addpkg coreutils gnugrep lynis
+
+# Pentesting tools
+#addpkg hashcat metasploit thc-hydra wrk
+
+# Scanning tools
+#addpkg dnsrecon nmap theharvester wireshark
+
+# Disk tools
+addpkg duc
+#addpkg gparted nwipe
 
 # Dev tools
-addpkg binutils file gcc-unwrapped gnumake gnupatch
-addpkg man git rustup
+addpkg curl git man rustup
+addpkg curlie file hexyl
+addpkg binutils gcc-unwrapped gnumake gnupatch
 
-# ClI tweaks
-addpkg curlie duc exa fd fish hexyl htop neofetch neovim ripgrep termshark ytop
+# ClI tooks
+addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
 
-# GUI things
-addpkg grim i3status slurp
-addpkg mpv-unwrapped termite
+# GUI essentials
+addpkg apulse grim i3status mpv-unwrapped slurp termite
 sudo apk add firefox
 
 # Setup git
@@ -63,6 +76,14 @@ nix-store --optimize
 # Disable APK cache
 sudo rm -r /etc/apk/cache
 sudo rm /var/cache/apk/*.apk
+
+# Replace Chrony with Busybox NTPd
+echo "server 0.pool.ntp.org iburst
+server 1.pool.ntp.org iburst
+server 2.pool.ntp.org iburst
+server 3.pool.ntp.org iburst" | sudo tee /etc/ntp.conf
+sudo rc-update add ntpd
+sudo rc-update del chronyd
 
 # Disable unnecessary services
 sudo rc-update del haveged
