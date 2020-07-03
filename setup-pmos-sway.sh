@@ -20,7 +20,7 @@ sh setup.sh
 set -euo pipefail
 
 # Setup sway
-sudo apk add sway
+sudo apk add sway swaylock
 echo "if [ \"\$(tty)\" = \"/dev/tty1\" ]; then
 	XDG_RUNTIME_DIR=\"/tmp\" exec sway
 fi" >> ~/.profile
