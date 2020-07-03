@@ -6,7 +6,7 @@ ln -sf /dev/null ~/.bash_history
 ln -s ~/dotfiles/.asoundrc ~
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.ssh/* ~/.ssh
-ln -s ~/dotfiles/.mozilla/user.js $(ls -d ~/.mozilla/firefox/*.default-default/)
+echo ~/.mozilla/firefox/*.default | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 
 ln -s ~/Downloads ~/Desktop/
 ln -s ~/.config ~/Desktop/
