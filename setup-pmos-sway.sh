@@ -65,7 +65,8 @@ addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
 
 # GUI essentials
 addpkg apulse grim i3status mpv-unwrapped slurp termite
-sudo apk add firefox
+addpkg firefox
+#sudo apk add firefox
 
 # Setup git
 git config --global color.ui auto
@@ -82,14 +83,6 @@ nix-store --optimize
 # Disable APK cache
 sudo rm -r /etc/apk/cache
 sudo rm /var/cache/apk/*.apk
-
-# Replace Chrony with Busybox NTPd
-echo "server 0.pool.ntp.org iburst
-server 1.pool.ntp.org iburst
-server 2.pool.ntp.org iburst
-server 3.pool.ntp.org iburst" | sudo tee /etc/ntp.conf
-sudo rc-update add ntpd
-sudo rc-update del chronyd
 
 # Disable unnecessary services
 sudo rc-update del haveged
