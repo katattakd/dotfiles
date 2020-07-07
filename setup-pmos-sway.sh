@@ -64,8 +64,9 @@ addpkg binutils gcc-unwrapped gnumake gnupatch
 addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
 
 # GUI essentials
-addpkg apulse grim i3status mpv-unwrapped slurp termite
-addpkg firefox
+addpkg i3status sway-contrib.grimshot
+addpkg mpv-unwrapped termite
+addpkg apulse firefox
 #sudo apk add firefox
 
 # Setup git
