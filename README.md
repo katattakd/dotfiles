@@ -30,19 +30,21 @@ Note that this repo contains the dotfiles for two completely different computers
 1. Install postmarketOS with no UI to your device.
 2. Connect to the internet.
 3. Create a single-user installation of Nix. This can be accomplished with the below commands:
-```
+```bash
 sudo apk add curl
 
 sudo mkdir /nix
 sudo chown katattakd /nix
 echo "#!/bin/sh" > ~/.profile
 
-curl https://nixos.org/nix/install -o /tmp/install.sh
+curl -L https://nixos.org/nix/install -o /tmp/install.sh
 sh /tmp/install.sh --no-daemon
 
 source ~/.profile
 sudo apk del curl
 ```
 4. Run the below command:
-```sh setup-pmos-sway.sh```
+```bash
+sh setup-pmos-sway.sh
+```
 5. Reboot
