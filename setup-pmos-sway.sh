@@ -7,6 +7,7 @@
 # - https://github.com/NixOS/nixpkgs/issues/83049
 # FIXME: Get Anbox working.
 # - https://gitlab.com/postmarketOS/pmaports/-/issues/327
+# FIXME: Get RTL-SDR working.
 # Additional issues to watch:
 # - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1863
 # - https://bugzilla.mozilla.org/show_bug.cgi?id=1422891
@@ -51,6 +52,14 @@ addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 # Scanning tools
 #addpkg dnsrecon nmap theharvester wireshark
 
+# SDR tools
+# TODO: Figure out why this isn't working properly.
+#echo "
+## For rtl-sdr
+#blacklist dvb_usb_rtl28xxu
+#blacklist dvb_usb_v2" | sudo tee -a /etc/modprobe.d/blacklist.conf
+#addpkg gqrx nrsc5 rtl_433 rtl_sdr
+
 # Disk tools
 addpkg duc
 #addpkg gparted nwipe
@@ -64,7 +73,7 @@ addpkg binutils gcc-unwrapped gnumake gnupatch
 addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
 
 # GUI essentials
-addpkg i3status sway-contrib.grimshot
+addpkg i3status sway-contrib.grimshot xwayland
 addpkg mpv-unwrapped termite
 addpkg apulse firefox
 #sudo apk add firefox
@@ -91,12 +100,12 @@ sudo rc-update del sshd
 sudo rc-update del swapfile
 
 # Setup firewall
-sudo apk add iptables ip6tables
-sudo rc-update add iptables
-sudo rc-update add ip6tables
-sudo iptables-restore firewall.rules
-sudo /etc/init.d/iptables save
-sudo ip6tables-restore firewall.rules
-sudo /etc/init.d/ip6tables save
+#sudo apk add iptables ip6tables
+#sudo rc-update add iptables
+#sudo rc-update add ip6tables
+#sudo iptables-restore firewall.rules
+#sudo /etc/init.d/iptables save
+#sudo ip6tables-restore firewall.rules
+#sudo /etc/init.d/ip6tables save
 
 echo "Please reboot for changes to take effect."
