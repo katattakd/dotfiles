@@ -27,7 +27,7 @@ Note that this repo contains the dotfiles for two completely different computers
 - curl
 
 ## Setup instructions (profile 1)
-1. Install postmarketOS with no UI to your device.
+1. Install postmarketOS with the Sway UI to your device.
 2. Connect to the internet.
 3. Create a single-user installation of Nix. This can be accomplished with the below commands:
 ```bash
