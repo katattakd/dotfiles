@@ -58,7 +58,7 @@ addpkg duc
 #addpkg gparted nwipe
 
 # Dev tools
-addpkg curl git man rustup
+addpkg curl git less man rustup
 addpkg curlie file hexyl
 addpkg binutils gcc-unwrapped gnumake gnupatch
 
