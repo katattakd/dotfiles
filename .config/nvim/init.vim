@@ -5,7 +5,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tpope/vim-sensible'
-Plug 'jez/vim-superman'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
