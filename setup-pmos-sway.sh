@@ -84,13 +84,13 @@ nix-collect-garbage -d
 nix-store --optimize
 
 # Disable APK cache
-sudo rm -r /etc/apk/cache
-sudo rm /var/cache/apk/*.apk
+#sudo rm -r /etc/apk/cache
+#sudo rm /var/cache/apk/*.apk
 
 # Disable unnecessary services
-sudo rc-update del haveged
-sudo rc-update del sshd
-sudo rc-update del swapfile
+#sudo rc-update del haveged
+#sudo rc-update del sshd
+#sudo rc-update del swapfile
 
 # Setup firewall
 #sudo apk add iptables ip6tables
