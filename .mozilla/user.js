@@ -299,6 +299,6 @@ user_pref("security.ssl3.rsa_aes_256_sha", false);
 
 // Fix apulse
 // (Taken from https://codelab.wordpress.com/2017/12/11/firefox-drops-alsa-apulse-to-the-rescue/)
-user_pref("security.sandbox.content.read_path_whitelist", "/dev/snd/,/home/katattakd/.asounrdc");
+user_pref("security.sandbox.content.read_path_whitelist", "/dev/snd/,/home/kat/.asounrdc");
 user_pref("security.sandbox.content.write_path_whitelist", "/dev/snd/");
 user_pref("security.sandbox.content.syscall_whitelist", 54);
