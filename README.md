@@ -34,7 +34,7 @@ Note that this repo contains the dotfiles for two completely different computers
 sudo apk add curl
 
 sudo mkdir /nix
-sudo chown katattakd /nix
+sudo chown kat /nix
 echo "#!/bin/sh" > ~/.profile
 
 curl -L https://nixos.org/nix/install -o /tmp/install.sh
