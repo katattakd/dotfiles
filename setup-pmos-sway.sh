@@ -1,17 +1,24 @@
 #!/bin/sh
 # FIXME: Use Alacritty instead of Termite.
+# - STATUS: Waiting for upstream fix to be merged.
 # - https://github.com/alacritty/alacritty/issues/128
 # FIXME: Get Imv working.
+# - STATUS: Waiting on upstream fix to be merged.
 # - https://github.com/NixOS/nixpkgs/issues/77653
+# - https://github.com/NixOS/nixpkgs/pull/92708
 # FIXME: Install Firefox/Krita through Nix.
+# - STATUS: Waiting for upstream fix.
 # - https://github.com/NixOS/nixpkgs/issues/83049
+# - https://github.com/NixOS/nixpkgs/pull/83249#issuecomment-605408317
 # FIXME: Get Anbox working.
+# - STATUS: Waiting on fix for PBP kernel.
 # - https://gitlab.com/postmarketOS/pmaports/-/issues/327
 # FIXME: Get RTL-SDR working.
+# - STATUS: Need additional troubleshooting.
 # Additional issues to watch:
 # - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1863
 # - https://bugzilla.mozilla.org/show_bug.cgi?id=1422891
-# - https://gitlab.com/postmarketOS/pmaports/-/issues/570
+# - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1941
 # - https://gitlab.com/postmarketOS/pmaports/-/issues/628
 
 # ----- User customizations ------
