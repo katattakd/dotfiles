@@ -1,28 +1,23 @@
 function fish_prompt
-    if not set -q VIRTUAL_ENV_DISABLE_PROMPT
-        set -g VIRTUAL_ENV_DISABLE_PROMPT true
-    else
-        printf '\n'
-    end
-    set_color yellow
-    printf '%s' $USER
-    set_color normal
-    printf ' at '
+	if not set -q IS_EXISTING_TERM
+		set -g IS_EXISTING_TERM true
+	else
+		printf "\n"
+	end
 
-    set_color magenta
-    echo -n (prompt_hostname)
-    set_color normal
-    printf ' in '
+	set_color $fish_color_user
+	printf "$USER"
+	set_color normal
+	printf ' at '
 
-    set_color $fish_color_cwd
-    printf '%s' (prompt_pwd)
-    set_color normal
+	set_color $fish_color_host
+	echo -n (prompt_hostname)
+	set_color normal
+	printf ' in '
 
-    # Line 2
-    echo
-    if test $VIRTUAL_ENV
-        printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
-    end
-    printf '↪ '
-    set_color normal
+	set_color $fish_color_cwd
+	echo (prompt_pwd)
+
+	set_color normal
+	printf '↪ '
 end

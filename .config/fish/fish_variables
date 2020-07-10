@@ -38,8 +38,8 @@ SETUVAR fish_color_end:white
 SETUVAR fish_color_error:brred
 SETUVAR fish_color_escape:brcyan
 SETUVAR fish_color_history_current:brcyan
-SETUVAR fish_color_host:f60
-SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_host:magenta
+SETUVAR fish_color_host_remote:magenta
 SETUVAR fish_color_match:brcyan
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:brcyan
@@ -49,7 +49,7 @@ SETUVAR fish_color_redirection:brcyan
 SETUVAR fish_color_search_match:blue
 SETUVAR fish_color_selection:888
 SETUVAR fish_color_status:red
-SETUVAR fish_color_user:888
+SETUVAR fish_color_user:yellow
 SETUVAR fish_color_valid_path:green
 SETUVAR fish_greeting:
 SETUVAR fish_key_bindings:fish_default_key_bindings
