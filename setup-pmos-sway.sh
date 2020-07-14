@@ -36,16 +36,13 @@ nix-env -u
 alias addpkg="nix-env -f '<nixpkgs>' -iA"
 
 # Media encoding tools
-addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
+addpkg exiv2 ffmpeg imagemagick_light sox youtube-dl-light
 
 # Office tools
 #addpkg libreoffice speedcrunch giac-with-xcas
 
 # Media editing tools
 #addpkg ardour gimp inkscape openshot-qt rawtherapee
-
-# Auditing tools
-#addpkg coreutils gnugrep lynis
 
 # Pentesting tools
 #addpkg hashcat metasploit thc-hydra wrk
@@ -62,19 +59,17 @@ addpkg exiftool ffmpeg imagemagick_light sox youtube-dl-light
 #addpkg gqrx nrsc5 rtl_433 rtl_sdr
 
 # Disk tools
-addpkg duc
 #addpkg gparted nwipe
 
 # Dev tools
 addpkg curl git less man
-addpkg curlie file hexyl
-addpkg binutils gcc-unwrapped gnumake gnupatch rustup
+addpkg binutils file gcc-unwrapped gnumake gnupatch rustup
 
 # ClI tooks
-addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
+addpkg alsaUtils curlie duc exa fish htop neofetch neovim ripgrep ytop
 
 # GUI essentials
-addpkg i3status sway-contrib.grimshot xwayland
+addpkg i3status sway-contrib.grimshot
 addpkg mpv-unwrapped termite
 addpkg apulse firefox
 #sudo apk add firefox
@@ -101,10 +96,8 @@ nix-store --optimize
 sudo rm -r /etc/apk/cache
 sudo rm /var/cache/apk/*.apk
 
-# Disable unnecessary services
-sudo rc-update del haveged
+# Disable SSH
 sudo rc-update del sshd
-sudo rc-update del swapfile
 
 # Setup firewall
 #sudo apk add iptables ip6tables
