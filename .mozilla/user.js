@@ -1,4 +1,4 @@
-// This borrows a LOT from ghacks-user.js (commit 4be0a80720f4d7af22bc103b3dc075ef55d47d88)
+// This borrows a LOT from ghacks-user.js (commit 1a389c021417833ccd688a52d05cd4b0b08734fa)
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 // Get rid of some annoyances
@@ -12,7 +12,7 @@ user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 user_pref("browser.sessionstore.interval", 600000);
 user_pref("media.autoplay.default", 5);
-user_pref("media.autoplay.enabled.user-gestures-needed", false);
+user_pref("media.autoplay.blocking_policy", 2);
 user_pref("dom.disable_window_open_feature.close", true);
 user_pref("dom.disable_window_open_feature.location", true);
 user_pref("dom.disable_window_open_feature.menubar", true);
@@ -48,7 +48,6 @@ user_pref("browser.tabs.warnOnOpen", false);
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.download.autohideButton", true);
-user_pref("toolkit.cosmeticAnimations.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("accessibility.typeaheadfind", false);
 user_pref("clipboard.autocopy", false);
@@ -64,7 +63,7 @@ user_pref("browser.bookmarks.max_backups", 2);
 user_pref("xpinstall.signatures.required", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-
+user_pref("ui.prefersReducedMotion", 1);
 
 // Disable telemetry
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
@@ -139,6 +138,8 @@ user_pref("identity.fxaccounts.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("network.manage-offline-status", false);
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
+user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 
 // Various privacy/security improvements
 user_pref("browser.privatebrowsing.autostart", true);
@@ -159,6 +160,7 @@ user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.autoFill", false);
 user_pref("browser.formfill.enable", false);
 user_pref("places.history.enabled", false);
@@ -288,14 +290,6 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
-
-// TLS hardening that can be fingerprinted
-user_pref("security.tls.version.min", 3);
-user_pref("security.ssl3.rsa_des_ede3_sha", false);
-user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
-user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
-user_pref("security.ssl3.rsa_aes_128_sha", false);
-user_pref("security.ssl3.rsa_aes_256_sha", false);
 
 // Fix apulse
 // (Taken from https://codelab.wordpress.com/2017/12/11/firefox-drops-alsa-apulse-to-the-rescue/)
