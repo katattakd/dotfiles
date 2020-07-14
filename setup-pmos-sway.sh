@@ -1,6 +1,6 @@
 #!/bin/sh
 # FIXME: Use Alacritty instead of Termite.
-# - STATUS: Waiting for upstream fix to be merged.
+# - STATUS: Waiting for upstream fix.
 # - https://github.com/alacritty/alacritty/issues/128
 # FIXME: Get Imv working.
 # - STATUS: Waiting on upstream fix to be merged.
@@ -20,6 +20,7 @@
 # - https://bugzilla.mozilla.org/show_bug.cgi?id=1422891
 # - https://gitlab.com/postmarketOS/pmbootstrap/-/issues/1941
 # - https://gitlab.com/postmarketOS/pmaports/-/issues/628
+# - https://github.com/rust-lang/rust/issues/69525
 
 # ----- User customizations ------
 
@@ -65,9 +66,9 @@ addpkg duc
 #addpkg gparted nwipe
 
 # Dev tools
-addpkg curl git less man rustup
+addpkg curl git less man
 addpkg curlie file hexyl
-addpkg binutils gcc-unwrapped gnumake gnupatch
+addpkg binutils gcc-unwrapped gnumake gnupatch rustup
 
 # ClI tooks
 addpkg alsaUtils exa fish htop neofetch neovim ripgrep ytop
@@ -77,6 +78,12 @@ addpkg i3status sway-contrib.grimshot xwayland
 addpkg mpv-unwrapped termite
 addpkg apulse firefox
 #sudo apk add firefox
+
+# Setup rustup
+#rustup toolchain install stable-aarch64-unknown-linux-gnu
+#rustup toolchain install stable-x86_64-unknown-linux-gnu
+# NOTE: To view documentation, open the below link.
+# file:///home/kat/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/doc/rust/html/index.html
 
 # Setup git
 git config --global color.ui auto
