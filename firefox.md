@@ -20,7 +20,8 @@ These steps assume that you've already added the required user.js file in the do
 - Remove the favorite icon from the address bar
 
 ### uMatrix setup
-- Enable and update all Hosts files assets, except those that use HTTP.
+- Enable and update all Hosts files assets, except hpHosts.
+  - https://github.com/uBlockOrigin/uMatrix-issues/issues/223
 - Open the Matrix and go to the global scope.
   - Set all scripts to blocked by default.
 - Save all temporary changes.
@@ -28,11 +29,10 @@ These steps assume that you've already added the required user.js file in the do
 
 ### uBlock Origin setup
 - Enable and update the rulesets in these categories:
-  - Built-in
   - Ads
   - Privacy
+  - Malware Domains
 - Disable the rulesets in these categories (they conflict with uMatrix):
-  - Malware domains
   - Multipurpose
 
 ### Privacy Badger setup
