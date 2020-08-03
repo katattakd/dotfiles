@@ -30,7 +30,7 @@ sudo ufw enable
 sudo pacman -S pulseaudio pulseaudio-alsa pulsemixer
 
 # Disk tools
-sudo pacman -D --asexplicit inxi parted
+sudo pacman -D --asexplicit ncdu parted
 #sudo pacman -S gparted
 
 # Media encoding tools
