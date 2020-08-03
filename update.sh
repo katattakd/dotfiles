@@ -2,16 +2,13 @@
 set -euo pipefail
 
 # Update installed packages
-sudo apk --update-cache upgrade --clean-protected --available
-sudo apk fix
+sudo pacman -Syu
 
-# Update Nix packages
-nix-channel --update
-nix-env -u
+# Remove orphaned packages
+sudo pacman -Rsunc $(pacman -Qtdq)
 
-# Clean Nix cache
-nix-collect-garbage -d
-nix-store --optimize
+# Clean cache
+sudo pacman -Sc
 
 # Update Vim plugins
 echo ":PlugUpdate" | nvim -s -
