@@ -7,6 +7,8 @@ ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 echo ~/.mozilla/firefox/*.default | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 
+ln -sf ~/.bashrc ~/.bash_profile
+rm ~/.bash_logout
 ln -s ~/Downloads ~/Desktop/
 ln -s ~/.config ~/Desktop/
 ln -s ~/.mozilla/firefox ~/.config/firefox

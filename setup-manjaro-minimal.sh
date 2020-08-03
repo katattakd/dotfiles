@@ -19,54 +19,55 @@ sudo pacman -D --asexplicit base manjaro-release manjaro-system openssh sudo
 sudo pacman -D --asexplicit ap6256-firmware linux-aarch64 pinebookpro-post-install uboot-pinebookpro zswap-arm # Pinebook Pro specific
 
 # Package documentation
-sudo pacman -D --asexplicit man-db man-pages texinfo 
+sudo pacman -D --asexplicit man-db man-pages texinfo
 
 # Networking essentials
-sudo pacman -S networkmanager ufw
+sudo pacman -S --asexplicit networkmanager ufw
 sudo systemctl enable --now NetworkManager ufw
 sudo ufw enable
 
 # Audio essentials
-sudo pacman -S pulseaudio pulseaudio-alsa pulsemixer
+sudo pacman -S --asexplicit pulsemixer
 
 # Disk tools
 sudo pacman -D --asexplicit ncdu parted
 #sudo pacman -S gparted
 
 # Media encoding tools
-sudo pacman -S exiv2 ffmpeg imagemagick sox youtube-dl
+sudo pacman -S --asexplicit exiv2 ffmpeg imagemagick sox youtube-dl
 
 # Office tools
-#sudo pacman -S libreoffice speedcrunch giac
+#sudo pacman -S --asexplicit libreoffice speedcrunch giac
 
 # Audio editing tools
-#sudo pacman -S audacity lmms
+#sudo pacman -S --asexplicit audacity lmms
 
 # Image editing tools
-#sudo pacman -S gimp inkscape krita rawtherapee
+#sudo pacman -S --asexplicit gimp inkscape krita rawtherapee
 
 # Video editing tools
-#sudo pacman -S blender openshot
+#sudo pacman -S --asexplicit blender openshot
 
 # Advanced networking tools
-sudo pacman -S bind-tools nmap wrk
-#sudo pacman -S wireshark 
+# TODO: Add wrk
+sudo pacman -S --asexplicit bind-tools nmap
+#sudo pacman -S --asexplicit wireshark
 
 # SDR tools
 # TODO: test this, add nrsc5 and rtl_433
-#sudo pacman -S rtl-sdr gqrx
+#sudo pacman -S --asexplicit rtl-sdr gqrx
 
 # Dev tools
-sudo pacman -S base-devel rustup
+sudo pacman -S --asexplicit base-devel rustup
 
 # CLI tools
 # TODO: Add curlie
-sudo pacman -S exa fish htop lostfiles neofetch neovim ytop
+sudo pacman -S --asexplicit exa fish htop lostfiles neofetch neovim ytop
 
 # GUI essentials
-sudo pacman -S i3status grimshot
-sudo pacman -S mpv termite
-sudo pacman -S firefox
+sudo pacman -S --asexplicit i3status grimshot
+sudo pacman -S --asexplicit mpv termite
+sudo pacman -S --asexplicit firefox
 
 # Setup rustup
 #rustup toolchain install stable-aarch64-unknown-linux-gnu
@@ -78,7 +79,7 @@ sudo pacman -S firefox
 git config --global color.ui auto
 
 # Setup vim-plugged
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -Lo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Remove unused packages
 sudo pacman -Rsunc $(pacman -Qtdq)
