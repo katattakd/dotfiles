@@ -290,9 +290,3 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
-
-// Fix apulse
-// (Taken from https://codelab.wordpress.com/2017/12/11/firefox-drops-alsa-apulse-to-the-rescue/)
-user_pref("security.sandbox.content.read_path_whitelist", "/dev/snd/,/home/kat/.asounrdc");
-user_pref("security.sandbox.content.write_path_whitelist", "/dev/snd/");
-user_pref("security.sandbox.content.syscall_whitelist", 54);
