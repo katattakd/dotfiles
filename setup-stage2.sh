@@ -14,3 +14,7 @@ sudo pacman -D --asexplicit --noconfirm parted
 
 # Audio essentials
 sudo pacman -S --asexplicit --noconfirm pulsemixer
+
+# Developer essentials
+sudo pacman -S --asexplicit --noconfirm base-devel
+

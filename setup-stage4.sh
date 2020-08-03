@@ -46,7 +46,6 @@ sudo pacman -S --asexplicit openshot
 
 # Developer tools
 # TODO: Add curlie
-sudo pacman -S --asexplicit base-devel
 sudo pacman -S --asexplicit go
 sudo pacman -S --asexplicit rustup
 git config --global color.ui auto
