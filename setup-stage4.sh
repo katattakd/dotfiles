@@ -11,7 +11,7 @@ sudo pacman -S --asexplicit --noconfirm bind-tools dnsmasq nmap wireshark-cli
 sudo pacman -S --asexplicit --noconfirm htop neofetch ytop
 
 # Media encoding tools
-sudo pacman -S --asexplicit --noconfirm exiv2 ffmpeg imagemagick sox youtube-dl
+sudo pacman -S --asexplicit --noconfirm exiv2 ffmpeg ghostscript imagemagick imagemagick-doc sox youtube-dl
 
 # Developer tools
 # TODO: Add curlie

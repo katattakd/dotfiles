@@ -5,7 +5,7 @@ set -euo pipefail
 sudo pacman -S --asexplicit --noconfirm sway swaylock i3status grimshot termite wl-clipboard xorg-server-xwayland
 
 # CLI customizations
-sudo pacman -S --asexplicit --noconfirm exa fish neovim pkgfile
+sudo pacman -S --asexplicit --noconfirm exa fish neovim
 curl -Lo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Pulseaudio
