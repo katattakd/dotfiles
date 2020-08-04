@@ -1,4 +1,4 @@
-// This borrows a LOT from ghacks-user.js (commit 1a389c021417833ccd688a52d05cd4b0b08734fa)
+// This borrows a LOT from ghacks-user.js (commit 8c2bcc0352fccb23334549db313ee7411d702f78)
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 // Get rid of some annoyances
@@ -6,10 +6,8 @@ user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("intl.accept_languages", "en-US, en");
 user_pref("javascript.use_us_english_locale", true);
-user_pref("intl.charset.fallback.override", "windows-1252");
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.urlbar.trimURLs", false);
-user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 user_pref("browser.sessionstore.interval", 600000);
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
@@ -153,7 +151,7 @@ user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.ftp.enabled", false);
-//user_pref("network.file.disable_unc_paths", true); Broken in FF 77
+user_pref("network.file.disable_unc_paths", true);
 user_pref("network.gio.supported-protocols", "");
 user_pref("layout.css.visited_links_enabled", false);
 user_pref("browser.search.suggest.enabled", false);
@@ -172,7 +170,7 @@ user_pref("signon.formlessCapture.enabled", false);
 user_pref("network.auth.subresource-http-auth-allow", 1);
 user_pref("permissions.memory_only", true);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
-user_pref("media.memory_cache_max_size", 16384);
+user_pref("media.memory_cache_max_size", 65536);
 user_pref("browser.sessionstore.max_tabs_undo", 0);
 user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.sessionstore.resume_from_crash", false);
@@ -248,15 +246,16 @@ user_pref("privacy.firstparty.isolate", true); // Can break some login pages
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 //user_pref("privacy.resistFingerprinting.letterboxing", true); // Looks ugly af
+user_pref("privacy.partition.network_state", true);
 
-// Privacy improvements that impact performance
-//user_pref("network.prefetch-next", false);
-//user_pref("network.dns.disablePrefetch", true);
-//user_pref("network.dns.disablePrefetchFromHTTPS", true);
-//user_pref("network.predictor.enabled", false);
-//user_pref("network.predictor.enable-prefetch", false);
-//user_pref("network.http.speculative-parallel-limit", 0);
-//user_pref("browser.urlbar.speculativeConnect.enabled", false);
+// Privacy/security improvements that impact performance
+user_pref("network.prefetch-next", false);
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
+user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enable-prefetch", false);
+user_pref("network.http.speculative-parallel-limit", 0);
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.cache.disk.enable", false);
 //user_pref("browser.cache.memory.enable", false);
 user_pref("security.tls.enable_0rtt_data", false);
@@ -290,3 +289,12 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
+
+// Performance improvements
+user_pref("gfx.webrender.all", true);
+user_pref("layers.acceleration.force-enabled", true);
+user_pref("dom.ipc.processCount", 16);
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+user_pref("browser.sessionhistory.max_entries", 20);
+user_pref("network.http.http3.enabled", true);
+
