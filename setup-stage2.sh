@@ -2,7 +2,8 @@
 set -euo pipefail
 
 # Program documentation
-sudo pacman -D --asexplicit --noconfirm man-db man-pages texinfo
+sudo pacman -D --asexplicit --noconfirm man-db man-pages
+sudo pacman -S --asexplicit --noconfirm texinfo
 
 # Disk essentials
 sudo pacman -D --asexplicit --noconfirm ncdu parted
