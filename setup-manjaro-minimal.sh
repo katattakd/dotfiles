@@ -10,16 +10,16 @@ sh setup.sh
 # Install updates and flag all non-core packages for removal
 sh setup-stage1.sh
 
-# Install and setup essential packages
+# Install and setup essential tools
 sh setup-stage2.sh
 
-# Install and setup Sway-related packages
+# Install and setup a graphical enviornment
 sh setup-stage3.sh
 
-# Install and setup optional packages
+# Install and setup useful tools
 sh setup-stage4.sh
 
-# Remove unused packages
+# Install optional GUI tools, remove unused packages
 sh setup-stage5.sh
 
 # Disable SSH
