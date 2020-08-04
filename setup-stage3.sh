@@ -13,4 +13,4 @@ sudo pacman -S --asexplicit --noconfirm pulseaudio-alsa pulsemixer
 
 # GUI essentials
 sudo pacman -S --asexplicit --noconfirm imv mpv termite
-sudo pacman -S --asexplicit --noconfirm firefox noto-fonts-emoji hunspell-en_US
+sudo pacman -S --asexplicit --noconfirm firefox noto-fonts-cjk noto-fonts-emoji hunspell-en_US
