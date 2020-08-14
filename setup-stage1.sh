@@ -8,10 +8,7 @@ sudo pacman -Syu
 sudo pacman -D --noconfirm --asdeps $(pacman -Qqe)
 
 # Core system packages
-sudo pacman -D --noconfirm --asexplicit base manjaro-release manjaro-system sudo
-
-# ARM system packages
-sudo pacman -D --noconfirm --asexplicit linux-aarch64 zswap-arm
+sudo pacman -D --noconfirm --asexplicit base linux manjaro-release manjaro-system sudo
 
 # Pinebook Pro system packages
-sudo pacman -D --noconfirm --asexplicit ap6256-firmware pinebookpro-post-install uboot-pinebookpro
+sudo pacman -D --noconfirm --asexplicit ap6256-firmware pinebookpro-post-install uboot-pinebookpro zswap-arm
