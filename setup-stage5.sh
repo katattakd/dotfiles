@@ -25,6 +25,9 @@ sudo pacman -S --asexplicit faac openshot
 # Advanced networking tools
 sudo pacman -S --asexplicit wireshark-qt
 
+# Virtualization tools
+sudo pacman -S --asexplicit qemu qemu-arch-extra
+
 # SDR tools
 # TODO: Add rtl_433 and nrsc5
 sudo pacman -S --asexplicit rtl-sdr gqrx
