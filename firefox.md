@@ -11,7 +11,7 @@ These steps assume that you've already added the required user.js file in the do
   - Set theme to Dark, and density to Compact
   - Remove Flexible Space from toolbar
   - Remove Home, Library and Sidebars icons
-  - Add "Open File" to corner of window
+  - Add "Open File" and "Save Page" to corner of window
 - Add the below extensions (add uMatrix last):
   - uMatrix - Block everything by default
   - uBlock Origin - Block stuff whitelisted by uMatrix
