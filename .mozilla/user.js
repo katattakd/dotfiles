@@ -293,7 +293,8 @@ user_pref("security.insecure_connection_text.enabled", true);
 // Performance improvements
 user_pref("gfx.webrender.all", true);
 user_pref("layers.acceleration.force-enabled", true);
-user_pref("dom.ipc.processCount", 16);
+user_pref("dom.ipc.processCount", 32);
 user_pref("browser.sessionhistory.max_entries", 20);
+user_pref("layout.frame_rate", 60);
 //user_pref("network.http.http3.enabled", true); // Can cause connection issues
 
