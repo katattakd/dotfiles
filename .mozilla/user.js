@@ -1,4 +1,4 @@
-// This borrows a LOT from ghacks-user.js (commit 8c2bcc0352fccb23334549db313ee7411d702f78)
+// This borrows a LOT from ghacks-user.js (commit c6f53c876803a4af26e1000c17455cc09f04cd9b)
 // https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js
 
 // Get rid of some annoyances
@@ -11,15 +11,6 @@ user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.sessionstore.interval", 600000);
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
-user_pref("dom.disable_window_open_feature.close", true);
-user_pref("dom.disable_window_open_feature.location", true);
-user_pref("dom.disable_window_open_feature.menubar", true);
-user_pref("dom.disable_window_open_feature.minimizable", true);
-user_pref("dom.disable_window_open_feature.personalbar", true);
-user_pref("dom.disable_window_open_feature.resizable", true);
-user_pref("dom.disable_window_open_feature.status", true);
-user_pref("dom.disable_window_open_feature.titlebar", true);
-user_pref("dom.disable_window_open_feature.toolbar", true);
 user_pref("dom.disable_window_move_resize", true);
 user_pref("browser.link.open_newwindow", 3);
 user_pref("browser.link.open_newwindow.restriction", 0);
@@ -69,7 +60,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 //user_pref("browser.cache.memory.enable", false);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "{}");
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
@@ -138,6 +129,8 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 user_pref("network.manage-offline-status", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
+user_pref("browser.region.network.url", "");
+user_pref("browser.region.update.enabled", false);
 
 // Various privacy/security improvements
 user_pref("browser.privatebrowsing.autostart", true);
