@@ -28,12 +28,19 @@ These steps assume that you've already added the required user.js file in the do
 - Load per-site rulesets as needed.
 
 ### uBlock Origin setup
-- Enable and update the rulesets in these categories:
+- Enable "I am an advanced user"
+- Enable all options under "Privacy"
+- Enable "Block media elements larger than 1000KB"
+- Enable "Block remote fonts"
+- Enable "Disable JavaScript"
+- Enable and update all rulesets in these categories:
+  - Built-in
   - Ads
   - Privacy
   - Malware Domains
-- Disable the rulesets in these categories (they conflict with uMatrix):
+  - Annoyances
   - Multipurpose
+- Open dynamic filtering menu, globally block 3rd party scripts and 3rd party frames, then save changes
 
 ### Privacy Badger setup
 - Enable "Learn in Private/Incognito windows"
