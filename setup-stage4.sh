@@ -5,13 +5,13 @@ set -euo pipefail
 sudo pacman -S --asexplicit --noconfirm pamac-cli lostfiles
 
 # Networking tools
-sudo pacman -S --asexplicit --noconfirm bind-tools dnsmasq nmap wireshark-cli
+sudo pacman -S --asexplicit --noconfirm bind-tools nmap
 
 # Monitoring tools
 sudo pacman -S --asexplicit --noconfirm htop neofetch ytop
 
 # Media encoding tools
-sudo pacman -S --asexplicit --noconfirm exiv2 ffmpeg ghostscript imagemagick imagemagick-doc sox youtube-dl
+sudo pacman -S --asexplicit --noconfirm exiv2 ffmpeg imagemagick imagemagick-doc sox youtube-dl
 
 # Developer tools
 # TODO: Add curlie

@@ -8,9 +8,6 @@ sudo pacman -S --asexplicit --noconfirm sway swaylock i3status grimshot noto-fon
 sudo pacman -S --asexplicit --noconfirm exa fish neovim
 curl -Lo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Pulseaudio
-sudo pacman -S --asexplicit --noconfirm pulseaudio-alsa pulsemixer
-
 # GUI essentials
 sudo pacman -S --asexplicit --noconfirm imv mpv termite
 sudo pacman -S --asexplicit --noconfirm firefox noto-fonts-cjk noto-fonts-emoji hunspell-en_US

@@ -1,26 +1,24 @@
 #!/bin/sh
 
 # Disk tools
-sudo pacman -S --asexplicit gparted dosfstools f2fs-tools exfat-utils ntfs-3g xfsprogs gpart mtools
+sudo pacman -S --asexplicit gparted dosfstools exfat-utils ntfs-3g gpart
 
 # Office tools
-sudo pacman -S --asexplicit libreoffice-fresh pstoedit libmythes sane gst-plugins-base-libs coin-or-mp
+sudo pacman -S --asexplicit libreoffice-fresh pstoedit libmythes gst-plugins-base-libs coin-or-mp
 sudo pacman -S --asexplicit speedcrunch xcas
 
 # Audio creation/editing tools
 sudo pacman -S --asexplicit audacity lmms
 
 # Illustrating tools
-sudo pacman -S --asexplicit inkscape krita scour
+sudo pacman -S --asexplicit inkscape krita
 
 # 3D modeling tools
-sudo pacman -S --asexplicit blender
+# (Broken on PBP!)
+#sudo pacman -S --asexplicit blender
 
 # Image editing tools
 sudo pacman -S --asexplicit gimp rawtherapee
-
-# Video creation/editing tools
-sudo pacman -S --asexplicit faac openshot
 
 # Advanced networking tools
 sudo pacman -S --asexplicit wireshark-qt
