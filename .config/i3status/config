@@ -3,7 +3,7 @@ general {
 	color_good = "#87D787"
 	color_degraded = "#D7AF87"
 	color_bad = "#FF5F87"
-	interval = 5
+	interval = 1
 }
 
 order += "wireless _first_"
@@ -51,5 +51,5 @@ battery 0 {
 }
 
 tztime local {
-	format = " %a %D %R %Z"
+	format = " %c"
 }

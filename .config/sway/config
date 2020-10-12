@@ -52,7 +52,8 @@ input type:pointer {
 set $mod Mod4
 
 bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'
-bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox'
+bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox --private-window'
+bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox'
 bindsym $mod+Shift+l exec 'swaylock'
 
 bindsym $mod+q kill
