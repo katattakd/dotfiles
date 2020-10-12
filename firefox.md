@@ -11,21 +11,12 @@ These steps assume that you've already added the required user.js file in the do
   - Set theme to Dark, and density to Compact
   - Remove Flexible Space from toolbar
   - Remove Home, Library and Sidebars icons
-  - Add "Open File" and "Save Page" to corner of window
-- Add the below extensions (add uMatrix last):
-  - uMatrix - Block everything by default
-  - uBlock Origin - Block stuff whitelisted by uMatrix
-  - Privacy Badger - Block stuff that uBlock Origin doesn't catch
-- Change the order of toolbar extensions to uMatrix, uBlock Origin, Privacy Badger.
+  - Add "Developer" after the refresh icon, and "Forget" to corner of window
+- Add the below extensions:
+  - uBlock Origin
+  - Privacy Badger
+- Change the order of toolbar extensions to uBlock Origin, Privacy Badger.
 - Remove the favorite icon from the address bar
-
-### uMatrix setup
-- Enable and update all Hosts files assets, except hpHosts.
-  - https://github.com/uBlockOrigin/uMatrix-issues/issues/223
-- Open the Matrix and go to the global scope.
-  - Set all scripts to blocked by default.
-- Save all temporary changes.
-- Load per-site rulesets as needed.
 
 ### uBlock Origin setup
 - Enable "I am an advanced user"
