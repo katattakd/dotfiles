@@ -15,12 +15,13 @@ These steps assume that you've already added the required user.js file in the do
 - Add the below extensions:
   - uBlock Origin
   - Privacy Badger
-- Change the order of toolbar extensions to uBlock Origin, Privacy Badger.
+  - Your preferred password manager.
+- Change the order of toolbar extensions to uBlock Origin, Privacy Badger, password manager.
 - Remove the favorite icon from the address bar
 
 ### uBlock Origin setup
 - Enable "I am an advanced user"
-- Enable all options under "Privacy"
+- Enable "Block CSP reports"
 - Enable "Block media elements larger than 1000KB"
 - Enable "Block remote fonts"
 - Enable "Disable JavaScript"
@@ -31,5 +32,5 @@ These steps assume that you've already added the required user.js file in the do
   - Malware Domains
   - Annoyances
   - Multipurpose
-- Open dynamic filtering menu, globally block 3rd party scripts and 3rd party frames, then save changes
+- Open dynamic filtering menu, globally block 3rd party frames, then save changes.
 
