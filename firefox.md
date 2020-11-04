@@ -33,6 +33,3 @@ These steps assume that you've already added the required user.js file in the do
   - Multipurpose
 - Open dynamic filtering menu, globally block 3rd party scripts and 3rd party frames, then save changes
 
-### Privacy Badger setup
-- Enable "Learn in Private/Incognito windows"
-
