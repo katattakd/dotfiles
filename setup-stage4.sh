@@ -19,8 +19,6 @@ sudo pacman -S --asexplicit --noconfirm base-devel hexyl rustup
 git config --global color.ui auto
 
 # Setup rustup
-rustup toolchain install stable-aarch64-unknown-linux-gnu
-rustup toolchain install stable-x86_64-unknown-linux-gnu
-# NOTE: To view documentation, open the below link.
-# file:///home/kat/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/doc/rust/html/index.html
-
+rustup toolchain install stable
+rustup toolchain install nightly
+rustup default nightly

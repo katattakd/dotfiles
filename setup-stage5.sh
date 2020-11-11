@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Disk tools
-sudo pacman -S --asexplicit gparted dosfstools exfat-utils ntfs-3g gpart
+sudo pacman -S --asexplicit gparted dosfstools exfat-utils ntfs-3g gpart mtools
 
 # Office tools
 sudo pacman -S --asexplicit libreoffice-fresh pstoedit libmythes gst-plugins-base-libs coin-or-mp
