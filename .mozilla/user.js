@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit c90341ddedf7e0c1ae1256d647a9470d056602c1)
+// This borrows a LOT from arkenfox/user.js (commit ccbca41e2d73fa63908fd87c2a7d35615016e7f7)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
@@ -17,9 +17,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false)
 user_pref("browser.library.activity-stream.enabled", false);
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
 user_pref("geo.provider.use_gpsd", false);
-user_pref("browser.search.geoSpecificDefaults", false);
-user_pref("browser.search.geoSpecificDefaults.url", "");
-user_pref("browser.region.network.url", "")
+user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 user_pref("intl.accept_languages", "en-US, en");
 user_pref("javascript.use_us_english_locale", true);
@@ -67,9 +65,9 @@ user_pref("extensions.systemAddon.update.enabled", false);
 user_pref("extensions.systemAddon.update.url", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("extensions.screenshots.disabled", true);
-user_pref("extensions.screenshots.upload-disabled", true);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.available", "off");
+user_pref("extensions.formautofill.creditCards.available", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("extensions.webcompat-reporter.enabled", false);
@@ -163,7 +161,7 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
 user_pref("media.memory_cache_max_size", 65536);
 user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.shell.shortcutFavicons", false);
-user_pref("browser.chrome.site_icons", false)
+user_pref("browser.chrome.site_icons", false);
 user_pref("gfx.downloadable_fonts.fallback_delay", -1);
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
@@ -202,6 +200,7 @@ user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("network.IDN_show_punycode", true);
 user_pref("browser.display.use_system_colors", false);
 user_pref("permissions.delegation.enabled", false);
+user_pref("privacy.window.name.update.enabled", true);
 user_pref("extensions.enabledScopes", 5);
 user_pref("extensions.autoDisableScopes", 15);
 user_pref("extensions.webextensions.restrictedDomains", "");
@@ -234,7 +233,6 @@ user_pref("privacy.clearOnShutdown.openWindows", true);
 user_pref("privacy.cpd.openWindows", true);
 user_pref("privacy.sanitize.timeSpan", 0);
 user_pref("privacy.firstparty.isolate", true); // Can break some login pages
-user_pref("privacy.partition.network_state", true);
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 //user_pref("privacy.resistFingerprinting.letterboxing", true); // Looks ugly af
@@ -256,7 +254,7 @@ user_pref("javascript.options.asmjs", false);
 //user_pref("javascript.options.ion", false);
 //user_pref("javascript.options.baselinejit", false);
 //user_pref("javascript.options.jit_trustedprincipals", true);
-//user_pref("javascript.options.wasm", false);
+user_pref("javascript.options.wasm", false);
 //user_pref("layers.acceleration.disabled", true);
 user_pref("browser.cache.offline.enable", false);
 user_pref("dom.caches.enabled", false);
@@ -278,10 +276,4 @@ user_pref("dom.security.https_only_mode", true);
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 user_pref("security.insecure_connection_text.enabled", true);
-
-// Performance improvements
-//user_pref("gfx.webrender.all", true);
-//user_pref("layers.acceleration.force-enabled", true);
-//user_pref("dom.ipc.processCount", 32);
-//user_pref("network.http.http3.enabled", true); // Can cause connection issues
 
