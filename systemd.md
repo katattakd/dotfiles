@@ -1,2 +1,2 @@
 ## /etc/systemd/logind.conf
-- Change HandlePowerKey to "lock"
+- Change HandlePowerKey to "ignore"
