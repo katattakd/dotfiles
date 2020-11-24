@@ -22,7 +22,6 @@ These steps assume that you've already added the required user.js file in the do
 ### uBlock Origin setup
 - Enable "I am an advanced user"
 - Enable "Block CSP reports"
-- Enable "Block media elements larger than 1000KB"
 - Enable "Block remote fonts"
 - Enable "Disable JavaScript"
 - Enable and update all rulesets in these categories:
