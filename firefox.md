@@ -24,6 +24,7 @@ These steps assume that you've already added the required user.js file in the do
 - Enable "Block CSP reports"
 - Enable "Block remote fonts"
 - Enable "Disable JavaScript"
+- Set "Block media elements larger than" limit to 0KB. Leave disabled.
 - Enable and update all rulesets in these categories:
   - Built-in
   - Ads
