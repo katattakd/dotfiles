@@ -20,5 +20,6 @@ git config --global color.ui auto
 
 # Setup rustup
 rustup toolchain install stable
+rustup toolchain install beta
 rustup toolchain install nightly
-rustup default nightly
+rustup default beta
