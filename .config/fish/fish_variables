@@ -25,6 +25,7 @@ SETUVAR _fish_abbr_ln:ln\x20\x2dsb
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid
 SETUVAR _fish_abbr_lsblk:lsblk\x20\x2do\x20NAME\x2cSIZE\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
 SETUVAR _fish_abbr_ltree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
+SETUVAR _fish_abbr_man:man\x20\x2d\x2dhtml\x3dfirefox
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
 SETUVAR _fish_abbr_mv:mv\x20\x2di
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
@@ -32,7 +33,6 @@ SETUVAR _fish_abbr_sud:sudo\x20\x2dEH
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_uname:uname\x20\x2dsrm
 SETUVAR _fish_abbr_vi:nvim
-SETUVAR _fish_abbr_xcas:nohup\x20xcas\x20\x3e\x20/dev/null\x20\x26
 SETUVAR fish_color_autosuggestion:white
 SETUVAR fish_color_cancel:brblack
 SETUVAR fish_color_command:brmagenta
