@@ -1,3 +1,5 @@
 [options]
 background = checks
 overlay = true
+overlay_font = Monospace:18
+upscaling_method = nearest_neighbour
