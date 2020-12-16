@@ -2,7 +2,7 @@
 
 # Disk tools
 sudo pacman -S --asexplicit gparted
-sudo pacman -S --asdeps dosfstools jfsutils f2fs-utils btrfs-progs exfat-utils ntfs-3g reiserfsprogs udftools xfsprogs nilfs-utils gpart mtools
+sudo pacman -S --asdeps dosfstools jfsutils f2fs-tools btrfs-progs exfat-utils ntfs-3g reiserfsprogs udftools xfsprogs nilfs-utils gpart mtools
 
 # Office tools
 sudo pacman -S --asexplicit libreoffice-fresh

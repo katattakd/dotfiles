@@ -5,7 +5,7 @@ set -euo pipefail
 sudo pacman -S --asdeps --noconfirm dnsmasq bluez ppp modemmanager iwd
 
 # Sway + essential packages
-sudo pacman -S --asexplicit --noconfirm sway i3status grimshot noto-fonts
+sudo pacman -S --asexplicit --noconfirm sway i3status grimshot noto-fonts xorg-xev
 sudo pacman -S --asdeps --noconfirm swaylock wl-clipboard xorg-server-xwayland
 sudo pacman -S --asdeps --noconfirm noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
