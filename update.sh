@@ -2,13 +2,13 @@
 set -euo pipefail
 
 # Update installed packages
-sudo pacman -Syu
+pamac upgrade -a --devel
 
 # Remove orphaned packages
-sudo pacman -Rsunc $(pacman -Qtdq)
+pamac remove -o
 
 # Clean cache
-sudo pacman -Sc
+pamac clean -b
 
 # Update Vim plugins
 echo ":PlugUpdate" | nvim -s -
