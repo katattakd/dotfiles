@@ -1,3 +1,5 @@
+let g:polyglot_disabled = ['autoindent']
+let g:lightline = {'colorscheme': 'onedark'}
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'sheerun/vim-polyglot'
@@ -15,7 +17,5 @@ set mouse=a
 set smartcase
 set lazyredraw
 set list
-autocmd FileType * setlocal noexpandtab
 
 colorscheme onedark
-let g:lightline = {'colorscheme': 'onedark'}

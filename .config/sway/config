@@ -16,7 +16,7 @@ client.urgent #ff386a #ff386a #262626 #ff386a
 
 # top bar
 bar {
-	font Noto Sans Mono 10
+	font Monospace 10
 	position top
 	status_command i3status
 	separator_symbol |
@@ -54,7 +54,7 @@ set $mod Mod4
 bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox'
-bindsym $mod+BackSpace exec 'xcas'
+bindsym $mod+BackSpace exec 'FONTCONFIG_FILE=~/.config/fontconfig/xcas.conf xcas'
 bindsym $mod+Shift+BackSpace exec 'speedcrunch'
 bindsym $mod+Shift+l exec 'swaylock'
 
