@@ -13,7 +13,9 @@ sudo pacman -S --asdeps --noconfirm noto-fonts-cjk noto-fonts-emoji noto-fonts-e
 sudo pacman -S --asexplicit --noconfirm exa fish neovim
 sudo pacman -S --asdeps --noconfirm python pkgfile
 sudo pacman -S --asdeps --noconfirm python-neovim wl-clipboard
-curl -Lo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Configure vim-plugged
+nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugInstall" -c "qa"`
 
 # GUI essentials
 sudo pacman -S --asexplicit --noconfirm imv mpv termite

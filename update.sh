@@ -11,7 +11,7 @@ pamac remove -o
 pamac clean -b
 
 # Update Vim plugins
-echo ":PlugUpdate" | nvim -s -
+nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!"
 
 # Update rustup toolchains
 rustup update
