@@ -18,6 +18,7 @@ SETUVAR _fish_abbr_chown:chown\x20\x2dhR
 SETUVAR _fish_abbr_cp:cp\x20\x2dir
 SETUVAR _fish_abbr_curlie:curlie\x20\x2dLvvv
 SETUVAR _fish_abbr_df:df\x20\x2dTh
+SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
