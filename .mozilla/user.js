@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit ccbca41e2d73fa63908fd87c2a7d35615016e7f7)
+// This borrows a LOT from arkenfox/user.js (commit c980bda695df4232c769535fbe19327bf5ae86d8)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
@@ -140,7 +140,6 @@ user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.ftp.enabled", false);
 user_pref("network.file.disable_unc_paths", true);
 user_pref("network.gio.supported-protocols", "");
-// user_pref("layout.css.visited_links_enabled", false); Affects useability
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
@@ -256,7 +255,7 @@ user_pref("javascript.options.asmjs", false);
 //user_pref("javascript.options.jit_trustedprincipals", true);
 user_pref("javascript.options.wasm", false);
 //user_pref("layers.acceleration.disabled", true);
-user_pref("browser.cache.offline.enable", false);
+user_pref("browser.cache.offline.storage.enable", false);
 user_pref("dom.caches.enabled", false);
 
 // TLS hardening
@@ -269,6 +268,8 @@ user_pref("security.OCSP.require", true);
 user_pref("security.pki.sha1_enforcement_level", 1);
 user_pref("security.nocertdb", true);
 user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.pki.crlite_mode", 2);
 user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 user_pref("security.mixed_content.block_object_subrequest", true);
