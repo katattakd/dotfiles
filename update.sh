@@ -10,6 +10,9 @@ pamac remove -o
 # Clean cache
 pamac clean -b
 
+# Update Fish completions
+fish_update_completions
+
 # Update Vim plugins
 nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!"
 
