@@ -5,7 +5,7 @@ set -euo pipefail
 sudo pacman -S --asexplicit --noconfirm pamac-cli lostfiles
 
 # Networking tools
-sudo pacman -S --asexplicit --noconfirm bind-tools nmap
+sudo pacman -S --asexplicit --noconfirm bind-tools mtr nmap
 
 # Monitoring tools
 sudo pacman -S --asexplicit --noconfirm htop neofetch ytop
