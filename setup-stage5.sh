@@ -37,6 +37,9 @@ sudo pacman -S --asdeps qemu-arch-extra samba qemu-block-iscsi qemu-block-gluste
 # TODO: Add rtl_433 and nrsc5
 sudo pacman -S --asexplicit rtl-sdr gqrx
 
+# GPS tools
+sudo pacman -S --asexplicit gpsd
+sudo pacman -S --asdeps php php-gd python-cairo python-gobject python-pyserial
 
 set -euo pipefail
 
