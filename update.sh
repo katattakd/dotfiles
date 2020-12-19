@@ -1,5 +1,4 @@
 #!/bin/sh
-set -euo pipefail
 
 # Update installed packages
 pamac upgrade -a --devel
@@ -11,7 +10,7 @@ pamac remove -o
 pamac clean -b
 
 # Update Fish completions
-fish_update_completions
+fish -c fish_update_completions
 
 # Update Vim plugins
 nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!"
