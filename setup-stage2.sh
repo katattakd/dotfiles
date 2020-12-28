@@ -15,7 +15,7 @@ sudo ufw enable
 
 # Audio essentials
 sudo pacman -S --asexplicit --noconfirm alsa-utils
-sudo pacman -S --asexplicit --noconfirm pulseaudio-alsa pulsemixer
+sudo pacman -S --asexplicit --noconfirm pulseaudio pulseaudio-alsa pulsemixer
 
 # USB essentials
 sudo pacman -S --asexplicit --noconfirm usbutils
