@@ -41,6 +41,10 @@ input type:touchpad {
 	pointer_accel -.2
 	scroll_factor .8
 }
+input type:keyboard {
+	repeat_delay 300
+	repeat_rate 30
+}
 input type:pointer {
 	accel_profile flat
 }
