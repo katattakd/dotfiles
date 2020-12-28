@@ -26,7 +26,7 @@ set mouse=a
 set smartcase
 set lazyredraw
 set list
-
+set spell
 set clipboard+=unnamedplus
 
 autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
