@@ -8,13 +8,13 @@ gaps outer -2
 # performance improvements
 #xwayland disable
 
-# status bar
+# title bar
 client.focused #00ffff #00ffff #262626 #00ffff
 client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
 client.unfocused #5f5f5f #5f5f5f #afafaf #5f5f5f
 client.urgent #ff386a #ff386a #262626 #ff386a
 
-# top bar
+# status bar
 bar {
 	font Monospace 10
 	position top
