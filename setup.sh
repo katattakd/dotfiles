@@ -8,6 +8,7 @@ ln -s ~/dotfiles/.config/pulse/* ~/.config/pulse
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
+ln -s ~/dotfiles/.bashrc ~/.bashrc
 echo ~/.mozilla/firefox/*.default* | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 
 ln -sf ~/.bashrc ~/.bash_profile
