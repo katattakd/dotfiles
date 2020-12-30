@@ -28,6 +28,7 @@ set lazyredraw
 set list
 set spell
 set clipboard+=unnamedplus
+let g:netrw_dirhistmax = 0
 
 autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 colorscheme onedark
