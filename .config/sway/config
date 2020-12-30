@@ -2,8 +2,7 @@
 output * bg #191919 solid_color
 default_border none
 default_floating_border none
-gaps inner 10
-gaps outer -2
+gaps inner 8
 
 # performance improvements
 #xwayland disable
@@ -49,7 +48,8 @@ input type:pointer {
 	accel_profile flat
 }
 
-# multi-display
+# display configuration
+output * adaptive_sync on
 #set $laptop eDP-1
 #bindswitch --reload lid:on output $laptop disable
 #bindswitch --reload lid:off output $laptop enable
