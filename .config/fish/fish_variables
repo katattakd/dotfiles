@@ -25,6 +25,7 @@ SETUVAR _fish_abbr_df:df\x20\x2dTh
 SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
 SETUVAR _fish_abbr_fd:fd\x20\x2dHI
+SETUVAR _fish_abbr_halt:systemctl\x20halt
 SETUVAR _fish_abbr_hexdump:hexdump\x20\x2dC
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
@@ -39,6 +40,8 @@ SETUVAR _fish_abbr_nmapp:sudo\x20nmap\x20\x2dv\x20\x2dT5\x20\x2dA\x20\x2d\x2doss
 SETUVAR _fish_abbr_ping4:ping\x20\x2d4
 SETUVAR _fish_abbr_ping6:ping\x20\x2d6
 SETUVAR _fish_abbr_pingf:sudo\x20ping\x20\x2df
+SETUVAR _fish_abbr_poweroff:systemctl\x20poweroff
+SETUVAR _fish_abbr_reboot:systemctl\x20reboot
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
