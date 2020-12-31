@@ -15,14 +15,12 @@ let g:lightline = {'colorscheme': 'onedark'}
 
 " Setup plugins through vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
-
 call plug#end()
 
 " Adjust vim settings
@@ -35,5 +33,8 @@ set list
 set spell
 set clipboard+=unnamedplus
 let g:netrw_dirhistmax = 0
-autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 colorscheme onedark
+
+" Use the same indentation settings regardless of file type
+setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
+autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
