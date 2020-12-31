@@ -1,27 +1,18 @@
 #!/bin/sh
-set -euo pipefail
 
-# Package tools
-sudo pacman -S --asexplicit --noconfirm pamac-cli lostfiles
+# Font extras
+sudo pacman -S --asdeps noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
 # Networking tools
-sudo pacman -S --asexplicit --noconfirm bind-tools mtr nmap
-
-# Monitoring tools
-sudo pacman -S --asexplicit --noconfirm htop neofetch ytop
-sudo pacman -S --asdeps --noconfirm lsof strace
+sudo pacman -S --asexplicit bind-tools mtr nmap
 
 # Media encoding tools
-sudo pacman -S --asexplicit --noconfirm exiv2 ffmpeg imagemagick sox youtube-dl
-sudo pacman -S --asdeps --noconfirm avisynthplus ladspa
-sudo pacman -S --asdeps --noconfirm ghostscript libheif libraw librsvg libwebp libwmf libxml2 ocl-icd openexr openjpeg2 djvulibre pango imagemagick-doc
-sudo pacman -S --asdeps --noconfirm libao libmad libid3tag wavpack libpulse opus twolame
-sudo pacman -S --asdeps --noconfirm rtmpdump atomicparsley python-pycryptodome
+sudo pacman -S --asexplicit perl-image-exiftool ffmpeg imagemagick sox youtube-dl
+sudo pacman -S --asdeps ghostscript imagemagick-doc
 
 # Developer tools
-# TODO: Add curlie
-sudo pacman -S --asexplicit --noconfirm base-devel hexyl rustup
-sudo pacman -S --asdeps --noconfirm lldb gdb
+sudo pacman -S --asexplicit base-devel rustup
+sudo pacman -S --asdeps lldb gdb
 git config --global color.ui auto
 
 # Setup rustup
