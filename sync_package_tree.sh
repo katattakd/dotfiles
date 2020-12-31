@@ -1,8 +1,4 @@
 #!/bin/sh
-# FIXME: Use Alacritty instead of Termite.
-# - STATUS: Waiting for upstream fix.
-# - https://github.com/alacritty/alacritty/issues/128
-# TODO: Get Anbox working.
 
 # Create package tree
 declare -a explicit_packages=(
@@ -33,7 +29,7 @@ declare -a explicit_packages=(
 "exa" "fish" "ncdu" "neovim"
 
 # CLI essentials
-"pamac-cli" "lostfiles"
+"lostfiles"
 "fd" "ripgrep"
 "htop" "neofetch" "ytop"
 
@@ -121,7 +117,14 @@ declare -a dependency_packages=(
 # Qemu extras
 "qemu-arch-extra"
 
+# Pacgraph extras
+"tk"
+
 )
+
+
+
+
 
 # Update installed system
 sudo pacman -Syu
@@ -132,17 +135,12 @@ sudo pacman -S --asdeps --needed --noconfirm ${explicit_packages[@]} ${dependenc
 # Flag packages according to the package tree
 sudo pacman -D --noconfirm --asdeps $(pacman -Qqe)
 sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]}
-sudo pacman -D --noconfirm --asdeps ${dependency_packages[@]}
 
 # Remove packages that are not part of the package tree
-sudo pacman -Rsunc $(pacman -Qtdq)
-sudo pacman -Rsunc $(comm -23 <(pacman -Qqttd | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} | sort))
+sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} | sort)) $(pacman -Qqtd)
 
+# Update config files
+sudo -E DIFFPROG='nvim -d' pacdiff
 
-# Clean package cache
-sudo pacman -Sc
-
-# Configure installed system
-sh setup.sh
-
-echo "Installation finished. Rebooting is recommended."
+# Remove old files from package cache
+paccache -rk2 -ruk0 --min-atime 1m
