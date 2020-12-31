@@ -18,6 +18,6 @@ ln -s ~/.config ~/Desktop/
 ln -s ~/.mozilla/firefox ~/.config/firefox
 ln -s ~/dotfiles ~/Desktop/
 
-sudo systemctl disable sshd --now
-sudo systemctl enable systemd-resolved --now
+sudo systemctl disable sshd
+sudo systemctl enable systemd-resolved
 sudo ln -s ~/dotfiles/.config/networkmanager.conf /etc/NetworkManager/conf.d/settings.conf
