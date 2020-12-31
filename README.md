@@ -1,8 +1,8 @@
 # dotfiles
 Kat's dotfiles.
-These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are only to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
+These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
-## todo
+### todo
 - use alacritty instead of termite
 - get anbox working
 - clean things up a bit
