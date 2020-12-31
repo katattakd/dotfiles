@@ -3,6 +3,7 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GREP_COLORS:ms\x3d01\x3b38\x3b5\x3b202\x3amc\x3d01\x3b31\x3asl\x3d\x3acx\x3d\x3afn\x3d01\x3b38\x3b5\x3b132\x3aln\x3d32\x3abn\x3d32\x3ase\x3d00\x3b38\x3b5\x3b242
 SETUVAR --export LESS:\x2dR
+SETUVAR --export LESSHISTFILE:/dev/null
 SETUVAR --export LESS_TERMCAP_mb:\x1b\x5b01\x3b31m
 SETUVAR --export LESS_TERMCAP_md:\x1b\x5b01\x3b38\x3b5\x3b180m
 SETUVAR --export LESS_TERMCAP_me:\x1b\x5b0m

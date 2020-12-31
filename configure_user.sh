@@ -22,9 +22,5 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bashrc ~/.bash_profile
 rm ~/.bash_logout
 
-# Prevent Bash/Ash from writing history to disk
-ln -sf /dev/null ~/.ash_history
-ln -sf /dev/null ~/.bash_history
-
 # Configure Git
 git config --global color.ui auto
