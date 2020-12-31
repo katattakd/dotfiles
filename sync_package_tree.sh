@@ -31,7 +31,7 @@ declare -a explicit_packages=(
 # CLI essentials
 "lostfiles"
 "fd" "ripgrep"
-"htop" "neofetch" "ytop"
+"htop" "ytop"
 
 # Sway + (some) config dependencies
 "sway" "brightnessctl" "grimshot"

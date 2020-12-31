@@ -5,8 +5,9 @@ These should *only* be used for reference, as they are written only to support 1
 ### todo
 - use alacritty instead of termite
 - get anbox working
-- clean things up a bit
-  - remove unnecessary dependencies
+- improve gqrx configuration handling
+- clean up .curlrc
+- remove unnecessary dependencies
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
