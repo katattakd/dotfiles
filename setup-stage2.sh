@@ -7,7 +7,7 @@ sudo pacman -S --asexplicit --noconfirm texinfo
 
 # Networking essentials
 sudo pacman -S --asexplicit --noconfirm networkmanager ufw
-sudo systemctl enable --now NetworkManager ufw
+sudo systemctl enable NetworkManager ufw
 sudo ufw enable
 
 # Audio essentials
