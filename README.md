@@ -6,7 +6,6 @@ These should *only* be used for reference, as they are written only to support 1
 - use alacritty instead of termite
 - get anbox working
 - improve gqrx configuration handling
-- remove unnecessary dependencies
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
@@ -17,6 +16,9 @@ These should *only* be used for reference, as they are written only to support 1
 cd ~
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
+
+# Update mirrorlist, so that packages will download faster. This should be run every few months or so.
+sudo pacman-mirrors -f 0
 
 # Install/updates packages, and remove those that aren't necessary.
 # This also performs maintenance tasks and can be used to upgrade the system.

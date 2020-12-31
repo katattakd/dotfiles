@@ -29,9 +29,7 @@ declare -a explicit_packages=(
 "exa" "fish" "ncdu" "neovim"
 
 # CLI essentials
-"lostfiles"
-"fd" "ripgrep"
-"htop" "ytop"
+"fd" "htop" "lostfiles" "ripgrep" "ytop"
 
 # Sway + (some) config dependencies
 "sway" "brightnessctl" "grimshot"
@@ -52,9 +50,6 @@ declare -a explicit_packages=(
 "$(pacman -Qqg base-devel)" "rustup"
 
 
-
-# Misc tools
-"pacgraph" "xorg-xev"
 
 # Disk tools
 "gparted"
@@ -97,13 +92,13 @@ declare -a dependency_packages=(
 "hunspell-en_US"
 
 # Font extras
-"noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extra"
+"noto-fonts-cjk" "noto-fonts-emoji"
 
 # Imagemagick extras
 "ghostscript" "imagemagick-doc"
 
 # Developer extras
-"lldb" "gdb"
+"lldb"
 
 # Gparted extras
 "dosfstools" "f2fs-tools" "exfat-utils" "ntfs-3g" "gpart" "mtools"
@@ -116,9 +111,6 @@ declare -a dependency_packages=(
 
 # Qemu extras
 "qemu-arch-extra"
-
-# Pacgraph extras
-"tk"
 
 )
 
