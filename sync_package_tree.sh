@@ -38,7 +38,7 @@ declare -a explicit_packages=(
 
 # GUI essentials
 "imv" "mpv" "termite" "xcas"
-"firefox" "firefox-ublock-origin" "firefox-extension-privacybadger"
+"firefox" "firefox-ublock-origin"
 
 
 

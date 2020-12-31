@@ -18,7 +18,8 @@ ln -s ~/dotfiles/.ssh/* ~/.ssh
 echo ~/.mozilla/firefox/*.default* | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 
 # Configure Bash
-ln -sf ~/.bashrc ~/.bash_profile
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bashrc ~/.bash_profile
 rm ~/.bash_logout
 
 # Prevent Bash/Ash from writing history to disk

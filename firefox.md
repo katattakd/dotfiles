@@ -1,7 +1,7 @@
-## Steps to setup Firefox
-These steps assume that you've already added the required user.js file in the dotfiles repo. If you haven't done this yet, reset Firefox, open and close it once, and then run the setup.sh script.
+# Firefox setup
+These instructions assume that you've already added the required user.js file in the dotfiles repo. If you haven't done this yet, reset Firefox, open and close it once, and then run the `configure_user.sh` script.
 
-### Firefox setup
+### Firefox configuration
 - Go to Preferences
   - Set default search engine to DuckDuckGo
   - Clear all history
@@ -9,17 +9,10 @@ These steps assume that you've already added the required user.js file in the do
   - Set theme to Dark, and density to Compact
   - Remove Flexible Space from toolbar
   - Remove Home, Library and Sidebars icons
-  - Add "Developer" after the refresh icon, and "Forget" to corner of window
-- Add the below extensions:
-  - uBlock Origin
-  - Privacy Badger
-  - Your preferred password manager.
-- Change the order of toolbar extensions to uBlock Origin, Privacy Badger, password manager.
+  - Change the order of the toolbar's right side to uBlock Origin, Downloads (auto hide on)
 - Remove the favorite icon from the address bar
 
 ### uBlock Origin setup
-- Enable "I am an advanced user"
-- Enable "Block CSP reports"
 - Enable "Disable JavaScript"
 - Set "Block media elements larger than" limit to 0KB. Leave disabled.
 - Enable and update all rulesets in these categories:
