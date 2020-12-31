@@ -10,7 +10,7 @@ These should *only* be used for reference, as they are written only to support 1
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
-2. Boot the device and connect it to the internet. Login as a non-root user.
+2. Boot the device and [connect it to the internet](https://wiki.archlinux.org/index.php/Iwd#Usage). Login as a non-root user.
 3. Run the below commands:
 ```bash
 # Download the dotfiles repo.
