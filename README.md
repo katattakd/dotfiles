@@ -6,7 +6,6 @@ These should *only* be used for reference, as they are written only to support 1
 - use alacritty instead of termite
 - get anbox working
 - improve gqrx configuration handling
-- clean up .curlrc
 - remove unnecessary dependencies
 
 ## Setup instructions
