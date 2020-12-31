@@ -136,6 +136,8 @@ sudo pacman -D --noconfirm --asdeps ${dependency_packages[@]}
 
 # Remove packages that are not part of the package tree
 sudo pacman -Rsunc $(pacman -Qtdq)
+sudo pacman -Rsunc $(comm -23 <(pacman -Qqttd | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} | sort))
+
 
 # Clean package cache
 sudo pacman -Sc
