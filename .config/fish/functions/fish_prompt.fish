@@ -1,4 +1,9 @@
+# Prompt:
+## [user] at [hostname] in [shorthand working directory]
+## ↪ [command]
+
 function fish_prompt
+	# If the terminal is empty, don't print a newline before the prompt.
 	if not set -q IS_EXISTING_TERM
 		set -g IS_EXISTING_TERM true
 	else

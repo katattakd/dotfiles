@@ -1,19 +1,18 @@
-# make things look nice
 output * bg #191919 solid_color
 default_border none
 default_floating_border none
 gaps inner 8
 
-# performance improvements
+# Performance improvements
 #xwayland disable
 
-# title bar
+# Title bar
 client.focused #00ffff #00ffff #262626 #00ffff
 client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
 client.unfocused #5f5f5f #5f5f5f #afafaf #5f5f5f
 client.urgent #ff386a #ff386a #262626 #ff386a
 
-# status bar
+# Status bar configuration
 bar {
 	font Noto Sans Mono 10
 	position top
@@ -31,7 +30,7 @@ bar {
 	status_edge_padding 10
 }
 
-# input methods
+# Input method configuration
 input type:touchpad {
 	dwt enabled
 	tap enabled
@@ -48,13 +47,14 @@ input type:pointer {
 	accel_profile flat
 }
 
-# display configuration
+# Display configuration
 output * adaptive_sync on
 #set $laptop eDP-1
 #bindswitch --reload lid:on output $laptop disable
 #bindswitch --reload lid:off output $laptop enable
 
-# keybinds
+
+# Navigation keybinds
 set $mod Mod4
 
 bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'

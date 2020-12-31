@@ -1,8 +1,5 @@
-daemonize
-indicator-idle-visible
-hide-keyboard-layout
-disable-caps-lock-text
-line-uses-inside
+font=Noto Sans Mono
+font-size=14
 
 color=262626
 
@@ -18,6 +15,7 @@ ring-color=191919
 ring-clear-color=d7875f
 ring-ver-color=00afff
 ring-wrong-color=ff386a
+line-uses-inside
 
 separator-color=262626
 
