@@ -18,6 +18,5 @@ ln -s ~/.config ~/Desktop/
 ln -s ~/.mozilla/firefox ~/.config/firefox
 ln -s ~/dotfiles ~/Desktop/
 
-sudo systemctl enable systemd-resolved
-sudo systemctl enable iwd
+sudo systemctl enable systemd-resolved --now
 sudo ln -s ~/dotfiles/.config/networkmanager.conf /etc/NetworkManager/conf.d/settings.conf
