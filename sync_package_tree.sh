@@ -29,10 +29,10 @@ declare -a explicit_packages=(
 "exa" "fish" "ncdu" "neovim"
 
 # CLI essentials
-"fd" "htop" "lostfiles" "ripgrep" "ytop"
+"fd" "htop" "lostfiles" "pacgraph" "ripgrep" "ytop"
 
 # Sway + (some) config dependencies
-"sway" "brightnessctl" "grimshot"
+"sway" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
 "imv" "mpv" "termite" "xcas"
@@ -67,13 +67,13 @@ declare -a explicit_packages=(
 #"blender"
 
 # Photography tools
-"gimp" "rawtherapee"
+"gimp" "gmic" "rawtherapee"
 
 # Advanced networking tools
 "wireshark-qt"
 
 # Virtualization tools
-"qemu"
+"qemu-arch-extra"
 
 # SDR tools
 "rtl-sdr" "gqrx"
@@ -84,9 +84,11 @@ declare -a explicit_packages=(
 )
 declare -a dependency_packages=(
 
+# Use mesa-git instead of mesa
+"mesa-git"
+
 # Sway config dependencies
-"i3status" "noto-fonts" "swaylock"
-"wl-clipboard" "xorg-xwayland"
+"noto-fonts" "swaylock" "wl-clipboard" "xorg-xwayland"
 
 # Firefox spell checking
 "hunspell-en_US"
@@ -101,35 +103,39 @@ declare -a dependency_packages=(
 "lldb"
 
 # Gparted extras
-"dosfstools" "f2fs-tools" "exfat-utils" "ntfs-3g" "gpart" "mtools"
+"dosfstools" "f2fs-tools" "gpart"
 
 # Libreoffice extras
-"libmythes" "libwpg" "sane" "coin-or-mp"
+"libmythes" "sane" "coin-or-mp"
 
 # Krita extras
-"opencolorio" "krita-plugin-gmic" "kseexpr" "kimageformats"
-
-# Qemu extras
-"qemu-arch-extra"
+"opencolorio" "kseexpr"
 
 )
-
+if [ -f ~/packages.txt ]; then
+	declare -a user_packages=($(cat ~/packages.txt))
+else
+	declare -a user_packages=()
+fi
 
 
 
 
 # Update installed system
 sudo pacman -Syu
+sudo pacman -Fy
 
 # Install all dependencies of the package tree not currently present
-sudo pacman -S --asdeps --needed --noconfirm ${explicit_packages[@]} ${dependency_packages[@]}
+sudo pacman -S --needed ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]}
+
 
 # Flag packages according to the package tree
 sudo pacman -D --noconfirm --asdeps $(pacman -Qqe)
-sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]}
+sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]} ${user_packages[@]}
+
 
 # Remove packages that are not part of the package tree
-sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} | sort)) $(pacman -Qqtd)
+sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]} | sort)) $(pacman -Qqtd)
 
 # Update config files
 sudo -E DIFFPROG='nvim -d' pacdiff
