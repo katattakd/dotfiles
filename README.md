@@ -10,7 +10,6 @@ These should *only* be used for reference, as they are written only to support 1
 ### things that i'm currently working on
 - improve firefox configuration
   - improve performance somehow
-  - simplify setup as much as possible
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
