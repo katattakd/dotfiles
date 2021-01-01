@@ -58,8 +58,8 @@ output * adaptive_sync on
 set $mod Mod4
 
 bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'
-bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox --private-window'
-bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox'
+bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-window'
+bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
 bindsym $mod+BackSpace exec 'xcas; rm -r ~/.fltk'
 bindsym $mod+Shift+l exec 'swaylock'
 

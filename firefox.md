@@ -1,10 +1,9 @@
 # Firefox setup
-These instructions assume that you've already added the required user.js file in the dotfiles repo. If you haven't done this yet, reset Firefox, open and close it once, and then run the `configure_user.sh` script.
+These instructions assume that you've already run the `configure_user.sh` setup script. If you haven't, remove the `~/.mozilla` folder and run the script before proceeding.
 
 ### Firefox configuration
 - Go to Preferences
   - Set default search engine to DuckDuckGo
-  - Clear all history
 - Go to Customize
   - Set theme to Dark, and density to Compact
   - Remove Flexible Space from toolbar

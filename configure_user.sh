@@ -15,7 +15,8 @@ ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 
 # Configure Firefox
-echo ~/.mozilla/firefox/*.default* | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
+firefox -CreateProfile $USER
+echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 
 # Configure Bash
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
