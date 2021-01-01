@@ -10,7 +10,6 @@ These should *only* be used for reference, as they are written only to support 1
 ### things that i'm currently working on
 - improve firefox configuration
   - improve performance somehow
-  - clean up user.js
   - simplify setup as much as possible
 
 ## Setup instructions
