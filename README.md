@@ -47,7 +47,7 @@ To update installed packages on the configured system, run the following command
 ```bash
 cd ~/dotfiles
 
-# This will also mark any programs added manually for removal. To prevent this, edit the package list in the script.
+# This will also mark any programs added manually for removal. To prevent this, create a ~/packages.txt file with the packages you want to keep.
 sh sync_package_tree.sh
 
 # This will also remove files not accessed in more than 28 days from ~/.cache
