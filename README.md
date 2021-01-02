@@ -1,5 +1,6 @@
 # dotfiles
 Kat's dotfiles.
+![](screenshot-1.png) ![](screenshot-2.png) ![](screenshot-3.png)
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
 ### todo
@@ -35,7 +36,7 @@ sh configure_user.sh
 sh sync_user_programs.sh
 ```
 4. Reboot
-5. If you intend to use Firefox, follow the instructions in firefox_setup.md. Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
+5. If you intend to use Firefox, follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions
 
