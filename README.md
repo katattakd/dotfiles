@@ -2,14 +2,10 @@
 Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
-### things to eventually do
+### todo
 - use alacritty instead of termite
 - get anbox working
 - add script to remove home folder junk and back-up user files
-
-### things that i'm currently working on
-- improve firefox configuration
-  - improve performance somehow
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
@@ -39,6 +35,7 @@ sh configure_user.sh
 sh sync_user_programs.sh
 ```
 4. Reboot
+5. If you intend to use Firefox, follow the instructions in firefox_setup.md. Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions
 

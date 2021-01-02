@@ -99,9 +99,6 @@ declare -a dependency_packages=(
 # Imagemagick extras
 "ghostscript" "imagemagick-doc"
 
-# Developer extras
-"lldb"
-
 # Gparted extras
 "dosfstools" "f2fs-tools" "gpart"
 
