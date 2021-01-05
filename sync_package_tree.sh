@@ -29,7 +29,7 @@ declare -a explicit_packages=(
 "exa" "fish" "ncdu" "neovim"
 
 # CLI essentials
-"fd" "htop" "lostfiles" "pacgraph" "ripgrep" "ytop"
+"fd" "htop" "lostfiles" "ripgrep" "ytop"
 
 # Sway + (some) config dependencies
 "sway" "i3status" "brightnessctl" "grimshot"
@@ -117,6 +117,11 @@ fi
 
 
 
+# Update branch and mirror list
+if [ $(pacman-mirrors --get-branch) != "arm-testing" ]; then
+	sudo pacman-mirrors --api --protocols https --set-branch testing
+	sudo pacman -Syyuu
+fi
 
 # Update installed system
 sudo pacman -Syu
@@ -138,4 +143,4 @@ sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_pac
 sudo -E DIFFPROG='nvim -d' pacdiff
 
 # Remove old files from package cache
-paccache -rk2 -ruk0 --min-atime 1m
+paccache -rk2 -ruk0 --min-atime 1m --min-mtime 1m

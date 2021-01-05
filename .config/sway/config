@@ -54,6 +54,9 @@ output * adaptive_sync on
 #bindswitch --reload lid:off output $laptop enable
 
 
+# Startup apps
+exec 'termite -d ~/Desktop -e fish'
+
 # Navigation keybinds
 set $mod Mod4
 
