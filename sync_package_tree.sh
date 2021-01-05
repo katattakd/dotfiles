@@ -84,9 +84,6 @@ declare -a explicit_packages=(
 )
 declare -a dependency_packages=(
 
-# Use mesa-git instead of mesa
-"mesa-git"
-
 # Sway config dependencies
 "noto-fonts" "swaylock" "wl-clipboard" "xorg-xwayland"
 
