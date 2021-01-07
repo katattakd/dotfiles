@@ -3,10 +3,17 @@
 # Create user directories
 mkdir -p ~/.cache ~/.config/pulse ~/.ssh ~/Downloads ~/Desktop
 
+# Setup ~/Documents folder
+ln -s ~/Templates ~/Documents
+ln -s ~/Music ~/Documents
+ln -s ~/Pictures ~/Documents
+ln -s ~/Videos ~/Documents
+
 # Setup ~/Desktop folder (default working directory for new terminals)
+ln -s ~/Documents ~/Desktop
 ln -s ~/Downloads ~/Desktop
-ln -s ~/.config ~/Desktop
-ln -s ~/dotfiles ~/Desktop/
+ln -s ~/Public ~/Desktop/Projects
+ln -s ~/dotfiles ~/Desktop
 
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/pulse/* ~/.config/pulse

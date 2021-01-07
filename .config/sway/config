@@ -54,13 +54,10 @@ output * adaptive_sync on
 #bindswitch --reload lid:off output $laptop enable
 
 
-# Startup apps
-exec 'termite -d ~/Desktop -e fish'
-
 # Navigation keybinds
 set $mod Mod4
 
-bindsym $mod+Return exec 'termite -d ~/Desktop -e fish'
+bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop --command fish'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
 bindsym $mod+BackSpace exec 'xcas; rm -r ~/.fltk'

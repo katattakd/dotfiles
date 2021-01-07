@@ -6,7 +6,7 @@ declare -a explicit_packages=(
 # Core system packages
 "base" "linux" "manjaro-release" "manjaro-system" "sudo"
 
-# Pinebook Pro system packages
+# Pinebook Pro specific packages
 "ap6256-firmware" "pinebookpro-post-install uboot-pinebookpro" "zswap-arm"
 
 
@@ -35,7 +35,7 @@ declare -a explicit_packages=(
 "sway" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"imv" "mpv" "termite" "xcas"
+"imv" "mpv" "alacritty" "xcas"
 "firefox" "firefox-ublock-origin"
 
 
