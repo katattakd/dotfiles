@@ -9,6 +9,7 @@ These settings put uBlock Origin into what is essentially a modified "medium mod
 
 ### Filter lists
 - Enable and update the default filter lists.
+- Enable and update the "uBlock filters - Annoyances" filter list.
 
 ### My rules
 - Paste and commit the following rules:

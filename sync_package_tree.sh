@@ -31,8 +31,8 @@ declare -a explicit_packages=(
 # CLI essentials
 "fd" "htop" "lostfiles" "ripgrep" "ytop"
 
-# Sway + (some) config dependencies
-"sway" "i3status" "brightnessctl" "grimshot"
+# Sway + config dependencies
+"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
 
 # GUI essentials
 "imv" "mpv" "alacritty" "xcas"
@@ -44,11 +44,10 @@ declare -a explicit_packages=(
 "bind" "mtr" "nmap" "wireshark-cli"
 
 # Media encoding tools
-"perl-image-exiftool" "ffmpeg" "imagemagick" "sox" "youtube-dl"
+"ffmpeg" "imagemagick" "sox" "youtube-dl"
 
 # Developer tools
 "$(pacman -Qqg base-devel)" "rustup"
-
 
 
 # Disk tools
@@ -60,44 +59,29 @@ declare -a explicit_packages=(
 # Audio tools
 "audacity" "lmms"
 
-# Illustrating tools
-"inkscape" "krita"
-
-# 3D modeling tools (Broken on PBP!)
-#"blender"
-
-# Photography tools
-"gimp" "gmic" "rawtherapee"
-
-# Virtualization tools
-"qemu-arch-extra"
+# Image tools
+"gimp" "inkscape" "krita" "rawtherapee"
 
 # SDR tools
-"rtl-sdr" "gqrx"
-
-# GPS tools
-"gpsd"
+"gqrx"
 
 )
 declare -a dependency_packages=(
 
-# Sway config dependencies
-"noto-fonts" "swaylock" "wl-clipboard" "xorg-xwayland"
+# Xwayland
+"xorg-xwayland"
 
-# Firefox spell checking
+# Fonts
+"noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji"
+
+# Spell checking dictionary
 "hunspell-en_US"
-
-# Font extras
-"noto-fonts-cjk" "noto-fonts-emoji"
 
 # Imagemagick extras
 "imagemagick-doc"
 
 # Gparted extras
 "dosfstools" "gpart"
-
-# Libreoffice extras
-"libmythes" "sane" "coin-or-mp"
 
 )
 if [ -f ~/packages.txt ]; then
