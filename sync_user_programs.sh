@@ -7,6 +7,7 @@ nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "qa"
 rustup toolchain install stable
 rustup toolchain install beta
 rustup toolchain install nightly
+rustup component add clippy rust-src llvm-tools-preview
 
 # Update Fish completions
 fish -c fish_update_completions

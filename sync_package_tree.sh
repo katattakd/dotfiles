@@ -99,9 +99,6 @@ declare -a dependency_packages=(
 # Libreoffice extras
 "libmythes" "sane" "coin-or-mp"
 
-# Krita extras
-"opencolorio" "kseexpr"
-
 )
 if [ -f ~/packages.txt ]; then
 	declare -a user_packages=($(cat ~/packages.txt))
