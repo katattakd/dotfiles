@@ -41,7 +41,7 @@ declare -a explicit_packages=(
 
 
 # Networking tools
-"bind" "mtr" "nmap"
+"bind" "mtr" "nmap" "wireshark-cli"
 
 # Media encoding tools
 "perl-image-exiftool" "ffmpeg" "imagemagick" "sox" "youtube-dl"
@@ -69,9 +69,6 @@ declare -a explicit_packages=(
 # Photography tools
 "gimp" "gmic" "rawtherapee"
 
-# Advanced networking tools
-"wireshark-qt"
-
 # Virtualization tools
 "qemu-arch-extra"
 
@@ -94,10 +91,10 @@ declare -a dependency_packages=(
 "noto-fonts-cjk" "noto-fonts-emoji"
 
 # Imagemagick extras
-"ghostscript" "imagemagick-doc"
+"imagemagick-doc"
 
 # Gparted extras
-"dosfstools" "f2fs-tools" "gpart"
+"dosfstools" "gpart"
 
 # Libreoffice extras
 "libmythes" "sane" "coin-or-mp"
