@@ -18,7 +18,7 @@ declare -a explicit_packages=(
 "networkmanager" "ufw"
 
 # Audio essentials
-"alsa-utils" "pulseaudio" "pulseaudio-alsa" "pulsemixer"
+"alsa-utils" "pulseaudio-alsa" "pulsemixer"
 
 # USB essentials
 "usbutils"
@@ -41,7 +41,7 @@ declare -a explicit_packages=(
 
 
 # Networking tools
-"bind" "mtr" "nmap" "wireshark-cli"
+"mtr" "nmap" "wireshark-cli"
 
 # Media encoding tools
 "ffmpeg" "imagemagick" "sox" "youtube-dl"
