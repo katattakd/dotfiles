@@ -1,7 +1,4 @@
 window:
-  padding:
-    x: 0
-    y: 0
   dynamic_padding: true
 font:
   normal:
@@ -32,4 +29,8 @@ colors:
     magenta: '#e285f9'
     cyan: '#00ffff'
     white: '#afafaf'
-
+cursor:
+  unfocused_hollow: false
+live_config_reload: false
+shell:
+  program: /usr/bin/fish
