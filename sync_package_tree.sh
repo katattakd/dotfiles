@@ -61,10 +61,10 @@ declare -a explicit_packages=(
 "libreoffice-fresh"
 
 # Audio tools
-"audacity" "lmms"
+"audacity"
 
 # Image tools
-"gimp" "inkscape" "krita" "rawtherapee"
+"gimp" "rawtherapee"
 
 )
 declare -a dependency_packages=(

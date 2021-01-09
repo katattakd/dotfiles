@@ -6,7 +6,9 @@ These should *only* be used for reference, as they are written only to support 1
 - get anbox working
 - add script to remove home folder junk and back-up user files
 - make things 100% wayland native, remove xwayland
-  - programs not supporting wayland *yet*: xcas, gimp, krita
+  - programs not supporting wayland yet: xcas, gimp
+    - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
+    - gimp *will* be adding wayland support in version 2.9.8
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
