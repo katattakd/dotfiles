@@ -12,3 +12,5 @@ sudo systemctl enable NetworkManager ufw
 # Disable bluetooth
 sudo systemctl start rfkill-block@bluetooth
 
+# Disable SSH
+sudo systemctl disable sshd

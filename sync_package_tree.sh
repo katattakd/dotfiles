@@ -60,9 +60,6 @@ declare -a explicit_packages=(
 # Office tools
 "libreoffice-fresh"
 
-# Audio tools
-"audacity"
-
 # Image tools
 "gimp" "rawtherapee"
 
