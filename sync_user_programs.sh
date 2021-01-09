@@ -11,6 +11,3 @@ rustup component add clippy rust-src llvm-tools-preview
 
 # Update Fish completions
 fish -c fish_update_completions
-
-# Clean cache
-find ~/.cache/ -atime +28 -print -delete

@@ -2,7 +2,10 @@ unset HISTFILE
 
 # Automatically start sway on TTY1 if it isn't already running.
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-	# Pinebook Pro specific
+	# Clean cache in the background
+	(sleep 10 && find ~/.cache/ -atime +28 -print -delete) &
+
+	# Pinebook Pro specific fixes
 	export PAN_MESA_DEBUG="gl3"
 
 	# systemd-inhibit is used to temporarily disable the power button, as it's right above backspace and is prone to accidental presses.
