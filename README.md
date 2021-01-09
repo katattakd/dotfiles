@@ -20,9 +20,6 @@ cd ~
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
 
-# Update mirrorlist, so that packages will download faster. This should be run every few months or so.
-sudo pacman-mirrors -f 0
-
 # Install/updates packages, and remove those that aren't necessary.
 # This also performs maintenance tasks and can be used to upgrade the system.
 sh sync_package_tree.sh
@@ -46,6 +43,9 @@ sh sync_user_programs.sh
 To update installed packages on the configured system, run the following commands:
 ```bash
 cd ~/dotfiles
+
+# Update mirrorlist, so that packages will download faster. This should be run every few months or so.
+sudo pacman-mirrors -f 0
 
 # This will also mark any programs added manually for removal. To prevent this, create a ~/packages.txt file with the packages you want to keep.
 sh sync_package_tree.sh
