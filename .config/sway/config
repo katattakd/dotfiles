@@ -3,9 +3,6 @@ default_border none
 default_floating_border none
 gaps inner 8
 
-# Performance improvements
-#xwayland disable
-
 # Title bar
 client.focused #00ffff #00ffff #262626 #00ffff
 client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
@@ -62,7 +59,7 @@ set $mod Mod4
 bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop --command fish'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
-bindsym $mod+BackSpace exec 'xcas; rm -r ~/.fltk'
+bindsym $mod+BackSpace exec 'HOME=~/.cache xcas'
 bindsym $mod+Shift+l exec 'swaylock'
 
 bindsym $mod+q kill

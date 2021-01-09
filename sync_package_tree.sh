@@ -43,6 +43,9 @@ declare -a explicit_packages=(
 # Networking tools
 "nmap"
 
+# Disk tools
+"parted" "dosfstools"
+
 # Media encoding tools
 "ffmpeg" "imagemagick" "sox" "youtube-dl"
 
@@ -53,9 +56,6 @@ declare -a explicit_packages=(
 
 # CAS Calculator
 "xcas"
-
-# Disk tools
-"gparted"
 
 # Office tools
 "libreoffice-fresh"
@@ -80,9 +80,6 @@ declare -a dependency_packages=(
 
 # Imagemagick extras
 "imagemagick-doc"
-
-# Gparted extras
-"dosfstools" "gpart"
 
 )
 if [ -f ~/packages.txt ]; then
@@ -116,7 +113,5 @@ sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]} ${user_packages[
 sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]} | sort)) $(pacman -Qqtd)
 
 # Update config files
-sudo -E DIFFPROG='nvim -d' pacdiff
+sudo DIFFPROG='nvim -d' pacdiff
 
-# Remove old files from package cache
-paccache -rk2 -ruk0 --min-atime 1m --min-mtime 1m
