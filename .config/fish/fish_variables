@@ -25,17 +25,17 @@ SETUVAR _fish_abbr_date:date\x20\x20\x2b\x22\x25A\x2c\x20\x25B\x20\x25d\x20\x25Y
 SETUVAR _fish_abbr_df:df\x20\x2dTh
 SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
-SETUVAR _fish_abbr_fd:fd\x20\x2dHI
+SETUVAR _fish_abbr_fd:fd\x20\x2duuL
 SETUVAR _fish_abbr_halt:systemctl\x20halt
 SETUVAR _fish_abbr_hexdump:hexdump\x20\x2dC
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
 SETUVAR _fish_abbr_ln:ln\x20\x2dsb
+SETUVAR _fish_abbr_lostfiles:sudo\x20lostfiles\x20\x2dz
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid
 SETUVAR _fish_abbr_lsblk:lsblk\x20\x2do\x20NAME\x2cSIZE\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
 SETUVAR _fish_abbr_ltree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
-SETUVAR _fish_abbr_mtr:mtr\x20\x2dbze\x20\x2do\x20\x22LSDR\x20\x20NBAWV\x20\x20JMX\x22
 SETUVAR _fish_abbr_mv:mv\x20\x2di
 SETUVAR _fish_abbr_nmapp:sudo\x20nmap\x20\x2dv\x20\x2dT5\x20\x2dA\x20\x2d\x2dosscan\x2dguess\x20\x2d\x2dversion\x2dall\x20\x2dp\x201\x2d65535
 SETUVAR _fish_abbr_ping4:ping\x20\x2d4
@@ -43,6 +43,7 @@ SETUVAR _fish_abbr_ping6:ping\x20\x2d6
 SETUVAR _fish_abbr_pingf:sudo\x20ping\x20\x2df
 SETUVAR _fish_abbr_poweroff:systemctl\x20poweroff
 SETUVAR _fish_abbr_reboot:systemctl\x20reboot
+SETUVAR _fish_abbr_rg:rg\x20\x2d\x2dstats\x20\x2duuLzSC\x202
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore

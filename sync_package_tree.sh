@@ -7,7 +7,7 @@ declare -a explicit_packages=(
 "base" "linux" "manjaro-release" "manjaro-system" "sudo"
 
 # Pinebook Pro specific packages
-"ap6256-firmware" "pinebookpro-post-install uboot-pinebookpro" "zswap-arm"
+"ap6256-firmware" "pinebookpro-post-install" "uboot-pinebookpro" "zswap-arm"
 
 
 
@@ -35,13 +35,13 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
 
 # GUI essentials
-"imv" "mpv" "alacritty" "xcas"
+"imv" "mpv" "alacritty"
 "firefox" "firefox-ublock-origin"
 
 
 
 # Networking tools
-"mtr" "nmap" "wireshark-cli"
+"nmap"
 
 # Media encoding tools
 "ffmpeg" "imagemagick" "sox" "youtube-dl"
@@ -49,6 +49,10 @@ declare -a explicit_packages=(
 # Developer tools
 "$(pacman -Qqg base-devel)" "rustup"
 
+
+
+# CAS Calculator
+"xcas"
 
 # Disk tools
 "gparted"
@@ -61,9 +65,6 @@ declare -a explicit_packages=(
 
 # Image tools
 "gimp" "inkscape" "krita" "rawtherapee"
-
-# SDR tools
-"gqrx"
 
 )
 declare -a dependency_packages=(
