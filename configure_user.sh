@@ -16,19 +16,19 @@ ln -sT ~/Public ~/Desktop/Projects
 ln -sT ~/dotfiles ~/Desktop
 
 # Create symlinks to config files
-ln -sT ~/dotfiles/.config/pulse/* ~/.config/pulse
-ln -sT ~/dotfiles/.config/* ~/.config
-ln -sT ~/dotfiles/.*rc ~/
-ln -sT ~/dotfiles/.ssh/* ~/.ssh
+ln -s ~/dotfiles/.config/pulse/* ~/.config/pulse
+ln -s ~/dotfiles/.config/* ~/.config
+ln -s ~/dotfiles/.*rc ~/
+ln -s ~/dotfiles/.ssh/* ~/.ssh
 
 # Configure Firefox
 firefox -CreateProfile $USER
-echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -sT ~/dotfiles/.mozilla/user.js
-echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -sT ~/dotfiles/.mozilla/search.json.mozlz4
+echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
+echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/search.json.mozlz4
 
 # Configure Bash
-ln -sTf ~/dotfiles/.bashrc ~/.bashrc
-ln -sTf ~/dotfiles/.bashrc ~/.bash_profile
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bashrc ~/.bash_profile
 rm ~/.bash_logout
 
 # Configure Git
