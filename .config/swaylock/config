@@ -1,25 +1,27 @@
 font=Noto Sans Mono
 font-size=14
+hide-keyboard-layout
+disable-caps-lock-text
 
-color=262626
+color=1d2021
 
-bs-hl-color=ff386a
-key-hl-color=6acd6a
+bs-hl-color=cc241d
+key-hl-color=98971a
 
-inside-color=262626
-inside-clear-color=262626
-inside-ver-color=262626
-inside-wrong-color=262626
+inside-color=1d2021
+inside-clear-color=1d2021
+inside-ver-color=1d2021
+inside-wrong-color=1d2021
 
-ring-color=191919
-ring-clear-color=d7875f
-ring-ver-color=00afff
-ring-wrong-color=ff386a
+ring-color=282828
+ring-clear-color=d79921
+ring-ver-color=458588
+ring-wrong-color=cc241d
 line-uses-inside
 
-separator-color=262626
+separator-color=282828
 
-text-color=262626
-text-clear-color=262626
-text-ver-color=262626
-text-wrong-color=262626
+text-color=ebdbb2
+text-clear-color=1d2021
+text-ver-color=1d2021
+text-wrong-color=1d2021

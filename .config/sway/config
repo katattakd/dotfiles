@@ -1,13 +1,26 @@
-output * bg #191919 solid_color
 default_border none
 default_floating_border none
 gaps inner 8
 
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d6a
+set $gray #a89984
+set $darkgray #1d2021
+set $white #ebdbb2
+
+output * bg $darkgray solid_color
+
 # Title bar
-client.focused #00ffff #00ffff #262626 #00ffff
-client.focused_inactive #00d6d6 #00d6d6 #262626 #00d6d6
-client.unfocused #5f5f5f #5f5f5f #afafaf #5f5f5f
-client.urgent #ff386a #ff386a #262626 #ff386a
+font Noto Sans Mono 10
+client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $gray $purple $darkgray
+client.unfocused        $darkgray $darkgray $gray $purple $darkgray
+client.urgent           $red $red $white $red $red
 
 # Status bar configuration
 bar {
@@ -16,12 +29,12 @@ bar {
 	status_command i3status
 	separator_symbol |
 	colors {
-		statusline #afafaf
-		background #262626
-		urgent_workspace #ff386a #ff386a #262626
-		focused_workspace #00ffff #00ffff #262626
-		active_workspace #00d6d6 #00d6d6 #262626
-		inactive_workspace #5f5f5f #5f5f5f #afafaf
+		background $bg
+		statusline $gray
+		focused_workspace $aqua $aqua $darkgray
+		inactive_workspace $darkgray $darkgray $gray
+		active_workspace $darkgray $darkgray $gray
+		urgent_workspace $red $red $bg
 	}
 	status_padding 4
 	status_edge_padding 10

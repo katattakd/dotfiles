@@ -6,29 +6,26 @@ font:
   size: 12
 colors:
   primary:
-    background: '#262626'
-    foreground: '#afafaf'
-    dim_foreground: '#5f5f5f'
-  selection:
-    background: '#5f5f5f'
+    background: '#282828'
+    foreground: '#ebdbb2'
   normal:
-    black: '#262626'
-    red: '#ff386a'
-    green: '#6acd6a'
-    yellow: '#d7875f'
-    blue: '#00afff'
-    magenta: '#d75fd7'
-    cyan: '#00d6d6'
-    white: '#5f5f5f'
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
   bright:
-    black: '#3d3d3d'
-    red: '#ff5f87'
-    green: '#87d787'
-    yellow: '#d7af87'
-    blue: '#61cdff'
-    magenta: '#e285f9'
-    cyan: '#00ffff'
-    white: '#afafaf'
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2' 
 cursor:
   unfocused_hollow: false
 live_config_reload: false
