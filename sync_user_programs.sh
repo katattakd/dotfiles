@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install/update Neovim plugins
-nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "qa"
+nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
 
 # Install/update Rustup toolchains
 rustup toolchain install stable

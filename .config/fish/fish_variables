@@ -71,7 +71,7 @@ SETUVAR fish_color_search_match:blue
 SETUVAR fish_color_selection:brwhite
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:yellow
-SETUVAR fish_color_valid_path:green
+SETUVAR fish_color_valid_path:brgreen
 SETUVAR fish_greeting:
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:white
