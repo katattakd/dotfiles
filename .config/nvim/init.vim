@@ -18,17 +18,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
-Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Adjust vim settings
 inoremap <F9> <C-O>za
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
