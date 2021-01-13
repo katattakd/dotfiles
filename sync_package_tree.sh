@@ -66,6 +66,9 @@ declare -a explicit_packages=(
 )
 declare -a dependency_packages=(
 
+# NetworkManager connection sharing
+"dnsmasq"
+
 # Xwayland
 "xorg-xwayland"
 
