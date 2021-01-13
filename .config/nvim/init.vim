@@ -25,9 +25,22 @@ call plug#end()
 
 " Adjust vim settings
 inoremap <F9> <C-O>za
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+nnoremap <C-L> :nohl<CR><C-L>
+nmap <M-Left> :bprev<CR>
+nmap <M-Right> :bnext<CR>
+map <F3> ggg?G
+map Y y$
+set autochdir
 set number
 set linebreak
 set mouse=a
@@ -36,12 +49,12 @@ set smartcase
 set lazyredraw
 set list
 set spell
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set foldlevel=99
-set foldcolumn=1
 set termguicolors
 set background=dark
-setlocal foldmethod=indent
+set backspace=indent,eol,start
+set confirm
 let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
 colorscheme gruvbox
@@ -49,3 +62,7 @@ colorscheme gruvbox
 " Use the same indentation settings regardless of file type
 setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
+
+" Configure folding
+setlocal foldmethod=indent
+autocmd FileType vim setlocal foldmethod=marker
