@@ -115,3 +115,5 @@ sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_pac
 # Update config files
 sudo DIFFPROG='nvim -d' pacdiff
 
+# Clean old packages from package cache
+paccache -rk2 -ruk0 --min-atime 1m --min-mtime 1m

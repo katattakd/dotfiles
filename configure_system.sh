@@ -3,9 +3,6 @@
 # Configure ufw
 sudo ufw enable
 
-# Enable automatic package cache clean-up
-sudo systemctl enable paccache.timer
-
 # Enable networking services
 sudo systemctl enable NetworkManager ufw
 
