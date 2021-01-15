@@ -65,7 +65,7 @@ user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("extensions.webcompat-reporter.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.urlbar.trimURLs", false);
-user_pref("browser.sessionstore.interval", 300000);
+user_pref("browser.sessionstore.enabled", false);
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
 user_pref("security.ssl.errorReporting.url", "");
@@ -146,7 +146,7 @@ user_pref("signon.autofillForms", false);
 user_pref("signon.formlessCapture.enabled", false);
 user_pref("network.auth.subresource-http-auth-allow", 1);
 user_pref("permissions.memory_only", true);
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("media.memory_cache_max_size", 65536);
 user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.shell.shortcutFavicons", false);
@@ -219,13 +219,14 @@ user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 //user_pref("privacy.resistFingerprinting.letterboxing", true); // Looks ugly af
 
-// uBlock Origin disables prefetching, so these rules *shouldn't* actually affect performance.
+// uBlock Origin disables prefetching, so these rules *shouldn't* actually affect performance much.
 user_pref("network.prefetch-next", false);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
+
 // Privacy/security improvements that impact performance
 user_pref("security.tls.enable_0rtt_data", false);
 //user_pref("webgl.disabled", true);
@@ -236,6 +237,7 @@ user_pref("javascript.options.asmjs", false);
 //user_pref("javascript.options.jit_trustedprincipals", true);
 //user_pref("javascript.options.wasm", false); // WASM is used by uBlock Origin to help performance, so it should stay enabled.
 //user_pref("layers.acceleration.disabled", true);
+user_pref("browser.cache.disk.enable", false);
 
 // TLS hardening
 user_pref("security.ssl.require_safe_negotiation", true);
