@@ -33,3 +33,6 @@ rm ~/.bash_logout
 
 # Configure Git
 git config --global color.ui auto
+
+# Disable AT SPI
+systemctl disable --user at-spi-dbus-bus

@@ -7,7 +7,7 @@ declare -a explicit_packages=(
 "base" "linux" "manjaro-release" "manjaro-system" "sudo"
 
 # Pinebook Pro specific packages
-"ap6256-firmware" "pinebookpro-post-install" "uboot-pinebookpro" "zswap-arm"
+"ap6256-firmware" "uboot-pinebookpro" "zswap-arm"
 
 
 
@@ -57,28 +57,22 @@ declare -a explicit_packages=(
 # CAS Calculator
 "xcas"
 
-# Office tools
-"libreoffice-fresh"
-
 # Image tools
 "gimp" "rawtherapee"
 
 )
 declare -a dependency_packages=(
 
-# NetworkManager connection sharing
-"dnsmasq"
-
 # Xwayland
 "xorg-xwayland"
 
 # Fonts
-"noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji"
+"noto-fonts"
 
 # Spell checking dictionary
 "hunspell-en_US"
 
-# Imagemagick extras
+# Imagemagick documentation
 "imagemagick-doc"
 
 )
