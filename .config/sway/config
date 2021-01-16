@@ -75,6 +75,7 @@ bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-wi
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
 bindsym $mod+BackSpace exec 'HOME=~/.cache xcas'
 bindsym $mod+Shift+l exec 'swaylock'
+bindsym $mod+p exec "grim -t png ~/Pictures/screenshot-$(date -Iseconds).png"
 
 bindsym $mod+q kill
 
@@ -134,16 +135,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-mode "screenshot" {
-	bindsym 0 exec "grimshot copy screen"
-	bindsym 1 exec "grimshot copy output"
-	bindsym 2 exec "grimshot copy window"
-	bindsym 3 exec "grimshot copy area"
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-bindsym $mod+p mode "screenshot"
 
 mode "resize" {
 	bindsym Left resize shrink width 20px

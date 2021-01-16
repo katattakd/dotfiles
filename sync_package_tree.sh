@@ -32,7 +32,7 @@ declare -a explicit_packages=(
 "fd" "htop" "lostfiles" "ripgrep" "ytop"
 
 # Sway + config dependencies
-"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
+"sway" "swaylock" "i3status" "brightnessctl" "grim" "wl-clipboard"
 
 # GUI essentials
 "imv" "mpv" "alacritty"
