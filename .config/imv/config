@@ -1,4 +1,0 @@
-[options]
-overlay = true
-overlay_font = Noto Sans Mono:18
-upscaling_method = nearest_neighbour

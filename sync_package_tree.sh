@@ -20,9 +20,6 @@ declare -a explicit_packages=(
 # Audio essentials
 "alsa-utils" "pulseaudio-alsa" "pulsemixer"
 
-# USB essentials
-"usbutils"
-
 
 
 # Fish + config dependencies
@@ -35,8 +32,7 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grim" "wl-clipboard"
 
 # GUI essentials
-"imv" "mpv" "alacritty"
-"firefox" "firefox-ublock-origin"
+"alacritty" "mpv" "firefox" "firefox-ublock-origin"
 
 
 

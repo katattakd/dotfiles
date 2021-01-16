@@ -34,10 +34,10 @@ SETUVAR _fish_abbr_ln:ln\x20\x2dsb
 SETUVAR _fish_abbr_lostfiles:sudo\x20lostfiles\x20\x2dz
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid
 SETUVAR _fish_abbr_lsblk:lsblk\x20\x2do\x20NAME\x2cSIZE\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
-SETUVAR _fish_abbr_lsusb:lsusb\x20\x2dtvv
 SETUVAR _fish_abbr_ltree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
 SETUVAR _fish_abbr_mv:mv\x20\x2di
+SETUVAR _fish_abbr_mvi:mpv\x20\x2d\x2dconfig\x2ddir\x3d/home/kat/\x2econfig/mvi
 SETUVAR _fish_abbr_nmapp:sudo\x20nmap\x20\x2dv\x20\x2dT5\x20\x2dA\x20\x2d\x2dosscan\x2dguess\x20\x2d\x2dversion\x2dall\x20\x2dp\x201\x2d65535
 SETUVAR _fish_abbr_ping4:ping\x20\x2d4
 SETUVAR _fish_abbr_ping6:ping\x20\x2d6
