@@ -50,7 +50,7 @@ declare -a explicit_packages=(
 
 
 
-# CAS Calculator
+# CAS calculator
 "xcas"
 
 # Image tools
