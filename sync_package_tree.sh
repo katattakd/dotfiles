@@ -14,11 +14,8 @@ declare -a explicit_packages=(
 # Program documentation
 "man-db" "man-pages" "texinfo"
 
-# Disk essentials
-"dosfstools"
-
 # Networking essentials
-"networkmanager" "ufw"
+"networkmanager"
 
 # Audio essentials
 "alsa-utils" "pulseaudio-alsa" "pulsemixer"
@@ -42,10 +39,10 @@ declare -a explicit_packages=(
 
 
 # Networking tools
-"nmap"
+"gnu-netcat"
 
 # Media encoding tools
-"ffmpeg" "imagemagick" "sox" "youtube-dl"
+"ffmpeg" "youtube-dl"
 
 # Developer tools
 "rustup"
@@ -69,9 +66,6 @@ declare -a dependency_packages=(
 
 # Spell checking dictionary
 "hunspell-en_US"
-
-# Imagemagick documentation
-"imagemagick-doc"
 
 )
 if [ -f ~/packages.txt ]; then
