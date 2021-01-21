@@ -14,6 +14,9 @@ declare -a explicit_packages=(
 # Program documentation
 "man-db" "man-pages" "texinfo"
 
+# Disk essentials
+"dosfstools"
+
 # Networking essentials
 "networkmanager" "ufw"
 
@@ -23,10 +26,12 @@ declare -a explicit_packages=(
 
 
 # Fish + config dependencies
-"exa" "fish" "ncdu" "neovim"
+"exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "htop" "lostfiles" "ripgrep" "ytop"
+"fd" "htop" "ncdu" "ripgrep" "ytop"
+
+
 
 # Sway + config dependencies
 "sway" "swaylock" "i3status" "brightnessctl" "grim" "wl-clipboard"
@@ -39,14 +44,11 @@ declare -a explicit_packages=(
 # Networking tools
 "nmap"
 
-# Disk tools
-"parted" "dosfstools"
-
 # Media encoding tools
 "ffmpeg" "imagemagick" "sox" "youtube-dl"
 
 # Developer tools
-"$(pacman -Qqg base-devel)" "rustup"
+"rustup"
 
 
 
