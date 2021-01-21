@@ -4,7 +4,7 @@
 declare -a explicit_packages=(
 
 # Core system packages
-"base" "linux" "manjaro-release" "manjaro-system" "sudo"
+"base" "linux" "manjaro-system" "sudo"
 
 # Pinebook Pro specific packages
 "ap6256-firmware" "uboot-pinebookpro" "zswap-arm"
@@ -12,13 +12,13 @@ declare -a explicit_packages=(
 
 
 # Program documentation
-"man-db" "man-pages" "texinfo"
+"man-db" "texinfo"
 
 # Networking essentials
 "networkmanager"
 
 # Audio essentials
-"alsa-utils" "pulseaudio-alsa" "pulsemixer"
+"alsa-utils" "pulsemixer"
 
 
 
