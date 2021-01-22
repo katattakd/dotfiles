@@ -53,7 +53,7 @@ declare -a explicit_packages=(
 "xcas"
 
 # Image tools
-"gimp"
+"gimp" "rawtherapee"
 
 )
 declare -a dependency_packages=(
