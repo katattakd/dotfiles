@@ -41,8 +41,8 @@ declare -a explicit_packages=(
 # Networking tools
 "gnu-netcat"
 
-# Media encoding tools
-"ffmpeg" "youtube-dl"
+# Media tools
+"youtube-dl"
 
 # Developer tools
 "rustup"
