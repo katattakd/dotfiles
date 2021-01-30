@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit 27dd6aa62d1d73e9cdb0b751a7d4d4acdb893b75)
+// This borrows a LOT from arkenfox/user.js (commit b6e8dcab81e74d8f8a8b3b074e702cc68590cdd5)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
@@ -123,6 +123,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false);
 user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["ublock0_raymondhill_net-browser-action","developer-button"],"dirtyAreaCache":["nav-bar"],"currentVersion":16,"newElementCount":3}');
 user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark","pinTab","bookmarkSeparator","copyURL","emailLink","addSearchEngine","screenshots_mozilla_org"],"idsInUrlbar":[]}');
+user_pref("browser.toolbars.bookmarks.visibility", "never");
 
 // Various privacy/security improvements
 user_pref("browser.send_pings", false);
@@ -179,7 +180,7 @@ user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("network.IDN_show_punycode", true);
 user_pref("browser.display.use_system_colors", false);
 user_pref("permissions.delegation.enabled", false);
-user_pref("privacy.window.name.update.enabled", true);
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
 user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("security.dialog_enable_delay", 700);
 user_pref("network.cookie.cookieBehavior", 3);

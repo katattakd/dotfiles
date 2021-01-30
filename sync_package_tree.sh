@@ -77,8 +77,8 @@ fi
 
 
 # Update branch and mirror list
-if [ $(pacman-mirrors --get-branch) != "arm-testing" ]; then
-	sudo pacman-mirrors --api --protocols https --set-branch testing
+if [ $(pacman-mirrors --get-branch) != "arm-unstable" ]; then
+	sudo pacman-mirrors --api --protocols https --set-branch unstable
 	sudo pacman -Syyuu
 fi
 
