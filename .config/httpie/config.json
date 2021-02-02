@@ -1,0 +1,14 @@
+{
+	"default_options": [
+		"--compress",
+		"--unsorted",
+		"--verbose",
+		"--follow",
+		"--path-as-is",
+		"--check-status",
+		"--verify=true",
+		"--ssl=tls1.2",
+		"--traceback",
+		"--default-scheme=https"
+	]
+}

@@ -39,7 +39,7 @@ declare -a explicit_packages=(
 
 
 # Networking tools
-"gnu-netcat"
+"gnu-netcat" "httpie"
 
 # Media tools
 "youtube-dl"
