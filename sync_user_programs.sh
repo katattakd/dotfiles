@@ -14,7 +14,7 @@ cd $CUR_DIR
 rustup toolchain install stable
 rustup toolchain install beta
 rustup toolchain install nightly
-rustup component add clippy rust-src llvm-tools-preview
+rustup component add clippy
 
 # Update Fish completions
 fish -c fish_update_completions
