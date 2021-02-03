@@ -62,3 +62,9 @@ autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 " Configure folding
 setlocal foldmethod=indent
 autocmd FileType vim setlocal foldmethod=marker
+
+" Reduce disk writes
+set shada="NONE"
+set viminfo="NONE"
+set nobackup
+set noswapfile
