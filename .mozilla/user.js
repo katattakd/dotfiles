@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit b6e8dcab81e74d8f8a8b3b074e702cc68590cdd5)
+// This borrows a LOT from arkenfox/user.js (commit 82bb3f987de619ccd61b1577d0fbb9e80675b76c)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
@@ -158,7 +158,6 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("plugin.state.flash", 0);
 user_pref("media.gmp-provider.enabled", false);
-user_pref("media.gmp-widevinecdm.visible", false); // Disables DRM
 user_pref("media.gmp-widevinecdm.enabled", false); // Disables DRM
 user_pref("media.eme.enabled", false);             // Disables DRM
 user_pref("webgl.min_capability_mode", true);
@@ -224,7 +223,6 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 user_pref("network.prefetch-next", false);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.predictor.enabled", false);
-user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
