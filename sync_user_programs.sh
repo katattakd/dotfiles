@@ -17,14 +17,11 @@ find ~/.cache -atime +21 -print -delete
 find ~/.config -atime +365 -not -type l -print -delete
 find ~/.ssh/known_hosts -atime +365 -print -delete
 
-# Remove empty files & folders from ~/.cache and ~/.config
-find ~/.cache ~/.config -empty -print -delete
+# Remove empty files & folders from ~/.cache, ~/.config, and ~/.local
+find ~/.cache ~/.config ~/.local -empty -print -delete
 
-# Remove empty files from ~/.local
-find ~/.local -empty -not -type d -print -delete
-
-# Remove broken symlinks which aren't named "lock" from hidden directories
-find ~/.* -xtype l -not -name lock -print -delete
+# Remove broken symlinks which aren't lock files from hidden directories
+find ~/.* -xtype l -not -name "*lock*" -print -delete
 
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
 find ~/.ssh/known_hosts ~/.ssh/id_* -mtime +365 -exec rm -ir {} \;

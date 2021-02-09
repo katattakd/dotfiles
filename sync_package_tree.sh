@@ -26,7 +26,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "htop" "ncdu" "ripgrep" "ytop"
+"fd" "htop" "ncdu" "ripgrep"
 
 
 
@@ -45,7 +45,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"rustup"
+"rustup" "cargo-watch"
 
 
 
