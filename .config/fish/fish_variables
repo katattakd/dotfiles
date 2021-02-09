@@ -16,12 +16,15 @@ SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_boop:ping\x20\x2dc\x201
 SETUVAR _fish_abbr_cal:cal\x20\x2dn\x209\x20\x2dS
+SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
 SETUVAR _fish_abbr_chown:chown\x20\x2dhR
+SETUVAR _fish_abbr_clippy_2D_watch:cargo\x2dwatch\x20\x2dd\x202\x20\x2dx\x20\x27clippy\x27
 SETUVAR _fish_abbr_cp:cp\x20\x2dir
 SETUVAR _fish_abbr_date:date\x20\x2b\x22\x25A\x2c\x20\x25B\x20\x25d\x20\x25Y\x25n\x25r\x20\x25Z\x20\x28UTC\x25\x3a\x3a\x3az\x29\x25nUnix\x20time\x20\x25s\x22
 SETUVAR _fish_abbr_df:df\x20\x2dTh
 SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_dig:drill\x20\x2dDV\x205
+SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x2etoml\x20\x2dx\x20\x27doc\x27
 SETUVAR _fish_abbr_fd:fd\x20\x2duuL
 SETUVAR _fish_abbr_halt:systemctl\x20halt
 SETUVAR _fish_abbr_hexdump:hexdump\x20\x2dC

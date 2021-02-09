@@ -260,21 +260,10 @@ user_pref("browser.xul.error_pages.expert_bad_cert", true);
 user_pref("security.insecure_connection_text.enabled", true);
 
 // Performance optimizations
-user_pref("layers.acceleration.force-enabled", true);
+// NOTE: These may cause significant system instability, and should be used with extreme caution.
+
+/*user_pref("layers.acceleration.force-enabled", true);
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.compositor", true);
-user_pref("gfx.webrender.enabled", true);
-
-// TODO: Review the below options and assess which ones are still necessary.
-
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1619523
-user_pref("media.ffmpeg.dmabuf-textures.enabled", true);
-user_pref("media.ffmpeg.vaapi-drm-display.enabled", true);
-user_pref("media.ffmpeg.vaapi.enabled", true);
-
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1660336
-user_pref("media.ffvpx.enabled", false);
-user_pref("media.hardware-video-decoding.force-enabled", true);
-user_pref("widget.dmabuf-textures.enabled", true);
-user_pref("widget.dmabuf-webgl.enabled", true);
+user_pref("gfx.webrender.enabled", true);*/
 

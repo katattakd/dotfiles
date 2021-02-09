@@ -45,7 +45,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"rustup" "cargo-watch"
+"gcc" "rustup" "cargo-watch"
 
 
 
