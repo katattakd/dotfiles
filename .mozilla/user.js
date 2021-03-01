@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit 82bb3f987de619ccd61b1577d0fbb9e80675b76c)
+// This borrows a LOT from arkenfox/user.js (commit 5f9bb59b9524d97dfe9f9fa2611667e292aee1d9)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
@@ -66,16 +66,13 @@ user_pref("extensions.webcompat-reporter.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.sessionstore.enabled", false);
-user_pref("security.ssl.errorReporting.automatic", false);
-user_pref("security.ssl.errorReporting.enabled", false);
-user_pref("security.ssl.errorReporting.url", "");
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
 user_pref("dom.disable_window_move_resize", true);
 user_pref("browser.link.open_newwindow", 3);
 user_pref("browser.link.open_newwindow.restriction", 0);
 user_pref("dom.disable_open_during_load", true);
-user_pref("dom.popup_allowed_events", "click dblclick");
+user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
 user_pref("dom.push.enabled", false);
 user_pref("dom.push.userAgentID", "");
 user_pref("dom.disable_beforeunload", true);
@@ -85,7 +82,6 @@ user_pref("pdfjs.disabled", false);
 user_pref("browser.download.folderList", 1);
 user_pref("browser.download.useDownloadDir", false);
 user_pref("browser.download.manager.addToRecentDocs", false);
-user_pref("browser.download.hide_plugins_without_extensions", false);
 user_pref("browser.download.forbid_open_with", true);
 user_pref("ui.prefersReducedMotion", 1);
 user_pref("browser.startup.homepage_override.mstone", "ignore");
@@ -158,10 +154,8 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("plugin.state.flash", 0);
 user_pref("media.gmp-provider.enabled", false);
-user_pref("media.gmp-widevinecdm.enabled", false); // Disables DRM
 user_pref("media.eme.enabled", false);             // Disables DRM
 user_pref("webgl.min_capability_mode", true);
-user_pref("webgl.disable-fail-if-major-performance-caveat", true);
 user_pref("dom.serviceWorkers.enabled", false);
 user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
@@ -241,7 +235,6 @@ user_pref("browser.cache.disk.enable", false);
 // TLS hardening
 user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("security.tls.version.enable-deprecated", false);
-user_pref("security.ssl.disable_session_identifiers", true);
 user_pref("security.ssl.enable_ocsp_stapling", true);
 user_pref("security.OCSP.enabled", 1);
 user_pref("security.OCSP.require", true);
