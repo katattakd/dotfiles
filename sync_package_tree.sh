@@ -45,7 +45,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"$(pacman -Qqg base-devel)" "rustup" "cargo-watch"
+"gcc" "make" "rustup" "cargo-watch"
 
 
 
