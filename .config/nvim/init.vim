@@ -63,13 +63,9 @@ let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
-" Use the same indentation settings regardless of file type
-setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
-autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
-
-" Configure folding
-setlocal foldmethod=indent
-autocmd FileType vim setlocal foldmethod=marker
+" Use the same indentation settings regardless of file type and configure folding
+setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8 foldmethod=indent
+autocmd FileType * setlocal tabstop=8 softtabstop=0 noexpandtab shiftwidth=8 foldmethod=indent
 
 " Reduce disk writes
 set shada="NONE"
