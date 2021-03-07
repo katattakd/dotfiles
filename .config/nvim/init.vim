@@ -21,6 +21,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Adjust vim settings
@@ -36,6 +37,12 @@ nmap <M-Left> :bprev<CR>
 nmap <M-Right> :bnext<CR>
 map <F3> ggg?G
 map Y y$
+inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 set autochdir
 set number
 set linebreak
@@ -51,6 +58,7 @@ set termguicolors
 set background=dark
 set backspace=indent,eol,start
 set confirm
+set completeopt=menu
 let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
 colorscheme gruvbox
