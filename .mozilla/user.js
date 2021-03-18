@@ -1,4 +1,4 @@
-// This borrows a LOT from arkenfox/user.js (commit 5f9bb59b9524d97dfe9f9fa2611667e292aee1d9)
+// This borrows a LOT from arkenfox/user.js (commit 3a24c01f030ef6b83c75b1a31ad4f030dbc66179)
 // https://github.com/arkenfox/user.js
 
 // Make Firefox less annoying
