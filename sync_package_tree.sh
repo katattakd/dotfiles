@@ -18,7 +18,8 @@ declare -a explicit_packages=(
 "networkmanager"
 
 # Audio essentials
-"alsa-utils" "pulsemixer"
+"alsa-utils" "pipewire-pulse"
+
 
 
 
@@ -38,14 +39,11 @@ declare -a explicit_packages=(
 
 
 
-# Networking tools
-"gnu-netcat" "httpie"
-
 # Media tools
 "youtube-dl"
 
 # Developer tools
-"gcc" "make" "rustup" "cargo-watch"
+"gcc" "httpie" "make" "rustup" "cargo-watch"
 
 
 
@@ -102,4 +100,4 @@ sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_pac
 sudo DIFFPROG='nvim -d' pacdiff
 
 # Clean old packages from package cache
-paccache -rk2 -ruk0 --min-atime 1m --min-mtime 1m
+paccache -rk0 -ruk0 --min-atime 1m --min-mtime 1m

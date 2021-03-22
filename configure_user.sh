@@ -16,7 +16,6 @@ ln -sT ~/Public ~/Desktop/Projects
 ln -sT ~/dotfiles ~/Desktop
 
 # Create symlinks to config files
-ln -s ~/dotfiles/.config/pulse/* ~/.config/pulse
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
