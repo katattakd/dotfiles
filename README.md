@@ -4,7 +4,6 @@ These should *only* be used for reference, as they are written only to support 1
 
 ### todo
 - get anbox working
-- add script to back-up user files
 - make things 100% wayland native, remove xwayland
   - programs not supporting wayland yet: xcas, gimp
     - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
@@ -35,7 +34,7 @@ sh configure_user.sh
 sh sync_user_programs.sh
 ```
 4. Reboot
-5. If you intend to use Firefox, follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
+5. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions
 
@@ -50,7 +49,7 @@ sudo pacman-mirrors -f 0
 # This will also mark any programs added manually for removal. To prevent this, create a ~/packages.txt file with the packages you want to keep.
 sh sync_package_tree.sh
 
-# This will also remove files not accessed in more than 28 days from ~/.cache
+# This will also clean up junk from the home folder.
 sh sync_user_programs.sh
 ```
 ### Configuration
