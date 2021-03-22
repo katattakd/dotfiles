@@ -26,3 +26,8 @@ behind-the-scene * 3p-script noop
 behind-the-scene * image noop
 behind-the-scene * inline-script noop
 ```
+
+## uBlock Origin backups
+
+### My rules
+Use the "Export to file" button to back up filter rules. They can later be restored by using the "Import from file..." button and then committing the changes.
