@@ -4,7 +4,8 @@ These should *only* be used for reference, as they are written only to support 1
 
 ### todo
 - get anbox working
-- add script to remove home folder junk and back-up user files
+- add script to remove home folder junk (halfway implemented)
+- add script to back-up user files
 - make things 100% wayland native, remove xwayland
   - programs not supporting wayland yet: xcas, gimp
     - xcas *may* eventually support wayland in the future, with the release of fltk 1.4

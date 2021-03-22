@@ -18,7 +18,7 @@ declare -a explicit_packages=(
 "networkmanager"
 
 # Audio essentials
-"alsa-utils" "pipewire-pulse"
+"alsa-utils" "pipewire-pulse" "pulsemixer"
 
 
 
