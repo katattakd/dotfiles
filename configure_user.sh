@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.cache ~/.config/pulse ~/.ssh ~/Downloads ~/Desktop
+mkdir -p ~/.cache ~/.ssh ~/.local/share/mozilla ~/Downloads ~/Documents ~/Desktop
 
 # Setup ~/Documents folder
 ln -sT ~/Templates ~/Documents
@@ -21,6 +21,7 @@ ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 
 # Configure Firefox
+ln -s ~/.local/share/mozilla ~/.mozilla
 firefox -CreateProfile $USER
 echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/search.json.mozlz4

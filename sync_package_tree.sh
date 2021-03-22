@@ -100,4 +100,4 @@ sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_pac
 sudo DIFFPROG='nvim -d' pacdiff
 
 # Clean old packages from package cache
-paccache -rk0 -ruk0 --min-atime 1m --min-mtime 1m
+paccache -rk0 -ruk0 --min-atime 3w --min-mtime 3w

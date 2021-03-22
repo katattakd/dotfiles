@@ -13,9 +13,9 @@ rustup component add clippy
 fish -c fish_update_completions
 
 # Clean unused files from ~/.cache, ~/.config, and ~/.ssh
-find ~/.cache -atime +21 -print -delete
-find ~/.config -atime +365 -not -type l -print -delete
-find ~/.ssh/known_hosts -atime +365 -print -delete
+find ~/.cache/* -atime +21 -print -delete
+find ~/.config/* -atime +90 -not -type l -print -delete
+find ~/.ssh/known_hosts -atime +90 -print -delete
 
 # Remove empty files & folders from ~/.cache, ~/.config, and ~/.local
 find ~/.cache ~/.config ~/.local -empty -print -delete
@@ -24,8 +24,8 @@ find ~/.cache ~/.config ~/.local -empty -print -delete
 find ~/.* -xtype l -not -name "*lock*" -print -delete
 
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
-find ~/.ssh/known_hosts ~/.ssh/id_* -mtime +365 -exec rm -ir {} \;
+find ~/.ssh/* -mtime +365 -not -type l -exec rm -ir {} \;
 
 # Prompt to remove old files from ~/Downloads
-find ~/Downloads -mtime +28 -exec rm -ir {} \;
+find ~/Downloads -mtime +21 -exec rm -ir {} \;
 
