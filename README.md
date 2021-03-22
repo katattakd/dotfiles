@@ -3,7 +3,6 @@ Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
 ### todo
-- (maybe?) get anbox working
 - make things 100% wayland native, remove xwayland
   - programs not supporting wayland yet: xcas, gimp
     - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
@@ -67,7 +66,7 @@ sh sync_user_programs.sh
 ### Backups
 Before backing up the installed system, export all extension settings to the cloud or to a file. This is documented in the [firefox_setup.md](firefox_setup.md) file.
 
-Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up the installed system (replace `$DEST` with the location to back up to, like kat@example.com:/home/kat/kattop_backup):
+Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up the installed system (replace `$DEST` with the location to back up to, like `kat@example.com:/home/kat/kattop_backup`):
 ```bash
 rsync -amL --delete -v ~/Desktop ~/.ssh/id_* ~/.gitconfig --exclude "dotfiles" $DEST
 ```
