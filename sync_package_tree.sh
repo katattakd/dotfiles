@@ -65,6 +65,9 @@ declare -a dependency_packages=(
 # Spell checking dictionary
 "hunspell-en_US"
 
+# Graphics library
+"mesa"
+
 )
 if [ -f ~/packages.txt ]; then
 	declare -a user_packages=($(cat ~/packages.txt))

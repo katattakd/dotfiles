@@ -1,19 +1,19 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.cache ~/.ssh ~/.local/share/mozilla ~/Downloads ~/Documents ~/Desktop
+mkdir -p ~/.config ~/.cache ~/.ssh ~/.local/share/mozilla ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
 
 # Setup ~/Documents folder
-ln -sT ~/Templates ~/Documents
-ln -sT ~/Music ~/Documents
-ln -sT ~/Pictures ~/Documents
-ln -sT ~/Videos ~/Documents
+ln -sT ~/Templates ~/Documents/Templates
+ln -sT ~/Music ~/Documents/Music
+ln -sT ~/Pictures ~/Documents/Pictures
+ln -sT ~/Videos ~/Documents/Videos
 
 # Setup ~/Desktop folder (default working directory for new terminals)
-ln -sT ~/Documents ~/Desktop
-ln -sT ~/Downloads ~/Desktop
+ln -sT ~/Documents ~/Desktop/Documents
+ln -sT ~/Downloads ~/Desktop/Downloads
 ln -sT ~/Public ~/Desktop/Projects
-ln -sT ~/dotfiles ~/Desktop
+ln -sT ~/dotfiles ~/Desktop/dotfiles
 
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/* ~/.config
