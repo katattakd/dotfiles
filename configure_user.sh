@@ -19,12 +19,7 @@ ln -sT ~/dotfiles ~/Desktop/dotfiles
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
-
-# Configure Firefox
 ln -s ~/.local/share/mozilla ~/.mozilla
-firefox -CreateProfile $USER
-echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
-echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/search.json.mozlz4
 
 # Configure Bash
 ln -sf ~/dotfiles/.bashrc ~/.bashrc

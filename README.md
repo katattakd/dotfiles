@@ -33,7 +33,13 @@ sh configure_user.sh
 sh sync_user_programs.sh
 ```
 4. Reboot
-5. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
+5. Run the below commands:
+```bash
+# Creates/updates user configuration as necessary.
+# This requires an active window manager to run properly.
+sh configure_user_additional.sh
+```
+6. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions
 
@@ -60,6 +66,7 @@ git pull
 sh sync_package_tree.sh
 sh configure_system.sh
 sh configure_user.sh
+sh configure_user_additional.sh
 sh sync_user_programs.sh
 ```
 

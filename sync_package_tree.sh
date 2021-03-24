@@ -43,7 +43,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"gcc" "httpie" "make" "rustup" "cargo-watch"
+"gcc" "github-cli" "httpie" "make" "rustup" "cargo-watch"
 
 
 
