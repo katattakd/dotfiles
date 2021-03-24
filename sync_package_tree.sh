@@ -63,7 +63,7 @@ declare -a dependency_packages=(
 "noto-fonts"
 
 # Spell checking dictionary
-"hunspell-en_US"
+"hunspell-en_us"
 
 # Graphics library
 "mesa"

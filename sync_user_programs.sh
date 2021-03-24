@@ -18,6 +18,10 @@ find ~/.cache/* -atime +21 -print -delete
 find ~/.config/* -atime +90 -not -type l -print -delete
 find ~/.ssh/known_hosts -atime +90 -print -delete
 
+# Remove junk/unused files from ~/.local and ~/.ssh
+find ~/.local/* -not -path "*/share*" -print -delete
+find ~/.ssh/* -not -name "id_*" -not -type l -not -name "known_hosts" -print -delete
+
 # Remove ".old" files
 find ~/.* -name "*.old" -print -delete
 
