@@ -5,14 +5,14 @@ mkdir -p ~/.config ~/.cache ~/.ssh ~/.local/share/mozilla ~/Templates ~/Music ~/
 
 # Setup ~/Documents folder
 ln -sT ~/Templates ~/Documents/Templates
-ln -sT ~/Music ~/Documents/Music
-ln -sT ~/Pictures ~/Documents/Pictures
-ln -sT ~/Videos ~/Documents/Videos
 
 # Setup ~/Desktop folder (default working directory for new terminals)
 ln -sT ~/Documents ~/Desktop/Documents
 ln -sT ~/Downloads ~/Desktop/Downloads
+ln -sT ~/Music ~/Desktop/Music
+ln -sT ~/Pictures ~/Desktop/Pictures
 ln -sT ~/Public ~/Desktop/Projects
+ln -sT ~/Videos ~/Desktop/Videos
 ln -sT ~/dotfiles ~/Desktop/dotfiles
 
 # Create symlinks to config files
