@@ -75,7 +75,7 @@ Before backing up the installed system, export all extension settings to the clo
 
 Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up the installed system (replace `$DEST` with the location to back up to, like `kat@example.com:/home/kat/kattop_backup`):
 ```bash
-rsync -amL --delete -v ~/Desktop ~/.ssh ~/.gitconfig --exclude "dotfiles" --exclude ".ssh/config" --exclude ".ssh/known_hosts" $DEST
+sh backup.sh $DEST
 ```
 
 ## Screenshots
