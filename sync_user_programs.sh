@@ -18,6 +18,9 @@ find ~/.cache/* -atime +21 -print -delete
 find ~/.config/* -atime +90 -not -type l -print -delete
 find ~/.ssh/known_hosts -atime +90 -print -delete
 
+# Remove ".old" files
+find ~/.* -name "*.old" -print -delete
+
 # Remove empty files & folders from ~/.cache, ~/.config, and ~/.local
 find ~/.cache ~/.config ~/.local -empty -print -delete
 
