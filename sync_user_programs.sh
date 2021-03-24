@@ -22,13 +22,11 @@ find ~/.ssh/known_hosts -atime +90 -print -delete
 find ~/.local/* -not -path "*/share*" -print -delete
 find ~/.ssh/* -not -name "id_*" -not -type l -not -name "known_hosts" -print -delete
 
-# Remove ".old" files
+# Remove empty files/folders from hidden directories
+find ~/.[^.]* -empty -not -name "*lock*" -not -name ".stamp" -print -delete
+
+# Remove broken symlinks and ".old" files
 find ~/.* -name "*.old" -print -delete
-
-# Remove empty files & folders from ~/.cache, ~/.config, and ~/.local
-find ~/.cache ~/.config ~/.local -empty -print -delete
-
-# Remove broken symlinks which aren't lock files from hidden directories
 find ~/.* -xtype l -not -name "*lock*" -print -delete
 
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
