@@ -27,7 +27,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "lazygit" "htop" "ncdu" "ripgrep" "rsync"
+"fd" "fff" "lazygit" "htop" "ncdu" "ripgrep" "rsync"
 
 
 

@@ -2,6 +2,9 @@
 # VERSION: 3.0
 SETUVAR --export CARGO_HOME:target/cargo
 SETUVAR --export EDITOR:nvim
+SETUVAR --export FFF_FAV1:/home/kat/Desktop
+SETUVAR --export FFF_FAV2:/home/kat/dotfiles
+SETUVAR --export FFF_HIDDEN:1
 SETUVAR --export LESS:\x2dRi
 SETUVAR --export LESSHISTFILE:/dev/null
 SETUVAR --export LESS_TERMCAP_mb:\x1b\x5b01\x3b31m
@@ -16,6 +19,7 @@ SETUVAR --export PAGER:less
 SETUVAR --export RUSTUP_HOME:/home/kat/\x2elocal/share/rustup
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_abbr:abbr\x20\x2da
 SETUVAR _fish_abbr_boop:ping\x20\x2dc\x201
 SETUVAR _fish_abbr_cal:cal\x20\x2dn\x209\x20\x2dS
 SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
@@ -46,9 +50,12 @@ SETUVAR _fish_abbr_reboot:systemctl\x20reboot
 SETUVAR _fish_abbr_rg:rg\x20\x2d\x2dstats\x20\x2duuLzSC\x202
 SETUVAR _fish_abbr_rgi:rg\x20\x2d\x2dpretty\x20\x2d\x2dstats\x20\x2dSC\x2025
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
+SETUVAR _fish_abbr_set:set\x20\x2daUx
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
+SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
 SETUVAR _fish_abbr_uname:uname\x20\x2dsrm
+SETUVAR _fish_abbr_unset:set\x20\x2deU
 SETUVAR _fish_abbr_vi:nvim
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:brblack
