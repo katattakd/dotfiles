@@ -31,7 +31,9 @@ SETUVAR _fish_abbr_df:df\x20\x2dTh
 SETUVAR _fish_abbr_diff:diff\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_dig:drill\x20\x2dDV\x205
 SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x2etoml\x20\x2dx\x20\x27doc\x27
+SETUVAR _fish_abbr_f:fff
 SETUVAR _fish_abbr_fd:fd\x20\x2duuL
+SETUVAR _fish_abbr_gp:gping\x20\x2d\x2dbuffer\x208\x20\x2d\x2dwatch\x2dinterval\x200\x2e25
 SETUVAR _fish_abbr_halt:systemctl\x20halt
 SETUVAR _fish_abbr_hexdump:hexdump\x20\x2dC
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
