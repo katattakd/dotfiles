@@ -58,7 +58,7 @@ SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
 SETUVAR _fish_abbr_uname:uname\x20\x2dsrm
 SETUVAR _fish_abbr_unset:set\x20\x2deU
-SETUVAR _fish_abbr_vi:nvim
+SETUVAR _fish_abbr_vi:nvim\x20\x2dp
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:brblack
