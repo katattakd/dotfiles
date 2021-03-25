@@ -1,0 +1,4 @@
+gui:
+  update:
+    method: never
+  disableStartupPopups: false
