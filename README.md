@@ -15,7 +15,7 @@ These should *only* be used for reference, as they are written only to support 1
 ```bash
 userdel -r $NON_ROOT_USER
 homectl create kat --storage=luks --member-of=wheel --disk-size=16G
-# If you want to put the /home on an SD card, replace --disk-size=16G with --image-path=/dev/mmcblk1 --disk-size=100%
+# If you want to put the /home on an SD card, replace --disk-size=16G with --image-path=/dev/mmcblk1
 ```
 4. Login with the "kat" user. Connect the device to the internet using an Ethernet adapter or USB tethering.
 5. Run the below commands:
