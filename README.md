@@ -10,8 +10,14 @@ These should *only* be used for reference, as they are written only to support 1
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
-2. Boot the device and [connect it to the internet](https://wiki.archlinux.org/index.php/Iwd#Usage). Login as a non-root user.
-3. Run the below commands:
+2. Boot the device and [connect it to the internet](https://wiki.archlinux.org/index.php/Iwd#Usage). Login as root.
+3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
+```bash
+userdel -r $NON_ROOT_USER
+homectl create kat --storage=luks --member-of=wheel --disk-size=16G
+```
+4. Login with the "kat" user.
+5. Run the below commands:
 ```bash
 # Download the dotfiles repo.
 cd ~
@@ -32,14 +38,14 @@ sh configure_user.sh
 # This also performs maintenance tasks and can be used to upgrade the system.
 sh sync_user_programs.sh
 ```
-4. Reboot
-5. Run the below commands:
+6. Reboot
+7. Login to "kat" and run the below commands:
 ```bash
 # Creates/updates user configuration as necessary.
 # This requires an active window manager to run properly.
 sh configure_user_additional.sh
 ```
-6. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
+8. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions
 

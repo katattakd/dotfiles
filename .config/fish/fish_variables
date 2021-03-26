@@ -53,6 +53,7 @@ SETUVAR _fish_abbr_rg:rg\x20\x2d\x2dstats\x20\x2duuLzSC\x202
 SETUVAR _fish_abbr_rgi:rg\x20\x2d\x2dpretty\x20\x2d\x2dstats\x20\x2dSC\x2025
 SETUVAR _fish_abbr_rm:rm\x20\x2dir
 SETUVAR _fish_abbr_set:set\x20\x2daUx
+SETUVAR _fish_abbr_su:sudo
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
