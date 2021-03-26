@@ -10,13 +10,14 @@ These should *only* be used for reference, as they are written only to support 1
 
 ## Setup instructions
 1. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
-2. Boot the device and connect it to the internet using an Ethernet adapter (or USB tethering if Ethernet is not available). Login as root.
+2. Boot the device and login as root.
 3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
 ```bash
 userdel -r $NON_ROOT_USER
 homectl create kat --storage=luks --member-of=wheel --disk-size=16G
+# If you want to put the /home on an SD card, replace --disk-size=16G with --image-path=/dev/mmcblk1 --disk-size=100%
 ```
-4. Login with the "kat" user.
+4. Login with the "kat" user. Connect the device to the internet using an Ethernet adapter or USB tethering.
 5. Run the below commands:
 ```bash
 # Download the dotfiles repo.
