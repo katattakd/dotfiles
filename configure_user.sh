@@ -26,6 +26,3 @@ ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 ln -s ~/.local/share/mozilla ~/.mozilla
 
-# Configure Git
-git config --global color.ui auto
-
