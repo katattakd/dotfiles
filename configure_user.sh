@@ -18,7 +18,7 @@ ln -sT ~/dotfiles ~/Desktop/dotfiles
 # Configure Bash
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bashrc ~/.bash_profile
-rm ~/.bash_logout ~/.bash_history
+rm ~/.bash_logout
 
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/* ~/.config
