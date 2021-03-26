@@ -15,16 +15,16 @@ ln -sT ~/Public ~/Desktop/Projects
 ln -sT ~/Videos ~/Desktop/Videos
 ln -sT ~/dotfiles ~/Desktop/dotfiles
 
+# Configure Bash
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bashrc ~/.bash_profile
+rm ~/.bash_logout ~/.bash_history
+
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 ln -s ~/.local/share/mozilla ~/.mozilla
-
-# Configure Bash
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.bashrc ~/.bash_profile
-rm ~/.bash_logout ~/.bash_history
 
 # Configure Git
 git config --global color.ui auto
