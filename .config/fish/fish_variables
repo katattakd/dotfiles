@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export CARGO_HOME:target/cargo
+SETUVAR --export CARGO_HOME:/home/kat/\x2elocal/share/cargo
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FFF_FAV1:/home/kat/Desktop
 SETUVAR --export FFF_FAV2:/home/kat/dotfiles
