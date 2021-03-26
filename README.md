@@ -9,8 +9,8 @@ These should *only* be used for reference, as they are written only to support 1
     - gimp *will* be adding wayland support in version 2.9.8
 
 ## Setup instructions
-1. Install [Manjaro ARM Minimal](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-installer) to your device.
-2. Boot the device and [connect it to the internet](https://wiki.archlinux.org/index.php/Iwd#Usage). Login as root.
+1. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
+2. Boot the device and connect it to the internet using an Ethernet adapter (or USB tethering if Ethernet is not available). Login as root.
 3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
 ```bash
 userdel -r $NON_ROOT_USER
