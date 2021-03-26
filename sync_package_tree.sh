@@ -7,12 +7,12 @@ declare -a explicit_packages=(
 "base" "linux" "manjaro-system" "sudo"
 
 # Pinebook Pro specific packages
-"ap6256-firmware" "uboot-pinebookpro" "zswap-arm"
+"ap6256-firmware" "plymouth-theme-manjaro" "uboot-pinebookpro" "zswap-arm"
 
 
 
 # Program documentation
-"man-db" "texinfo"
+"man-db" "man-pages" "texinfo"
 
 # Networking essentials
 "networkmanager"

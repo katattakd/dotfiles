@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -amLR --delete -v $@ ~/Desktop/remote_backup
+rsync -amL --delete -v $@ ~/Desktop/remote_backup
