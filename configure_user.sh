@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.config ~/.cache ~/.ssh ~/.local/share/mozilla ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
+mkdir -p ~/.config ~/.cache ~/.ssh ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
 
 # Setup ~/Documents folder
 ln -sT ~/Templates ~/Documents/Templates
@@ -24,5 +24,4 @@ rm ~/.bash_logout ~/.bash_history
 ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
-ln -s ~/.local/share/mozilla ~/.mozilla
 

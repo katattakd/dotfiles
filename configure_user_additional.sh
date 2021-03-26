@@ -2,6 +2,8 @@
 
 # Configure Firefox profiles
 firefox -CreateProfile $USER
+mv ~/.mozilla ~/.local/share/mozilla
+ln -s ~/.local/share/mozilla ~/.mozilla
 echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/user.js
 echo ~/.mozilla/firefox/*.$USER | xargs -n 1 ln -s ~/dotfiles/.mozilla/search.json.mozlz4
 
