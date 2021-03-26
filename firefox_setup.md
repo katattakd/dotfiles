@@ -1,5 +1,5 @@
 # Firefox setup
-These instructions assume that you've already run the `configure_user.sh` setup script. If you haven't, remove the `~/.mozilla` folder and run the script before proceeding.
+These instructions assume that you've already run the `configure_user_additional.sh` setup script. If you haven't, remove the `~/.mozilla` folder and run the script before proceeding.
 
 ## uBlock Origin setup
 These settings put uBlock Origin into what is essentially a modified "medium mode". This should provide a fairly good balance between privacy (all JS and 3rd party frames are disabled by default), usability (one click to completely disable script blocking), and performance (not using a large number of filter lists).
