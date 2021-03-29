@@ -3,6 +3,10 @@ font-size=14
 hide-keyboard-layout
 disable-caps-lock-text
 
+indicator-radius=100
+indicator-thickness=6
+indicator-idle-visible
+
 color=1d2021
 
 bs-hl-color=cc241d
