@@ -9,11 +9,12 @@ These should *only* be used for reference, as they are written only to support 1
     - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
     - gimp *will* be adding wayland support in version 2.9.8
 
-## Setup instructions (Partial install)
+## Setup/update instructions (Partial install)
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
    - Alacritty (terminal emulator)
      - noto-fonts
    - Fish (CLI shell)
+     - Alacritty (terminal emulator which has been configured with the correct color scheme)
      - GNU Coreutils
      - man-db (Manual page tools)
      - Less (text pager)
@@ -25,8 +26,9 @@ These should *only* be used for reference, as they are written only to support 1
      - Optional deps:
        - ldns, fd, fff, gping, lazygit, ripgrep, github cli (Useful tools)
    - Rustup (Rust programming language)
-     - Cargo-watch (automatically rebuilds Rust code)
-     - GNU GCC
+     - GNU GCC (needed for linker command)
+   - Cargo-watch (automatically rebuilds Rust code)
+     - Rustup (rust compiler)
    - mpv (media player)
      - youtube-dl (streaming media downloader)
        - ffmpeg (media encoder)
@@ -37,70 +39,21 @@ These should *only* be used for reference, as they are written only to support 1
    - xcas (computer algebra system)
    - gimp (image editor)
    - rawtherapee (raw image editor)
+
+   Note: Updates will need to be handled by your distro's package manager, and should be performed often.
 2. Run the following commands:
 ```bash
 # Download the dotfiles repo.
 cd ~
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
+# If you're only updating the repo, do `cd ~/dotfiles && git pull` instead!
 
-# Install/update configuration files
-# Warn: This may interfere with other existing programs. Use with caution, and review the dotfiles repo before continuing.
-ln -s ~/dotfiles/.config/* ~/.config
-ln -s ~/dotfiles/.*rc ~/
-ln -s ~/dotfiles/.ssh/* ~/.ssh
+# Install/update configuration files and managed programs
+# Warn: This may interfere with other existing programs on your device. Use with caution, and review the repo's contents before continuing.
+sh sync_configure_partial_user.sh
 
-# Install/update Neovim plugins (if installed):
-nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
-
-# Install/update Rustup toolchains (if installed):
-rustup toolchain install stable
-rustup toolchain install beta # Optional
-rustup toolchain install nightly # Optional
-rustup component add clippy
-
-```
-3. If you are using the fish shell, run the following commands:
-```fish
-# Review list of abbreviations, and remove those that are unnecessary/unneeded.
-# This requires user intervention and cannot be automated
-abbr # List abbrs
-abbr -e $command # Remove abbr for $command (replace with the abbr you want removed)
-
-# Remove confliting env variables
-set # List env variables
-set -eU $variable # Remove $variable (replace with the variable you want removed)
-
-# WILL CAUSE ISSUES IF NOT REMOVED:
-set -eU CARGO_HOME
-set -eU RUSTUP_HOME
-
-# Update Fish completions
-fish_update_completions
-```
-
-## Update instructions (Partial install)
-1. Update the installed packages through your distro's package manager
-2. Run the following commands:
-```bash
-cd ~/dotfiles
-git pull # Warn: This may result in broken symlinks, which will ned to be cleaned up manually.
-
-# Update config files
-# Warn: This may interfere with other existing programs. Use with caution, and review the dotfiles repo before continuing.
-ln -s ~/dotfiles/.config/* ~/.config
-ln -s ~/dotfiles/.*rc ~/
-ln -s ~/dotfiles/.ssh/* ~/.ssh
-
-# Update Neovim plugins (if installed):
-nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
-
-# Update Rustup toolchains (if installed):
-rustup update
-```
-3. Run the following commands in the Fish shell (if installed):
-```fish
-fish_update_completions
+# Note: Updating the dotfiles may leave broken symlinks on your system, which will need to be removed manually.
 ```
 
 ## Setup instructions (Full install)
