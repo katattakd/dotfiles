@@ -55,6 +55,7 @@ SETUVAR _fish_abbr_rm:rm\x20\x2dir
 SETUVAR _fish_abbr_set:set\x20\x2daUx
 SETUVAR _fish_abbr_su:sudo
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
+SETUVAR _fish_abbr_top:htop
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
 SETUVAR _fish_abbr_uname:uname\x20\x2dsrmo

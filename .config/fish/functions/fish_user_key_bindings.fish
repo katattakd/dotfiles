@@ -3,6 +3,7 @@ function fish_user_key_bindings
 	bind -k f1 "run_command 'exa --all --classify --grid --group-directories-first'"
 	bind -k f2 "run_command 'exa --all --tree --level=4 --long --git --header --extended --git-ignore'"
 	bind -k f3 "run_command lazygit"
+	bind -k f4 "run_command htop"
 
 	bind -k f9 "change_dir .."
 	bind -k f10 "change_dir ~/Desktop"
