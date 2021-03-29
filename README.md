@@ -51,7 +51,7 @@ cd dotfiles
 
 # Install/update configuration files and managed programs
 # Warn: This may interfere with other existing programs on your device. Use with caution, and review the repo's contents before continuing.
-sh sync_configure_partial_user.sh
+sh partial_user_sync_configure.sh
 
 # Note: Updating the dotfiles may leave broken symlinks on your system, which will need to be removed manually.
 ```
