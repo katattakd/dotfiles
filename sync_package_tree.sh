@@ -4,10 +4,13 @@
 declare -a explicit_packages=(
 
 # Core system packages
-"base" "linux" "manjaro-system" "sudo"
+"base" "linux" "sudo"
+
+# Manjaro [ARM] specific packages
+"plymouth-theme-manjaro" "manjaro-system"
 
 # Pinebook Pro specific packages
-"ap6256-firmware" "plymouth-theme-manjaro" "uboot-pinebookpro" "zswap-arm"
+"ap6256-firmware" "uboot-pinebookpro" "zswap-arm"
 
 
 
@@ -15,7 +18,7 @@ declare -a explicit_packages=(
 "man-db" "man-pages" "texinfo"
 
 # Networking essentials
-"networkmanager"
+"networkmanager" "ufw"
 
 # Audio essentials
 "alsa-utils" "pipewire-pulse" "pulsemixer"
