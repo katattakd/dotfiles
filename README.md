@@ -62,9 +62,7 @@ sh partial_user_sync_configure.sh
 3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
 ```bash
 userdel -r $NON_ROOT_USER
-homectl create kat --storage=luks --member-of=wheel --disk-size=16G
-# If you want to put the /home on an SD card, replace --disk-size=16G with --image-path=/dev/mmcblk1
-# If you want near-instant logins (at the expense of brute forcing the password being easier), add --luks-pbkdf-time-cost=0.01 to the command.
+homectl create kat --member-of=wheel --storage=luks --disk-size=16G --luks-pbkdf-time-cost=0.01
 ```
 4. Login with the "kat" user. Connect the device to the internet using an Ethernet adapter or USB tethering.
 5. Run the below commands:
