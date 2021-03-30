@@ -18,7 +18,7 @@ declare -a explicit_packages=(
 "man-db" "man-pages" "texinfo"
 
 # Networking essentials
-"networkmanager" "ufw"
+"networkmanager"
 
 # Audio essentials
 "alsa-utils" "pipewire-pulse" "pulsemixer"

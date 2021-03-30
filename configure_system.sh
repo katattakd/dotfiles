@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # Configure networking
-sudo systemctl enable NetworkManager ufw
-sudo ufw enable
+sudo systemctl enable NetworkManager
+
+# Disable SSH (Manjaro [ARM] specific)
+sudo systemctl disable sshd
 
