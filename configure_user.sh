@@ -18,6 +18,7 @@ ln -sT ~/dotfiles ~/Desktop/dotfiles
 # Configure Bash
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bashrc ~/.bash_profile
+ln -s ~/dotfiles/.hushlogin ~/.hushlogin
 rm ~/.bash_logout
 
 # Create symlinks to config files
