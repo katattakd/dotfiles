@@ -35,7 +35,7 @@ declare -a explicit_packages=(
 
 
 # Sway + config dependencies
-"sway" "swaylock" "i3status" "brightnessctl" "grim" "wl-clipboard"
+"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
 
 # GUI essentials
 "alacritty" "mpv" "firefox" "firefox-ublock-origin"

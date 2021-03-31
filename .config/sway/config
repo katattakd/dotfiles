@@ -75,7 +75,9 @@ bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-wi
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
 bindsym $mod+BackSpace exec 'HOME=~/.cache xcas'
 bindsym $mod+Shift+l exec 'swaylock'
-bindsym $mod+p exec "grim -t png - | wl-copy"
+bindsym $mod+p exec "grimshot copy output"
+bindsym $mod+Shift+p exec "grimshot copy window"
+bindsym $mod+Ctrl+p exec "grimshot copy area"
 
 bindsym $mod+q kill
 

@@ -5,7 +5,7 @@ function fish_user_key_bindings
 	bind -k f3 "run_command lazygit"
 	bind -k f4 "run_command htop"
 	bind -k f5 "run_command reset"
-	bind -k f6 "commandline -i '&>/dev/null &'"
+	bind -k f6 "commandline -i ' &>/dev/null &'"
 
 	bind -k f9 "change_dir .."
 	bind -k f10 "change_dir ~/Desktop"
