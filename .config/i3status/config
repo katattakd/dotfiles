@@ -35,7 +35,7 @@ cpu_usage {
 
 load {
 	format = " L: %1min "
-	max_threshold = 4
+	max_threshold = 3
 }
 
 memory {
