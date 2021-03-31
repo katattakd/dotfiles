@@ -35,6 +35,7 @@ SETUVAR _fish_abbr_fd:fd\x20\x2duuL
 SETUVAR _fish_abbr_gp:gping\x20\x2d\x2dbuffer\x208\x20\x2d\x2dwatch\x2dinterval\x200\x2e25
 SETUVAR _fish_abbr_halt:systemctl\x20halt
 SETUVAR _fish_abbr_hexdump:hexdump\x20\x2dC
+SETUVAR _fish_abbr_imv:mpv\x20\x2d\x2dprofile\x3dimage
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
 SETUVAR _fish_abbr_lg:lazygit
