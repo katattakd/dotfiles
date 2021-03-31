@@ -35,7 +35,6 @@ noremap! <C-h> <C-w>
 nnoremap <C-L> :nohl<CR><C-L>
 nmap <M-Left> :bprev<CR>
 nmap <M-Right> :bnext<CR>
-map <F3> ggg?G
 map Y y$
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
@@ -63,6 +62,7 @@ set confirm
 set completeopt=menu
 let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
+let g:SuperTabMappingForward = '<F3>'
 colorscheme gruvbox
 
 " Use the same indentation settings regardless of file type and configure folding
