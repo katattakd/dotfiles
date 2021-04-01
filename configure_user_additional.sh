@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Configure managed user
-sudo homectl update kat --nice=2 --timezone=America/Los_Angeles --language=en_US --cpu-weight=50 --io-weight=50 --kill-processes=true --stop-delay=0 #--memory-high=85% --memory-max=90%
+sudo homectl update $USER --nice=2 --timezone=America/Los_Angeles --language=en_US --cpu-weight=50 --io-weight=50 --kill-processes=true --stop-delay=0 #--memory-high=85% --memory-max=90%
 
 # Cleanup old files from Bash
 rm ~/.bash_history

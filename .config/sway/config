@@ -71,8 +71,8 @@ output * adaptive_sync on
 set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop'
-bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-window'
-bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P kat'
+bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER --private-window'
+bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER'
 bindsym $mod+BackSpace exec 'HOME=~/.cache xcas'
 bindsym $mod+Shift+l exec 'swaylock'
 bindsym $mod+p exec "grimshot copy output"
@@ -95,7 +95,7 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+Shift+minus scratchpad show
 
 bindsym $mod+Shift+r reload
-bindsym $mod+Shift+q exec swaymsg exit
+bindsym $mod+Shift+q exit
 
 bindsym $mod+Escape focus parent
 bindsym $mod+Space focus mode_toggle
