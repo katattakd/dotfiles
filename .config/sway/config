@@ -71,6 +71,7 @@ output * adaptive_sync on
 set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop'
+bindsym $mod+t exec 'alacritty --command htop'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER'
 bindsym $mod+BackSpace exec 'HOME=~/.cache xcas'
