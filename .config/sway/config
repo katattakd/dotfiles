@@ -40,16 +40,18 @@ bar {
 	status_edge_padding 10
 }
 
+# Pinebook Pro specific tweaks
+input 9610:30:Pine64_Pinebook_Pro_Touchpad {
+	pointer_accel -.2
+	scroll_factor .8
+}
+
 # Input method configuration
 input type:touchpad {
 	dwt enabled
 	tap enabled
 	natural_scroll enabled
 	middle_emulation enabled
-
-	# Pinebook Pro specific tweaks
-	pointer_accel -.2
-	scroll_factor .8
 }
 input type:keyboard {
 	repeat_delay 300
@@ -57,6 +59,8 @@ input type:keyboard {
 	xkb_options "caps:shift,shift:both_capslock_cancel,compose:ralt"
 }
 input type:pointer {
+	dwt disabled
+	natural_scroll disabled
 	accel_profile flat
 }
 

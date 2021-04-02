@@ -6,12 +6,6 @@ declare -a explicit_packages=(
 # Core system packages
 "base" "linux" "sudo"
 
-# Manjaro [ARM] specific packages
-"plymouth-theme-manjaro" "manjaro-system"
-
-# Pinebook Pro specific packages
-"ap6256-firmware" "uboot-pinebookpro" "zswap-arm"
-
 
 
 # Program documentation

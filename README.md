@@ -3,6 +3,7 @@ Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
 ### todo
+- replace i3status with a more flexible tool
 - make things 100% wayland native, remove xwayland
   - programs not supporting wayland yet: xcas, gimp
     - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
@@ -69,6 +70,10 @@ homectl create kat --member-of=wheel --storage=luks --disk-size=16G --luks-pbkdf
 cd ~
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
+
+# Configures Pinebook Pro / Manjaro (ARM) specific parts of the system.
+# This must be run before all other scripts.
+sh configure_system_pbp.sh
 
 # Install/updates packages, and remove those that aren't necessary.
 # This also performs maintenance tasks and can be used to upgrade the system.
