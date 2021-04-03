@@ -71,7 +71,6 @@ user_pref("layers.acceleration.force-enabled", true);
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.compositor", true);
 user_pref("gfx.webrender.enabled", true);
-user_pref("gfx.webrender.software", true); // Pinebook Pro specific workaround
 
 
 user_pref("browser.aboutConfig.showWarning", false); // 0000
