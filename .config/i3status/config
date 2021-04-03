@@ -35,7 +35,7 @@ cpu_usage {
 
 load {
 	format = " L: %1min "
-	max_threshold = 3
+	max_threshold = 5
 }
 
 memory {
@@ -46,11 +46,6 @@ memory {
 
 disk / {
 	format = " /: %percentage_used "
-	low_threshold = 30
-}
-
-disk /home/kat {
-	format = " ~: %percentage_used "
 	low_threshold = 30
 }
 
