@@ -12,7 +12,6 @@ order += "cpu_usage"
 order += "load"
 order += "memory"
 order += "disk /"
-order += "disk /home/kat"
 order += "battery 0"
 order += "tztime local"
 
