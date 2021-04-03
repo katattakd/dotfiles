@@ -19,10 +19,7 @@ zswap-arm" >> ~/packages.txt
 echo "pref(\"general.config.obscure_value\", 0);
 pref(\"general.config.filename\", \"mozilla.cfg\");" | sudo tee /usr/lib/firefox/defaults/pref/local-settings.js
 echo "//
-if (getPref(\"gfx.webrender.all\") == true) {
-	lockPref(\"gfx.webrender.software\", true);
-} else {
-	unlockPref(\"gfx.webrender.software\");
-	clearPref(\"gfx.webrender.software\");
-}
+lockPref(\"gfx.webrender.all\", false);
+lockPref(\"gfx.webrender.compositor\", false);
+lockPref(\"gfx.webrender.enabled\", false);
 " | sudo tee /usr/lib/firefox/mozilla.cfg
