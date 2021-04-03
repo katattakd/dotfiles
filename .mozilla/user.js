@@ -74,7 +74,7 @@ user_pref("gfx.webrender.enabled", true);
 user_pref("gfx.webrender.software", true); // Pinebook Pro specific workaround
 
 
-user_pref("general.warnOnAboutConfig", false); // 0000
+user_pref("browser.aboutConfig.showWarning", false); // 0000
 
 user_pref("browser.shell.checkDefaultBrowser", false); // 0101
 user_pref("browser.startup.page", 1); // 0102
@@ -261,7 +261,6 @@ user_pref("gfx.font_rendering.graphite.enabled", false); // 1408
 
 user_pref("network.http.referer.XOriginPolicy", 1); // 1603
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2); // 1604
-user_pref("network.http.referer.defaultPolicy.pbmode", 0); // 1606
 user_pref("privacy.donottrackheader.enabled", true); // 1610
 
 

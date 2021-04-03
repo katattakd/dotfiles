@@ -6,8 +6,6 @@ nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
 # Install/update Rustup toolchains
 export RUSTUP_HOME="$HOME/.local/share/rustup"
 rustup toolchain install stable
-rustup toolchain install beta
-rustup toolchain install nightly
 rustup component add clippy
 
 # Update Fish completions
