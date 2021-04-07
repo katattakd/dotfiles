@@ -18,6 +18,7 @@ SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_abbr:abbr\x20\x2da
 SETUVAR _fish_abbr_boop:ping\x20\x2dc\x201
 SETUVAR _fish_abbr_cal:cal\x20\x2d\x2dmonths\x209\x20\x2d\x2dspan
+SETUVAR _fish_abbr_calc:flatpak\x20run\x20\x2d\x2duser\x20io\x2egithub\x2eQalculate
 SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
 SETUVAR _fish_abbr_chown:chown\x20\x2dhR
 SETUVAR _fish_abbr_clippy_2D_watch:cargo\x2dwatch\x20\x2dd\x202\x20\x2dx\x20\x27clippy\x27

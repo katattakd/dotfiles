@@ -26,3 +26,6 @@ ln -s ~/dotfiles/.config/* ~/.config
 ln -s ~/dotfiles/.*rc ~/
 ln -s ~/dotfiles/.ssh/* ~/.ssh
 
+# Configure Flatpak apps
+mkdir -p ~/.var/app/io.github.Qalculate/config/qalculate
+ln -s ~/dotfiles/.config/var/qalculate ~/.var/app/io.github.Qalculate/config/qalculate
