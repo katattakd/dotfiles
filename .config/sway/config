@@ -96,8 +96,8 @@ bindsym $mod+s sticky toggle
 bindsym $mod+f floating toggle
 bindsym $mod+Shift+f fullscreen
 
-bindsym $mod+minus move scratchpad
-bindsym $mod+Shift+minus scratchpad show
+bindsym $mod+equal opacity plus 0.1
+bindsym $mod+minus opacity minus 0.1
 
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+q exit
@@ -156,8 +156,6 @@ mode "resize" {
 	bindsym 2 resize set 360 640
 	bindsym 3 resize set 640 640
 	bindsym 4 resize set 360 360
-	bindsym equal opacity plus 0.1
-	bindsym minus opacity minus 0.1
 }
 bindsym $mod+r mode "resize"
 floating_modifier $mod
