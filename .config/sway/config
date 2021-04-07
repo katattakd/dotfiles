@@ -152,6 +152,12 @@ mode "resize" {
 	bindsym Shift+Right move right 20px
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
+	bindsym 1 resize set 640 360
+	bindsym 2 resize set 360 640
+	bindsym 3 resize set 640 640
+	bindsym 4 resize set 360 360
+	bindsym equal opacity plus 0.1
+	bindsym minus opacity minus 0.1
 }
 bindsym $mod+r mode "resize"
 floating_modifier $mod
