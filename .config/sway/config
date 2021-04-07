@@ -78,6 +78,7 @@ bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER'
 bindsym $mod+BackSpace exec 'alacritty --command htop'
+bindsym $mod+Shift+Backspace exec 'flatpak run --user io.github.Qalculate'
 bindsym $mod+Shift+l exec 'swaylock'
 bindsym $mod+p exec "grimshot copy output"
 bindsym $mod+Shift+p exec "grimshot copy window"
