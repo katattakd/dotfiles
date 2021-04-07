@@ -32,7 +32,7 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
 
 # GUI essentials
-"alacritty" "mpv" "firefox" "firefox-ublock-origin"
+"alacritty" "flatpak" "mpv" "firefox" "firefox-ublock-origin"
 
 
 
@@ -42,19 +42,8 @@ declare -a explicit_packages=(
 # Developer tools
 "gcc" "github-cli" "httpie" "make" "rustup" "cargo-watch"
 
-
-
-# CAS calculator
-"xcas"
-
-# Image tools
-"gimp" "rawtherapee"
-
 )
 declare -a dependency_packages=(
-
-# Xwayland
-"xorg-xwayland"
 
 # Fonts
 "noto-fonts"

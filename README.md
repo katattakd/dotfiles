@@ -3,10 +3,7 @@ Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
 ### todo
-- make things 100% wayland native, remove xwayland
-  - programs not supporting wayland yet: xcas, gimp
-    - xcas *may* eventually support wayland in the future, with the release of fltk 1.4
-    - gimp *will* be adding wayland support in version 2.9.8
+- 
 
 ## Setup/update instructions (Partial install)
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
@@ -34,9 +31,6 @@ These should *only* be used for reference, as they are written only to support 1
    - Firefox (web browser)
      - uBlock Origin (adblocker)
      - hunspell-en_us (spell checking dictionary)
-   - xcas (computer algebra system)
-   - gimp (image editor)
-   - rawtherapee (raw image editor)
 
    Note: Updates will need to be handled by your distro's package manager, and should be performed often.
 2. Run the following commands:
