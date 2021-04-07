@@ -24,7 +24,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "fff" "gping" "lazygit" "htop" "ncdu" "ripgrep" "rsync"
+"fd" "gping" "lazygit" "htop" "ncdu" "ripgrep" "rsync"
 
 
 
@@ -40,7 +40,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"gcc" "github-cli" "httpie" "make" "rustup" "cargo-watch"
+"gcc" "github-cli" "httpie" "rustup" "cargo-watch"
 
 )
 declare -a dependency_packages=(
