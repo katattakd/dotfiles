@@ -21,7 +21,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Adjust vim settings
@@ -36,12 +37,20 @@ nnoremap <C-L> :nohl<CR><C-L>
 nmap <M-Left> :bprev<CR>
 nmap <M-Right> :bnext<CR>
 map Y y$
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+			\ quit | endif
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+			\ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+autocmd BufWinEnter * silent NERDTreeMirror
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 au FocusGained,BufEnter * :checktime
 set autoread
 set autochdir
@@ -51,6 +60,7 @@ set mouse=a
 set ignorecase
 set smartcase
 set lazyredraw
+set isfname-==
 set list
 set spell
 set clipboard=unnamedplus
@@ -59,10 +69,11 @@ set termguicolors
 set background=dark
 set backspace=indent,eol,start
 set confirm
-set completeopt=menu
+set completeopt=longest,menuone
+set wildmenu
+set wildmode=longest,list,full
 let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
-let g:SuperTabMappingForward = '<F3>'
 colorscheme gruvbox
 
 " Use the same indentation settings regardless of file type and configure folding
