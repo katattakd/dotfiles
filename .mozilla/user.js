@@ -340,7 +340,8 @@ user_pref("dom.storage.next_gen", true); // 2760
 user_pref("privacy.sanitize.sanitizeOnShutdown", true); // 2802
 
 // 2803
-user_pref("privacy.clearOnShutdown.cache", true);
+user_pref("privacy.clearOnShutdown.cache", false);
+user_pref("privacy.clearOnShutdown.cookies", false);
 user_pref("privacy.clearOnShutdown.formdata", true);
 user_pref("privacy.clearOnShutdown.history", true);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
