@@ -96,6 +96,9 @@ bindsym $mod+s sticky toggle
 bindsym $mod+f floating toggle
 bindsym $mod+Shift+f fullscreen
 
+bindsym $mod+d move scratchpad
+bindsym $mod+Shift+d scratchpad show
+
 bindsym $mod+equal opacity plus 0.1
 bindsym $mod+minus opacity minus 0.1
 
