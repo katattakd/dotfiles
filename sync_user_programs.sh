@@ -47,3 +47,4 @@ find ~/.ssh/* -mtime +365 -not -type l -exec rm -ir {} \;
 # Prompt to remove old files from ~/Downloads
 find ~/Downloads -mtime +21 -exec rm -ir {} \;
 
+echo "Warning: Firefox browser extensions must be manually updated."
