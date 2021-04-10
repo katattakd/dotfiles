@@ -74,6 +74,13 @@ set wildmenu
 set wildmode=longest,list,full
 let g:netrw_dirhistmax = 0
 let g:gruvbox_italic=1
+let NERDTreeCaseSensitiveSort=0
+let NERDTreeNaturalSort=1
+let NERDTreeSortHiddenFirst=1
+let NERDTreeHijackNetrw=1
+let NERDTreeShowHidden=1
+let NERDTreeCascadeSingleChildDir=1
+let NERDTreeCascadeOpenSingleChildDir=1
 colorscheme gruvbox
 
 " Use the same indentation settings regardless of file type and configure folding
