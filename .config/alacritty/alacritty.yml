@@ -28,7 +28,7 @@ colors:
     white:   '#ebdbb2' 
 bell:
   color: '#928374'
-  duration: 50
+  duration: 32
 cursor:
   unfocused_hollow: false
 live_config_reload: false
