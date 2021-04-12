@@ -26,6 +26,10 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 " Adjust vim settings
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
