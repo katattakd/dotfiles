@@ -1,5 +1,5 @@
 // Based heavily on arkenfox/user.js
-// - commit b1927f9de1e7a2559f0e83c484d5cb243a4d5722
+// - commit 9b8735a87a1696a0124246b92d5c6beadf2d4567
 // https://github.com/arkenfox/user.js
 
 // Configuration which may break sites is listed with a "-".
@@ -30,7 +30,6 @@
 // 1800 = Plugins
 // 		- Disables DRM & external codecs
 // 2000 = Media / Camera / Mic
-// 		- Hardens WebGL
 // 		- Disables HTML5 autoplay
 // 2200 = Window management
 // 		- Prevents JS from moving/resizing windows
@@ -65,8 +64,6 @@ user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["ublock0_raymondhill_net-browser-action","developer-button"],"dirtyAreaCache":["nav-bar"],"currentVersion":16,"newElementCount":3}');
 user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark","pinTab","bookmarkSeparator","copyURL","emailLink","addSearchEngine","screenshots_mozilla_org"],"idsInUrlbar":[]}');
 user_pref("browser.toolbars.bookmarks.visibility", "never");
-user_pref("privacy.trackingprotection.enabled", true);
-user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.compositor", true);
@@ -271,8 +268,6 @@ user_pref("media.gmp-provider.enabled", false); // 1820
 user_pref("media.eme.enabled", false); // 1830
 
 
-user_pref("webgl.min_capability_mode", true); // 2012
-
 user_pref("media.autoplay.default", 5); // 2030
 user_pref("media.autoplay.blocking_policy", 2); // 2031
 
@@ -329,8 +324,11 @@ user_pref("security.dialog_enable_delay", 700); // 2684
 
 
 user_pref("browser.contentblocking.category", "strict"); // 2701
-
 user_pref("network.cookie.thirdparty.sessionOnly", true); // 2702
+
+user_pref("privacy.trackingprotection.enabled", true); // 2710
+user_pref("privacy.trackingprotection.socialtracking.enabled", true); // 2711
+
 user_pref("dom.caches.enabled", false); // 2740
 user_pref("dom.storageManager.enabled", false); // 2750
 user_pref("dom.storage_access.enabled", false); // 2755
