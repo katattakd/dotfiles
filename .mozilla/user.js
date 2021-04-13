@@ -22,18 +22,15 @@
 // 1000 = Cache / Session restore
 // 1200 = HTTPS
 // 		- Enables OCSP hard-fail
-// 		- Blocks all mixed content
 // 1400 = Fonts
 // 1600 = HTTP Headers
-// 		- Doesn't send referrer by default in private browsing
+// 		- Reduce cross-origin referer info
 // 1700 = Containers
 // 1800 = Plugins
 // 		- Disables DRM & external codecs
 // 2000 = Media / Camera / Mic
-// 		- Disables HTML5 autoplay
 // 2200 = Window management
 // 		- Prevents JS from moving/resizing windows
-// 		- Blocks pop-up windows
 // 2300 = Web workers
 // 		- Disables Service Workers, Web Notifications, and Push Notifications
 // 2400 = DOM & JavaScript
