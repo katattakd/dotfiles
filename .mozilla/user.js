@@ -2,7 +2,7 @@
 // - commit 9b8735a87a1696a0124246b92d5c6beadf2d4567
 // https://github.com/arkenfox/user.js
 
-// Configuration which may break sites is listed with a "-".
+// Configuration which could possibly break sites is listed with a "-". Configuration which is likely to break sites is listed with a "--" or "---".
 // Configuration which may *accidentally break* the browser is listed with a "*".
 // Other configuration, which is very unlikely to result in breakage, is not listed. Purposeful breakage of *browser* functionality is also not listed.
 
@@ -13,7 +13,6 @@
 // 		* Configures the new tab page, may break on update
 // 0200 = Geolocation
 // 0300 = Telemetry / auto-update
-// 		* Disables automatic update of extensions
 // 0400 = Safe browsing
 // 0500 = System add-ons
 // 0600 = Implicit outbound
@@ -24,7 +23,6 @@
 // 		- Enables OCSP hard-fail
 // 1400 = Fonts
 // 1600 = HTTP Headers
-// 		- Reduce cross-origin referer info
 // 1700 = Containers
 // 1800 = Plugins
 // 		- Disables DRM & external codecs
@@ -34,21 +32,19 @@
 // 2300 = Web workers
 // 		- Disables Service Workers, Web Notifications, and Push Notifications
 // 2400 = DOM & JavaScript
-// 		- Disables asm.js
 // 2600 = Misc
 // 		* Disables accessibility services
 // 		- Disables sendBeacon
 // 		- Prevents websites from overriding Firefox keyboard shortcuts
 // 2700 = Persistent Storage
-// 		- Changes content blocking settings
+// 		-- Changes content blocking category to "strict"
 // 		- Makes 3rd party cookies session-only
-// 		- Disables Storage API / Storage Access API
 // 		* Enables Local Storage Next Generation
 // 2800 = Shutdown
 // 4000 = First Party Isolation
-// 		- May break some login pages / site functionality
+// 		--- May break some login pages / site functionality
 // 4500 = Resist Fingerprinting
-//		- May break some site functionality
+//		-- May break some site functionality
 // 5000 = Personal
 // END = Easy check for syntax errors
 
@@ -252,8 +248,6 @@ user_pref("security.insecure_connection_text.enabled", true); // 1273
 user_pref("gfx.font_rendering.graphite.enabled", false); // 1408
 
 
-user_pref("network.http.referer.XOriginPolicy", 1); // 1603
-user_pref("network.http.referer.XOriginTrimmingPolicy", 2); // 1604
 user_pref("privacy.donottrackheader.enabled", true); // 1610
 
 
@@ -323,12 +317,7 @@ user_pref("security.dialog_enable_delay", 700); // 2684
 user_pref("browser.contentblocking.category", "strict"); // 2701
 user_pref("network.cookie.thirdparty.sessionOnly", true); // 2702
 
-user_pref("privacy.trackingprotection.enabled", true); // 2710
-user_pref("privacy.trackingprotection.socialtracking.enabled", true); // 2711
-
 user_pref("dom.caches.enabled", false); // 2740
-user_pref("dom.storageManager.enabled", false); // 2750
-user_pref("dom.storage_access.enabled", false); // 2755
 user_pref("dom.storage.next_gen", true); // 2760
 
 

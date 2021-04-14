@@ -5,7 +5,6 @@ disable-caps-lock-text
 
 indicator-radius=100
 indicator-thickness=6
-indicator-idle-visible
 
 color=1d2021
 
