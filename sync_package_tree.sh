@@ -40,7 +40,7 @@ declare -a explicit_packages=(
 "youtube-dl"
 
 # Developer tools
-"gcc" "github-cli" "httpie" "rustup" "cargo-watch"
+$(pacman -Sqg base-devel | xargs) "github-cli" "go" "go-tools" "httpie" "rustup" "cargo-watch"
 
 )
 declare -a dependency_packages=(
@@ -79,14 +79,18 @@ sudo pacman -Fy
 # Install all dependencies of the package tree not currently present
 sudo pacman -S --needed ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]}
 
-
-# Flag packages according to the package tree
+# Flag packages according to their presence in the package tree
 sudo pacman -D --noconfirm --asdeps $(pacman -Qqe)
-sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]} ${user_packages[@]}
-
+sudo pacman -D --noconfirm --asexplicit ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]}
 
 # Remove packages that are not part of the package tree
-sudo pacman -Rsunc $(comm -23 <(pacman -Qqtt | sort) <(pacman -Qq ${explicit_packages[@]} ${dependency_packages[@]} ${user_packages[@]} | sort)) $(pacman -Qqtd)
+sudo pacman -Rsunc $(pacman -Qqttd)
+
+# Flag packages according to their role in the package tree
+sudo pacman -D --noconfirm --asdeps ${dependency_packages[@]}
+
+# Validate the package tree by removing orphaned packages
+sudo pacman -Rsunc $(pacman -Qqtd)
 
 # Update config files
 sudo DIFFPROG='nvim -d' pacdiff
