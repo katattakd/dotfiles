@@ -74,8 +74,8 @@ else
 fi
 
 # Update mirror list (Manjaro specific tool)
-if [[ $(find /etc/pacman.d/mirrorlist -mtime +15 --print) ]] || [ $(pacman-mirrors --get-branch) != "*unstable" ]; then
-	sudo pacman-mirrors --api --protocols https --set-branch unstable --fasttrack 0
+if [[ $(find /etc/pacman.d/mirrorlist -mtime +15 -print) ]] || [[ $(pacman-mirrors --get-branch) != *"unstable" ]]; then
+	sudo pacman-mirrors --api --protocols https --set-branch unstable --country all
 	sudo pacman -Syyuu
 fi
 
