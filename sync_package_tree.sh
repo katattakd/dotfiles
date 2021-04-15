@@ -24,7 +24,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "gping" "lazygit" "htop" "ncdu" "ripgrep" "rsync"
+"fd" "gping" "lazygit" "htop" "ncdu" "ripgrep"
 
 
 
@@ -39,8 +39,17 @@ declare -a explicit_packages=(
 # Media tools
 "youtube-dl"
 
+# File tools
+"rsync"
+
 # Developer tools
-$(pacman -Sqg base-devel | xargs) "github-cli" "go" "go-tools" "httpie" "rustup" "cargo-watch"
+"github-cli" "httpie"
+
+### Golang tools
+"go" "go-tools"
+
+### Rust/C tools
+$(pacman -Sqg base-devel | xargs) "rustup" "cargo-watch"
 
 )
 declare -a dependency_packages=(
@@ -50,9 +59,6 @@ declare -a dependency_packages=(
 
 # Spell checking dictionary
 "hunspell-en_us"
-
-# Graphics library
-"mesa"
 
 # Pipewire screen capture backend
 "xdg-desktop-portal" "xdg-desktop-portal-wlr"
