@@ -8,8 +8,7 @@ echo "export PAN_MESA_DEBUG=\"gl3\"" | sudo tee /etc/profile.d/pbp_gpu.sh
 
 # Manjaro [ARM] specific packages
 echo "plymouth-theme-manjaro
-manjaro-system
-mesa-git" > ~/packages.txt
+manjaro-system" > ~/packages.txt
 
 # Pinebook Pro specific packages
 echo "ap6256-firmware

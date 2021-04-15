@@ -101,9 +101,6 @@ To update installed packages on the configured system, run the following command
 ```bash
 cd ~/dotfiles
 
-# Update mirrorlist, so that packages will download faster. This should be run every few months or so.
-sudo pacman-mirrors -f 0
-
 # This will also mark any programs added manually for removal. To prevent this, create a ~/packages.txt file with the packages you want to keep.
 sh sync_package_tree.sh
 

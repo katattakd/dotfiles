@@ -57,6 +57,9 @@ declare -a dependency_packages=(
 # Fonts
 "noto-fonts"
 
+# Graphics library
+"mesa"
+
 # Spell checking dictionary
 "hunspell-en_us"
 
@@ -70,11 +73,9 @@ else
 	declare -a user_packages=()
 fi
 
-
-
-# Update branch and mirror list
-if [ $(pacman-mirrors --get-branch) != "arm-unstable" ]; then
-	sudo pacman-mirrors --api --protocols https --set-branch unstable
+# Update mirror list (Manjaro specific tool)
+if [[ $(find /etc/pacman.d/mirrorlist -mtime +15 --print) ]] || [ $(pacman-mirrors --get-branch) != "*unstable" ]; then
+	sudo pacman-mirrors --api --protocols https --set-branch unstable --fasttrack 0
 	sudo pacman -Syyuu
 fi
 
@@ -95,11 +96,8 @@ sudo pacman -Rsunc $(pacman -Qqttd)
 # Flag packages according to their role in the package tree
 sudo pacman -D --noconfirm --asdeps ${dependency_packages[@]}
 
-# Validate the package tree by removing orphaned packages
-sudo pacman -Rsunc $(pacman -Qqtd)
+# Validate the package tree by removing orphaned/foreign packages
+sudo pacman -Rsunc $(pacman -Qqtd) $(pacman -Qqm)
 
 # Update config files
 sudo DIFFPROG='nvim -d' pacdiff
-
-# Clean old packages from package cache
-paccache -rk0 -ruk0 --min-atime 3w --min-mtime 3w
