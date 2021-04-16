@@ -24,3 +24,10 @@ if command -v flatpak > /dev/null
 	abbr -ga rawtherapee 'flatrun com.rawtherapee.RawTherapee'
 end
 
+function auto_ls --on-variable PWD
+	eval $_fish_abbr_ls
+end
+
+function .
+	auto_ls
+end

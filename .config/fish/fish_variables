@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
-SETUVAR --export FFF_HIDDEN:1
 SETUVAR --export LESS:\x2dRi
 SETUVAR --export LESSHISTFILE:/dev/null
 SETUVAR --export LESS_TERMCAP_mb:\x1b\x5b01\x3b31m
@@ -29,7 +28,6 @@ SETUVAR _fish_abbr_diff:nvim\x20\x2dd
 SETUVAR _fish_abbr_dig:drill\x20\x2dDV\x205
 SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x2etoml\x20\x2dx\x20\x27doc\x27
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
-SETUVAR _fish_abbr_f:fff
 SETUVAR _fish_abbr_fd:fd\x20\x2d\x2dhidden\x20\x2d\x2dfollow
 SETUVAR _fish_abbr_gp:gping\x20\x2d\x2dbuffer\x208\x20\x2d\x2dwatch\x2dinterval\x200
 SETUVAR _fish_abbr_halt:systemctl\x20halt
