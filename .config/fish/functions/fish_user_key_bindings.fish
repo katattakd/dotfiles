@@ -9,8 +9,7 @@ function fish_user_key_bindings
 end
 
 function change_dir
-	cd $argv
-	commandline -f repaint
+	run_command cd $argv 
 end
 
 function run_command
