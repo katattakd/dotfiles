@@ -1,17 +1,17 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.config ~/.cache ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
+mkdir -p ~/.config ~/.cache ~/Desktop ~/Downloads ~/Projects ~/Documents ~/Music ~/Pictures ~/Videos
 
-# Setup ~/Documents folder
-ln -sT ~/Templates ~/Documents/Templates
+# Configure XDG user dirs
+cp ~/dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs
 
 # Setup ~/Desktop folder (default working directory for new terminals)
 ln -sT ~/Documents ~/Desktop/Documents
 ln -sT ~/Downloads ~/Desktop/Downloads
 ln -sT ~/Music ~/Desktop/Music
 ln -sT ~/Pictures ~/Desktop/Pictures
-ln -sT ~/Public ~/Desktop/Projects
+ln -sT ~/Projects ~/Desktop/Projects
 ln -sT ~/Videos ~/Desktop/Videos
 ln -sT ~/dotfiles ~/Desktop/dotfiles
 
