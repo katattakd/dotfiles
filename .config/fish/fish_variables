@@ -19,11 +19,10 @@ SETUVAR _fish_abbr_cal:cal\x20\x2d\x2dmonths\x209\x20\x2d\x2dspan\x20\x2d\x2dwee
 SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
 SETUVAR _fish_abbr_chown:chown\x20\x2dhR
 SETUVAR _fish_abbr_cp:cp\x20\x2dir
-SETUVAR _fish_abbr_date:date\x20\x2b\x22\x25A\x2c\x20\x25B\x20\x25d\x20\x25Y\x25n\x25r\x20\x25Z\x20\x28UTC\x25\x3a\x3a\x3az\x29\x25nUnix\x20time\x20\x25s\x22
 SETUVAR _fish_abbr_dd:sudo\x20dd\x20bs\x3d1M\x20conv\x3dfsync\x20status\x3dprogress
-SETUVAR _fish_abbr_df:df\x20\x2d\x2dsi\x20\x2d\x2dprint\x2dtype
 SETUVAR _fish_abbr_diff:nvim\x20\x2dd
 SETUVAR _fish_abbr_dig:drill\x20\x2dDV\x205
+SETUVAR _fish_abbr_dl:lsblk\x20\x2d\x2doutput\x20NAME\x2cSIZE\x2cFSUSED\x2cFSUSE\x25\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
 SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x2etoml\x20\x2dx\x20\x27doc\x27
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
 SETUVAR _fish_abbr_fd:fd\x20\x2d\x2dhidden\x20\x2d\x2dfollow
@@ -31,10 +30,8 @@ SETUVAR _fish_abbr_gp:gping\x20\x2d\x2dbuffer\x208\x20\x2d\x2dwatch\x2dinterval\
 SETUVAR _fish_abbr_hex:hexdump\x20\x2d\x2dcanonical
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
-SETUVAR _fish_abbr_lg:lazygit
 SETUVAR _fish_abbr_ln:ln\x20\x2dsb
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
-SETUVAR _fish_abbr_lsblk:lsblk\x20\x2d\x2doutput\x20NAME\x2cSIZE\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
 SETUVAR _fish_abbr_lsd:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x20\x2d\x2donly\x2ddirs
 SETUVAR _fish_abbr_ltree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
@@ -48,6 +45,7 @@ SETUVAR _fish_abbr_su:sudo\x20su
 SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_top:htop
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
+SETUVAR _fish_abbr_treed:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore\x20\x2d\x2donly\x2ddirs
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
 SETUVAR _fish_abbr_uname:uname\x20\x2d\x2dkernel\x2dname\x20\x2d\x2dkernel\x2drelease\x20\x2d\x2dmachine\x20\x2d\x2doperating\x2dsystem
 SETUVAR _fish_abbr_unset:set\x20\x2deU
@@ -80,4 +78,3 @@ SETUVAR fish_pager_color_completion:white
 SETUVAR fish_pager_color_description:white
 SETUVAR fish_pager_color_prefix:brgreen
 SETUVAR fish_pager_color_progress:white
-SETUVAR fish_read_limit:0

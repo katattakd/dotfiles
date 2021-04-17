@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.config ~/.cache ~/.ssh ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
+mkdir -p ~/.config ~/.cache ~/Templates ~/Music ~/Pictures ~/Videos ~/Public ~/Downloads ~/Documents ~/Desktop
 
 # Setup ~/Documents folder
 ln -sT ~/Templates ~/Documents/Templates
@@ -23,8 +23,6 @@ rm ~/.bash_logout
 
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/* ~/.config
-ln -s ~/dotfiles/.*rc ~/
-ln -s ~/dotfiles/.ssh/* ~/.ssh
 
 # Configure Flatpak apps
 mkdir -p ~/.var/app/io.github.Qalculate/config/qalculate

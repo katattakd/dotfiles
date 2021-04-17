@@ -12,16 +12,16 @@ These should *only* be used for reference, as they are written only to support 1
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
    - Alacritty (terminal emulator)
      - noto-fonts
-     - Fish (CLI shell)
-       - GNU Coreutils
-       - man-db (Manual page tools)
-       - Less (text pager)
-       - Neovim (CLI code/text editor)
-       - Exa (ls alternative)
-       - Ncdu (du alternative)
-       - Htop (top alternative)
+   - Fish (CLI shell)
+     - Alacritty
+     - GNU Coreutils
+     - man-db (Manual page tools)
+     - Less (text pager)
+     - Neovim (CLI code/text editor)
+     - Exa (ls alternative)
+     - Ncdu (du alternative)
        - Optional deps:
-         - ldns, fd, gping, lazygit, ripgrep, github cli (Useful tools)
+         - ldns, fd, gping, lazygit, ripgrep, htop, github cli (Useful tools)
    - Rust (Rust programming language)
      - Cargo-watch (automatically rebuilds Rust code)
    - mpv (media player)

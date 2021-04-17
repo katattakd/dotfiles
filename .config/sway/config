@@ -74,7 +74,7 @@ output * adaptive_sync on
 # Navigation keybinds
 set $mod Mod4
 
-bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop'
+bindsym $mod+Return exec 'alacritty --working-directory ~/Desktop --command fish'
 bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER --private-window'
 bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -ProfileManager'
 bindsym $mod+BackSpace exec 'alacritty --command htop'

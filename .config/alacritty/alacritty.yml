@@ -26,13 +26,5 @@ colors:
     magenta: '#d3869b'
     cyan:    '#8ec07c'
     white:   '#ebdbb2' 
-bell:
-  color: '#928374'
-  duration: 32
 cursor:
   unfocused_hollow: false
-live_config_reload: false
-shell:
-  program: /usr/bin/fish
-debug:
-  log_level: Off
