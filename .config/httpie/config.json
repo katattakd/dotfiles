@@ -1,11 +1,8 @@
 {
 	"default_options": [
-		"--compress",
 		"--verbose",
 		"--follow",
 		"--path-as-is",
-		"--check-status",
-		"--ssl=tls1.2",
 		"--default-scheme=https"
 	]
 }

@@ -1,5 +1,3 @@
-set -gx CARGO_HOME $HOME/.local/share/cargo
-
 if command -v flatpak > /dev/null
 	function flatrun
 		run flatpak run --user $argv

@@ -16,7 +16,6 @@ set $white #ebdbb2
 output * bg $darkgray solid_color
 
 # Title bar
-font Noto Sans Mono 10
 client.focused          $blue $blue $darkgray $purple $darkgray
 client.focused_inactive $darkgray $darkgray $gray $purple $darkgray
 client.unfocused        $darkgray $darkgray $gray $purple $darkgray
@@ -24,7 +23,6 @@ client.urgent           $red $red $white $red $red
 
 # Status bar configuration
 bar {
-	font Noto Sans Mono 10
 	position top
 	status_command i3status
 	separator_symbol |
