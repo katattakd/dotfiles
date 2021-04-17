@@ -21,25 +21,26 @@ flatpak --user update
 fish -c fish_update_completions
 
 # Clean unused files from ~/.cache, ~/.config, and ~/.ssh
-find ~/.cache/* -atime +21 -print -delete
+find ~/.cache/* -atime +21 -mtime +90 -print -delete
 find ~/.config/* -atime +90 -not -type l -print -delete
 find ~/.ssh/known_hosts -atime +90 -print -delete
 
 # Remove junk/unused files from ~/.local and ~/.ssh
 find ~/.local/* -not -path "*/share*" -print -delete
-find ~/.ssh/* -not -name "id_*" -not -type l -not -name "known_hosts" -print -delete
+find ~/.ssh/* -not -name "id_*" -not -name "known_hosts" -print -delete
 
-# Remove empty files/folders and broken symlinks from ~/.config and ~/.ssh
-find ~/.config ~/.ssh -empty -not -name "*lock*" -not -name ".stamp" -print -delete
-find ~/.config ~/.ssh -xtype l -not -name "*lock*" -print -delete
+# Remove empty files/folders and broken symlinks from ~/.config
+find ~/.config -empty -print -delete
+find ~/.config -xtype l -print -delete
 
 # Remove ".old" files
 find ~/.* -name "*.old" -print -delete
 
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
-find ~/.ssh/* -mtime +365 -not -type l -exec rm -ir {} \;
+find ~/.ssh/* -mtime +365 -exec rm -ir {} \;
 
-# Prompt to remove old files from ~/Downloads
+# Prompt to remove old files from ~/Downloads and ~/.config
 find ~/Downloads -mtime +21 -exec rm -ir {} \;
+find ~/.config/* -mtime +180 -not -type l -exec rm -ir {} \;
 
 echo "Warning: Unmanaged Firefox browser extensions must be manually updated."
