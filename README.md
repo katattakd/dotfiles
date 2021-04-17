@@ -2,6 +2,12 @@
 Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
+# todo
+- move back to x86_64 (aarch64 linux is hell)
+  - fully automate system installation process
+  - use firefox flatpak
+  - remove device specific configuration
+
 ## Setup/update instructions (Partial install)
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
    - Alacritty (terminal emulator)
@@ -14,13 +20,10 @@ These should *only* be used for reference, as they are written only to support 1
        - Exa (ls alternative)
        - Ncdu (du alternative)
        - Htop (top alternative)
-       - Systemd (init system)
        - Optional deps:
-         - ldns, fd, fff, gping, lazygit, ripgrep, github cli (Useful tools)
-   - Rustup (Rust programming language)
-     - GNU GCC (needed for linker command)
-   - Cargo-watch (automatically rebuilds Rust code)
-     - Rustup (rust compiler)
+         - ldns, fd, gping, lazygit, ripgrep, github cli (Useful tools)
+   - Rust (Rust programming language)
+     - Cargo-watch (automatically rebuilds Rust code)
    - mpv (media player)
      - youtube-dl (streaming media downloader)
        - ffmpeg (media encoder)

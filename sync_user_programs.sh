@@ -3,11 +3,6 @@
 # Install/update Neovim plugins
 nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
 
-# Install/update Rustup toolchains
-export RUSTUP_HOME="$HOME/.local/share/rustup"
-rustup toolchain install stable
-rustup component add clippy
-
 # Setup Flatpak repos
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --user --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo

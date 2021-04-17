@@ -29,10 +29,10 @@ declare -a explicit_packages=(
 
 
 # Sway + config dependencies
-"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wl-clipboard"
+"sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"alacritty" "flatpak" "mpv" "firefox" "firefox-ublock-origin"
+"alacritty" "mpv" "flatpak" "firefox" "firefox-ublock-origin"
 
 
 
@@ -45,11 +45,8 @@ declare -a explicit_packages=(
 # Developer tools
 "github-cli" "httpie"
 
-### Golang tools
-"go" "go-tools"
-
-### Rust/C tools
-$(pacman -Sqg base-devel | xargs) "rustup" "cargo-watch"
+### Rust tools
+"gcc" "rust" "rust-docs" "cargo-watch"
 
 )
 declare -a dependency_packages=(
@@ -59,6 +56,9 @@ declare -a dependency_packages=(
 
 # Graphics library
 "mesa"
+
+# Clipboard support
+"wl-clipboard"
 
 # Spell checking dictionary
 "hunspell-en_us"
