@@ -7,6 +7,7 @@ These should *only* be used for reference, as they are written only to support 1
 - fix screen capture for the millionth time
 - try out kakoune
 - simplify/streamline configs as much as possible
+  - simplify/streamline install process as much as possible
 - move back to x86_64 (aarch64 linux is hell)
   - fully automate system installation process
   - use firefox flatpak

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create user directories
-mkdir -p ~/.config ~/.cache ~/Downloads ~/Projects ~/Documents ~/Music ~/Pictures ~/Videos
+mkdir -p ~/.config ~/Downloads ~/Projects ~/Documents ~/Music ~/Pictures ~/Videos
 
 # Create symlinks to config files
 cp ~/dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs
