@@ -63,6 +63,9 @@ declare -a dependency_packages=(
 # Spell checking dictionary
 "hunspell-en_us"
 
+# Wireless networking backend
+"iwd"
+
 # Pipewire screen capture backend
 "xdg-desktop-portal" "xdg-desktop-portal-wlr"
 
