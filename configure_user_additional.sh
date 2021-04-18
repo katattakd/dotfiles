@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Cleanup old files from Bash
-rm ~/.bash_history
+rm  ~/.bashrc ~/.bash_profile ~/.bash_logout ~/.bash_history
 
 # Configure Firefox profiles
 firefox -CreateProfile $USER

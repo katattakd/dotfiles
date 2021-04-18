@@ -3,8 +3,11 @@
 # Disable SSH (Manjaro [ARM] specific)
 sudo systemctl disable sshd
 
+# Manjaro [ARM] specific tweaks
+sudo rm /etc/motd
+
 # Pinebook Pro specific GPU fixes
-echo "export PAN_MESA_DEBUG=\"gl3\"" | sudo tee /etc/profile.d/pbp_gpu.sh
+sudo homectl update $USER --setenv PAN_MESA_DEBUG=gl3
 
 # Manjaro [ARM] specific packages
 echo "plymouth-theme-manjaro

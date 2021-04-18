@@ -15,15 +15,12 @@ ln -sT ~/Projects ~/Desktop/Projects
 ln -sT ~/Videos ~/Desktop/Videos
 ln -sT ~/dotfiles ~/Desktop/dotfiles
 
-# Configure Bash
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.bashrc ~/.bash_profile
-ln -s ~/dotfiles/.hushlogin ~/.hushlogin
-rm ~/.bash_logout
-
 # Create symlinks to config files
 ln -s ~/dotfiles/.config/* ~/.config
 
 # Configure Flatpak apps
 mkdir -p ~/.var/app/io.github.Qalculate/config/qalculate
 ln -s ~/dotfiles/.config/var/qalculate ~/.var/app/io.github.Qalculate/config/qalculate
+
+# Configure user account
+sudo homectl update $USER --shell=/usr/bin/fish --nice=-2
