@@ -20,3 +20,4 @@ plugins
 CAS
 NetworkManager
 Flatpak
+systemd
