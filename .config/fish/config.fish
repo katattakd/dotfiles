@@ -1,7 +1,7 @@
 set TTY1 (tty)
 if test "$TTY1" = "/dev/tty1"
 	clear
-	systemd-inhibit --what=handle-power-key --why="Prevent accidental power button presses" sway > /dev/null 2>&1
+	systemd-inhibit --what=handle-power-key --why="Prevent accidental power button presses" sway &> /dev/null # Pinebook Pro specific fix
 	systemctl poweroff # Workaround for https://github.com/systemd/systemd/issues/8598
 	exit
 end

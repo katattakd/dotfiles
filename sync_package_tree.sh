@@ -36,9 +36,6 @@ declare -a explicit_packages=(
 
 
 
-# Media tools
-"youtube-dl"
-
 # File tools
 "rsync"
 
@@ -56,6 +53,9 @@ declare -a dependency_packages=(
 
 # Graphics library
 "mesa"
+
+# Media streaming support
+"youtube-dl"
 
 # Clipboard support
 "wl-clipboard"
