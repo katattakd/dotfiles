@@ -66,6 +66,9 @@ declare -a dependency_packages=(
 # Wireless networking backend
 "iwd"
 
+# Pipewire screen capture backend
+"xdg-desktop-portal-wlr"
+
 )
 if [ -f ~/packages.txt ]; then
 	declare -a user_packages=($(cat ~/packages.txt))
