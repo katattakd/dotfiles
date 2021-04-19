@@ -3,9 +3,13 @@ function run
 end
 
 function play
-	run mpv $argv
+	run mpv --force-window=yes $argv
 end
 
 function view
-	run mpv --profile=image $argv
+	play --profile=image $argv
+end
+
+function hear
+	play --video=no $argv
 end
