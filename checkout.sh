@@ -1,3 +1,3 @@
 #!/bin/sh
-rm ~/checkout
-rsync -am -v $@ ~/checkout
+rm -rf ~/checkout
+rsync -avm $@ ~/checkout
