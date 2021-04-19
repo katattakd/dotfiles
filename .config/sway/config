@@ -15,6 +15,9 @@ set $white #ebdbb2
 
 output * bg $darkgray solid_color
 
+# xdg-desktop-portal bug fixes
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 # Title bar
 client.focused          $blue $blue $darkgray $purple $darkgray
 client.focused_inactive $darkgray $darkgray $gray $purple $darkgray

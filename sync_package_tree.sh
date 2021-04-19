@@ -29,12 +29,14 @@ declare -a explicit_packages=(
 
 
 # Sway + config dependencies
-"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wf-recorder"
+"sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
 "alacritty" "mpv" "flatpak" "firefox" "firefox-ublock-origin"
 
 
+# Sway tools
+"wf-recorder"
 
 # File tools
 "rsync"
