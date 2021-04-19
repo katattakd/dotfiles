@@ -29,7 +29,7 @@ declare -a explicit_packages=(
 
 
 # Sway + config dependencies
-"sway" "swaylock" "i3status" "brightnessctl" "grimshot"
+"sway" "swaylock" "i3status" "brightnessctl" "grimshot" "wf-recorder"
 
 # GUI essentials
 "alacritty" "mpv" "flatpak" "firefox" "firefox-ublock-origin"
@@ -65,9 +65,6 @@ declare -a dependency_packages=(
 
 # Wireless networking backend
 "iwd"
-
-# Pipewire screen capture backend
-"xdg-desktop-portal" "xdg-desktop-portal-wlr"
 
 )
 if [ -f ~/packages.txt ]; then
