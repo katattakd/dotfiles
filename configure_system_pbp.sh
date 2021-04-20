@@ -3,9 +3,6 @@
 # Disable SSH (Manjaro [ARM] specific)
 sudo systemctl disable sshd
 
-# Manjaro [ARM] specific tweaks
-sudo rm /etc/motd
-
 # Pinebook Pro specific GPU fixes
 sudo homectl update $USER --setenv PAN_MESA_DEBUG=gl3
 
