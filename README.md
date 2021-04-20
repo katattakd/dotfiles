@@ -27,7 +27,6 @@ These should *only* be used for reference, as they are written only to support 1
      - Cargo-watch (automatically rebuilds Rust code)
    - mpv (media player)
      - youtube-dl (streaming media downloader)
-       - ffmpeg (media encoder)
      - noto-fonts
 
    Note: Updates will need to be handled by your distro's package manager, and should be performed often.

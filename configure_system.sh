@@ -9,6 +9,10 @@ printf '[device]\nwifi.backend=iwd\n' | sudo tee /etc/NetworkManager/conf.d/wifi
 # Configure automatic pacman cache management
 sudo systemctl enable paccache.timer
 
+# Configure system flatpak
+sudo rm -rf /var/lib/flatpak
+sudo flatpak remote-delete --system flathub
+
 # Lock root user
 sudo passwd -ld root
 sudo usermod -s /usr/sbin/nologin root

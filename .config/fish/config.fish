@@ -1,3 +1,5 @@
+ulimit -c 0
+
 set TTY1 (tty)
 if test "$TTY1" = "/dev/tty1"
 	clear
