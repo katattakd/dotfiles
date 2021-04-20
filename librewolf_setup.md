@@ -5,7 +5,7 @@ Run the following command to import the dotfiles user.js:
 ```bash
 echo ~/.var/app/io.gitlab.librewolf-community/.librewolf/*.default* | xargs -n 1 cp -f ~/dotfiles/.config/librewolf/user.js
 ```
-This is only required the first time you run the browser. After running this, the `sync_user_programs.sh` script will keep it updated.
+This is only required after the first time you run the browser. After running this, the `sync_user_programs.sh` script will keep it updated.
 
 ## menu > "Customize Toolbar..."
 - Set "Theme" to "Dark"
