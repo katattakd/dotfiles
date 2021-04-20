@@ -79,8 +79,8 @@ set $mod Mod4
 bindsym $mod+Return exec 'alacritty --command fish'
 bindsym $mod+Backspace exec 'flatpak run --user com.github.tchx84.Flatseal'
 bindsym $mod+Shift+Backspace exec 'flatpak run --user io.github.Qalculate'
-bindsym $mod+Shift+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -P $USER --private-window'
-bindsym $mod+Ctrl+Return exec 'MOZ_ENABLE_WAYLAND=1 firefox -ProfileManager'
+bindsym $mod+Shift+Return exec 'flatpak run --user io.gitlab.librewolf-community --private-window'
+bindsym $mod+Ctrl+Return exec 'flatpak run --user io.gitlab.librewolf-community'
 bindsym $mod+Shift+l exec 'swaylock'
 bindsym $mod+p exec "grimshot copy output"
 bindsym $mod+Shift+p exec "grimshot copy window"

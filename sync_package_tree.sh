@@ -32,7 +32,7 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"alacritty" "mpv" "flatpak" "firefox" "firefox-ublock-origin"
+"alacritty" "mpv" "flatpak"
 
 
 # Sway tools
@@ -61,9 +61,6 @@ declare -a dependency_packages=(
 
 # Clipboard support
 "wl-clipboard"
-
-# Spell checking dictionary
-"hunspell-en_us"
 
 # Wireless networking backend
 "iwd"

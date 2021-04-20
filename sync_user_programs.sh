@@ -14,6 +14,14 @@ flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
 flatpak install --user flathub io.github.Qalculate
 
+# Install LibreWolf Flatpak
+curl https://gitlab.com/librewolf-community/browser/linux/uploads/5c8ea25604b07904ff388be85a33b173/LibreWolf-87.0-1.aarch64.flatpak -O
+flatpak install --user LibreWolf-*.flatpak
+rm LibreWolf-*.flatpak
+
+# Configure Librewolf profiles
+echo ~/.var/app/io.gitlab.librewolf-community/.librewolf/*.default* | xargs -n 1 cp -f ~/dotfiles/.config/librewolf/user.js
+
 # Update Flatpak apps
 flatpak --user update
 
@@ -42,5 +50,3 @@ find ~/.ssh/* -mtime +365 -exec rm -ir {} \;
 # Prompt to remove old files from ~/Downloads and ~/.config
 find ~/Downloads -mtime +21 -exec rm -ir {} \;
 find ~/.config/* -mtime +180 -not -type l -exec rm -ir {} \;
-
-echo "Warning: Unmanaged Firefox browser extensions must be manually updated."

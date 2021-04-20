@@ -7,7 +7,6 @@ These should *only* be used for reference, as they are written only to support 1
   - simplify/streamline install process as much as possible
 - move back to x86_64 (aarch64 linux is hell)
   - fully automate system installation process
-  - use firefox flatpak
   - remove device specific configuration
 
 ## Setup/update instructions (Partial install)
@@ -30,9 +29,6 @@ These should *only* be used for reference, as they are written only to support 1
      - youtube-dl (streaming media downloader)
        - ffmpeg (media encoder)
      - noto-fonts
-   - Firefox (web browser)
-     - uBlock Origin (adblocker)
-     - hunspell-en_us (spell checking dictionary)
 
    Note: Updates will need to be handled by your distro's package manager, and should be performed often.
 2. Run the following commands:
@@ -97,7 +93,7 @@ sh sync_user_programs.sh
 # This requires an active window manager to run properly.
 sh configure_user_additional.sh
 ```
-8. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most of Firefox's configuration is automated, however, adjusting extension settings must be done manually.
+8. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most browser configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions (Full install)
 
