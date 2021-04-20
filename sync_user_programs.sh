@@ -14,7 +14,7 @@ flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
 flatpak install --user flathub io.github.Qalculate
 
-# Install LibreWolf Flatpak
+# Workaround for https://gitlab.com/librewolf-community/browser/linux/-/issues/128
 curl https://gitlab.com/librewolf-community/browser/linux/uploads/5c8ea25604b07904ff388be85a33b173/LibreWolf-87.0-1.aarch64.flatpak -O
 flatpak install --user LibreWolf-*.flatpak
 rm LibreWolf-*.flatpak
