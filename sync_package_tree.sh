@@ -71,6 +71,9 @@ declare -a dependency_packages=(
 # Pipewire screen capture backend
 "xdg-desktop-portal-wlr"
 
+# Workaround for https://github.com/flatpak/flatpak/issues/2861
+"xdg-desktop-portal-gtk"
+
 )
 if [ -f ~/packages.txt ]; then
 	declare -a user_packages=($(cat ~/packages.txt))
