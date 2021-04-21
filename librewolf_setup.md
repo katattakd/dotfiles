@@ -9,7 +9,6 @@ This is only required after the first time you run the browser. After running th
 
 ## menu > "Customize Toolbar..."
 - Set "Theme" to "Dark"
-- Set "Density" to "Compact"
 
 ## uBlock Origin setup
 These settings put uBlock Origin into what is essentially a modified "medium mode". This should provide a fairly good balance between privacy (all JS and 3rd party frames are disabled by default), usability (one click to completely disable script blocking), and performance (not using a large number of filter lists).
