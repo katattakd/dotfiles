@@ -33,6 +33,17 @@ function fm
 	wl-copy -c
 end
 
+function fl
+	for arg in $argv
+		realpath -s $arg
+	end
+	for file in (string escape -n (string split -n ' ' (wl-paste)))
+		if test (string sub -l 8 $file) = 'file:///'
+			echo (string unescape --style=url (string unescape (string sub -s 8 "$file"))) $dest
+		end
+	end
+end
+
 function frm
 	for arg in $argv
 		rm -Irv $arg
