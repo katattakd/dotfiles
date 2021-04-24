@@ -16,9 +16,6 @@ set $white #ebdbb2
 
 output * bg $darkgray solid_color
 
-# xdg-desktop-portal bug fixes
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
 # Title bar
 client.focused          $blue $blue $darkgray $purple $darkgray
 client.focused_inactive $darkgray $darkgray $gray $purple $darkgray
@@ -40,12 +37,6 @@ bar {
 	}
 	status_padding 4
 	status_edge_padding 10
-}
-
-# Pinebook Pro specific tweaks
-input 9610:30:Pine64_Pinebook_Pro_Touchpad {
-	pointer_accel -.2
-	scroll_factor .8
 }
 
 # Input method configuration
@@ -165,3 +156,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 floating_modifier $mod
 
+include /etc/sway/config.d/*

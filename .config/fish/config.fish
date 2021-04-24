@@ -3,7 +3,7 @@ ulimit -c 0
 set TTY1 (tty)
 if test "$TTY1" = "/dev/tty1"
 	clear
-	exec systemd-inhibit --what=handle-power-key --why="Prevent accidental power button presses" sway &> /dev/null # Pinebook Pro specific fix
+	exec sway &> /dev/null
 end
 
 if command -v flatpak > /dev/null
