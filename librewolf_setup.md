@@ -7,9 +7,6 @@ echo ~/.var/app/io.gitlab.librewolf-community/.librewolf/*.default* | xargs -n 1
 ```
 This is only required after the first time you run the browser. After running this, the `sync_user_programs.sh` script will keep it updated.
 
-## menu > "Customize Toolbar..."
-- Set "Theme" to "Dark"
-
 ## uBlock Origin setup
 These settings put uBlock Origin into what is essentially a modified "medium mode". This should provide a fairly good balance between privacy (all JS and 3rd party frames are disabled by default), usability (one click to completely disable script blocking), and performance (not using a large number of filter lists).
 

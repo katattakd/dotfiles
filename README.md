@@ -6,9 +6,6 @@ These should *only* be used for reference, as they are written only to support 1
 - simplify/streamline configs as much as possible
   - simplify/streamline install process as much as possible
 - move back to x86_64 (aarch64 linux is hell)
-  - remove librewolf, switch to better alternatives (which don't break major webapps for little practical benefit)
-    - use tor browser for normal browsing
-    - use firefox with a comprehensive user.js for web apps
   - fully automate system installation process
   - remove device specific configuration
 
