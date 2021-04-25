@@ -29,7 +29,6 @@ user_pref("browser.region.update.enabled", false);
 user_pref("app.update.auto", false);
 
 // Disable sending plugin crash reports
-user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 user_pref("dom.ipc.plugins.reportCrashURL", false);
 
 // Disable about:addons recommendations
@@ -100,13 +99,6 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 // Disable automatically installing extension/theme updates
 user_pref("extensions.update.autoUpdateDefault", false);
 
-// Disable Captive Portal detection
-user_pref("captivedetect.canonicalURL", "");
-user_pref("network.captive-portal-service.enabled", false);
-
-// Disable Network Connectivity checks
-user_pref("network.connectivity-service.enabled", false);
-
 // Disable Safe Browsing
 user_pref("browser.safebrowsing.malware.enabled", false);
 user_pref("browser.safebrowsing.phishing.enabled", false);
@@ -139,6 +131,13 @@ user_pref("extensions.update.enabled", false);
 
 // Disable extension metadata
 user_pref("extensions.getAddons.cache.enabled", false);
+
+// Disable Captive Portal detection
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+
+// Disable Network Connectivity checks
+user_pref("network.connectivity-service.enabled", false);
 
 // Disable extension signing
 user_pref("xpinstall.signatures.required", false);
@@ -232,13 +231,10 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
 //////////////////// security
 
-// Enforce Firefox blocklist
-user_pref("extensions.blocklist.enabled", true);
-
 // Display the full URL in the location bar
 user_pref("browser.urlbar.trimURLs", false);
 
-// Limit HTTP authenticaion dialogs for sub-resorces
+// Limit HTTP authenticaion dialogs for cross-origin sub-resorces
 user_pref("network.auth.subresource-http-auth-allow", 1);
 
 // Disable media cache from writing to disk in Private Browsing
@@ -255,21 +251,6 @@ user_pref("security.insecure_connection_text.enabled", true);
 // Display advanced info on insecure connection pages
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
-// Disable Flash player
-user_pref("plugin.state.flash", 0);
-
-// Enable window.opener protection
-user_pref("dom.targetBlankNoOpener.enabled", true);
-
-// Remove files opened with an external app
-user_pref("browser.helperApps.deleteTempFileOnExit", true);
-
-// Disable dev tools in browser context
-user_pref("devtools.chrome.enabled", false);
-
-// Disable remote debugging
-user_pref("devtools.debugger.remote-enabled", false);
-
 // Prevent websites from overriding Firefox keyboard shortcuts
 user_pref("permissions.default.shortcuts", 2);
 
@@ -278,16 +259,9 @@ user_pref("network.IDN_show_punycode", true);
 
 // Enforce Firefox's built-in PDF reader
 user_pref("pdfjs.disabled", false);
-user_pref("pdfjs.enableScripting", false);
-
-// Disable Windows store links
-user_pref("network.protocol-handler.external.ms-windows-store", false);
 
 // Disable permissions delegation
 user_pref("permissions.delegation.enabled", false);
-
-// Enable window.name protection
-user_pref("privacy.window.name.update.enabled", true);
 
 // Disable bypassing 3rd party extension install prompts
 user_pref("extensions.postDownloadThirdPartyPrompt", false);
@@ -298,9 +272,6 @@ user_pref("browser.download.useDownloadDir", false);
 // Lock down extension directories
 user_pref("extensions.enabledScopes", 5);
 user_pref("extensions.autoDisableScopes", 15);
-
-// Enforce a delay on some confirmation dialogs
-user_pref("security.dialog_enable_delay", 700);
 
 // Set default items to clear when clearing history
 user_pref("privacy.cpd.cache", true);
@@ -323,14 +294,8 @@ user_pref("privacy.sanitize.timeSpan", 0);
 // Require safe negotiation
 user_pref("security.ssl.require_safe_negotiation", true);
 
-// Enforce TLS 1.0 / 1.1 downgrades as session only
-user_pref("security.tls.version.enable-deprecated", false);
-
 // Disable TLS 1.3 0-RTT
 user_pref("security.tls.enable_0rtt_data", false);
-
-// Enable OCSP stapling
-user_pref("security.ssl.enable_ocsp_stapling", true);
 
 // Make OCSP fetches hard-fail
 user_pref("security.OCSP.require", true);
@@ -475,24 +440,8 @@ user_pref("toolkit.winRegisterApplicationRestart", false);
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
 
-// Block pop-ups
-user_pref("dom.disable_open_during_load", true);
-
-// Limit events capable of causing pop-ups
-user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
-
-// Disable Web Notifications
-user_pref("dom.webnotifications.enabled", false);
-user_pref("dom.webnotifications.serviceworker.enabled", false);
-
 // Disable page close confirmation dialogs
 user_pref("dom.disable_beforeunload", true);
-
-// Disable shaking the screen (on mobile devices)
-user_pref("dom.vibrator.enabled", false);
-
-// Download to Downloads folder by default
-user_pref("browser.download.folderList", 2);
 
 // Disable unnecessary warnings
 user_pref("browser.tabs.warnOnClose", false);
@@ -504,41 +453,27 @@ user_pref("full-screen-api.warning.timeout", 0);
 // Disable autocopy
 user_pref("clipboard.autocopy", false);
 
-// Enable single-line spell check
-user_pref("layout.spellcheckDefault", 1);
-
 // Open bookmarks in a new tab
 user_pref("browser.tabs.loadBookmarksInTabs", true);
 
-// Decode URLs on copy
-user_pref("browser.urlbar.decodeURLsOnCopy", true);
-
-// Disable auto scroll
-user_pref("general.autoScroll", false);
-
 // Disable alt menu
 user_pref("ui.key.menuAccessKey", 0);
-
-// Open "view source" in a new window
-user_pref("view_source.tab", false);
-
-// Hide bookmarks toolbar
-user_pref("browser.toolbars.bookmarks.visibility", "never");
 
 
 
 
 //////////////////// katprefs
 
+// Disable location bar dropdown
+user_pref("browser.urlbar.maxRichResults", 0);
+
 // Disable favicons
 user_pref("browser.chrome.site_icons", false);
 user_pref("alerts.showFavicons", false);
 
-// Disable location bar dropdown
-user_pref("browser.urlbar.maxRichResults", 0);
-
-// Auto hide download button
-user_pref("browser.download.autohideButton", true);
+// Disable Web Notifications
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
 
 // Enable "Find As You Type"
 user_pref("accessibility.typeaheadfind", true);
@@ -548,6 +483,9 @@ user_pref("browser.backspace_action", 0);
 
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
+
+// Hide bookmarks toolbar
+user_pref("browser.toolbars.bookmarks.visibility", "never");
 
 // Set dark compact theme
 user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
@@ -561,4 +499,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sat Apr 24 05:51:38 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Sun Apr 25 04:45:22 AM PDT 2021");
