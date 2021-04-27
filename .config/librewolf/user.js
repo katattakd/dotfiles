@@ -133,14 +133,10 @@ user_pref("extensions.update.enabled", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 
 // Disable Captive Portal detection
-user_pref("captivedetect.canonicalURL", "");
 user_pref("network.captive-portal-service.enabled", false);
 
 // Disable Network Connectivity checks
 user_pref("network.connectivity-service.enabled", false);
-
-// Disable extension signing
-user_pref("xpinstall.signatures.required", false);
 
 
 
@@ -177,10 +173,6 @@ user_pref("browser.link.open_newwindow.restriction", 0);
 
 //////////////////// privacy_standard
 
-// Disable HTTP Alternate Services
-user_pref("network.http.altsvc.enabled", false);
-user_pref("network.http.altsvc.oe", false);
-
 // Disable sendBeacon
 user_pref("beacon.enabled", false);
 
@@ -207,20 +199,15 @@ user_pref("privacy.firstparty.isolate", true);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 
-// Prevent CSS-based history leak
-user_pref("layout.css.visited_links_enabled", false);
-
-// Make permissions session-only
-user_pref("permissions.memory_only", true);
+// Disable HTTP Alternate Services
+user_pref("network.http.altsvc.enabled", false);
+user_pref("network.http.altsvc.oe", false);
 
 // Only send referer if base domains match
 user_pref("network.http.referer.XOriginPolicy", 1);
 
 // Only send scheme://host:port for cross-origin referers
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
-
-// Disable service workers
-user_pref("dom.serviceWorkers.enabled", false);
 
 // Disable mozAddonManager Web API
 user_pref("extensions.webextensions.restrictedDomains", "");
@@ -234,12 +221,16 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 // Display the full URL in the location bar
 user_pref("browser.urlbar.trimURLs", false);
 
-// Limit HTTP authenticaion dialogs for cross-origin sub-resorces
-user_pref("network.auth.subresource-http-auth-allow", 1);
-
 // Disable media cache from writing to disk in Private Browsing
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("media.memory_cache_max_size", 65536);
+
+// Enforce CRLite
+user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.pki.crlite_mode", 2);
+
+// Upgrade mixed content (same behavior as OOTB Chrome)
+user_pref("security.mixed_content.upgrade_display_content", true);
 
 // Enable HTTPS-Only mode in private browsing
 user_pref("dom.security.https_only_mode_pbm", true);
@@ -248,30 +239,14 @@ user_pref("dom.security.https_only_mode_pbm", true);
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("security.insecure_connection_text.enabled", true);
 
-// Display advanced info on insecure connection pages
-user_pref("browser.xul.error_pages.expert_bad_cert", true);
-
 // Prevent websites from overriding Firefox keyboard shortcuts
 user_pref("permissions.default.shortcuts", 2);
 
 // Always show Punycode in domain names
 user_pref("network.IDN_show_punycode", true);
 
-// Enforce Firefox's built-in PDF reader
-user_pref("pdfjs.disabled", false);
-
 // Disable permissions delegation
 user_pref("permissions.delegation.enabled", false);
-
-// Disable bypassing 3rd party extension install prompts
-user_pref("extensions.postDownloadThirdPartyPrompt", false);
-
-// Always prompt before downloading
-user_pref("browser.download.useDownloadDir", false);
-
-// Lock down extension directories
-user_pref("extensions.enabledScopes", 5);
-user_pref("extensions.autoDisableScopes", 15);
 
 // Set default items to clear when clearing history
 user_pref("privacy.cpd.cache", true);
@@ -291,32 +266,8 @@ user_pref("privacy.sanitize.timeSpan", 0);
 
 //////////////////// security_tls
 
-// Require safe negotiation
-user_pref("security.ssl.require_safe_negotiation", true);
-
-// Disable TLS 1.3 0-RTT
-user_pref("security.tls.enable_0rtt_data", false);
-
 // Make OCSP fetches hard-fail
 user_pref("security.OCSP.require", true);
-
-// Block SHA-1 certs
-user_pref("security.pki.sha1_enforcement_level", 1);
-
-// Disable Microsoft Family Safety cert
-user_pref("security.family_safety.mode", 0);
-
-// Enforce strict PKP
-user_pref("security.cert_pinning.enforcement_level", 2);
-
-// Enforce CRLite
-user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.pki.crlite_mode", 2);
-
-// Block mixed content
-user_pref("security.mixed_content.block_active_content", true);
-user_pref("security.mixed_content.block_display_content", true);
-user_pref("security.mixed_content.block_object_subrequest", true);
 
 // Enable HTTPS-Only mode
 user_pref("dom.security.https_only_mode", true);
@@ -325,6 +276,9 @@ user_pref("dom.security.https_only_mode", true);
 
 
 //////////////////// security_data
+
+// Make permissions session-only
+user_pref("permissions.memory_only", true);
 
 // Disable Form Autofill
 user_pref("extensions.formautofill.addresses.enabled", false);
@@ -348,9 +302,6 @@ user_pref("browser.taskbar.lists.frequent.enabled", false);
 user_pref("browser.taskbar.lists.recent.enabled", false);
 user_pref("browser.taskbar.lists.tasks.enabled", false);
 
-// Disable Windows taskbar preview
-user_pref("browser.taskbar.previews.enable", false);
-
 // Disable saving passwords
 user_pref("signon.rememberSignons", false);
 
@@ -365,9 +316,6 @@ user_pref("browser.sessionstore.max_tabs_undo", 3);
 
 // Disable storing additional session data
 user_pref("browser.sessionstore.privacy_level", 2);
-
-// Disable shortcut favicons
-user_pref("browser.shell.shortcutFavicons", false);
 
 // Disable page thumbnail collection
 user_pref("browser.pagethumbnails.capturing_disabled", true);
@@ -384,26 +332,14 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 //////////////////// security_hardened
 
-// Disable SVG OpenType fonts
-user_pref("gfx.font_rendering.opentype_svg.enabled", false);
-
-// Disable graphite
-user_pref("gfx.font_rendering.graphite.enabled", false);
-
 // Disable media plugins
 user_pref("media.gmp-provider.enabled", false);
 
 // Disable all DRM
 user_pref("media.eme.enabled", false);
 
-// Disable clipboard commands from "non-privileged" content
-user_pref("dom.allow_cut_copy", false);
-
 // Disable asm.js
 user_pref("javascript.options.asmjs", false);
-
-// Disable accessibility services
-user_pref("accessibility.force_disabled", 1);
 
 // Remove special permissions for mozilla domains
 user_pref("permissions.manager.defaultsUrl", "");
@@ -418,9 +354,6 @@ user_pref("webchannel.allowObject.urlWhitelist", "");
 
 // Increase minimum interval between session saves
 user_pref("browser.sessionstore.interval", 60000);
-
-// Disable OCSP fetching
-user_pref("security.OCSP.enabled", 0);
 
 
 
@@ -449,9 +382,6 @@ user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
-
-// Disable autocopy
-user_pref("clipboard.autocopy", false);
 
 // Open bookmarks in a new tab
 user_pref("browser.tabs.loadBookmarksInTabs", true);
@@ -499,4 +429,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sun Apr 25 04:45:22 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Tue Apr 27 03:24:53 AM PDT 2021");
