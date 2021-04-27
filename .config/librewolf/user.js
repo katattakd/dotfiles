@@ -129,9 +129,6 @@ user_pref("identity.fxaccounts.enabled", false);
 // Disable auto checking for extension/theme updates
 user_pref("extensions.update.enabled", false);
 
-// Disable extension metadata
-user_pref("extensions.getAddons.cache.enabled", false);
-
 // Disable Captive Portal detection
 user_pref("network.captive-portal-service.enabled", false);
 
@@ -160,9 +157,6 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 
 // Enable Do Not Track HTTP header
 user_pref("privacy.donottrackheader.enabled", true);
-
-// Prevent scripts from moving/resizing open windows
-user_pref("dom.disable_window_move_resize", true);
 
 // Open links targeting new windows in a new tab
 user_pref("browser.link.open_newwindow", 3);
@@ -330,26 +324,6 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 
 
-//////////////////// security_hardened
-
-// Disable media plugins
-user_pref("media.gmp-provider.enabled", false);
-
-// Disable all DRM
-user_pref("media.eme.enabled", false);
-
-// Disable asm.js
-user_pref("javascript.options.asmjs", false);
-
-// Remove special permissions for mozilla domains
-user_pref("permissions.manager.defaultsUrl", "");
-
-// Remove webchannel whitelist
-user_pref("webchannel.allowObject.urlWhitelist", "");
-
-
-
-
 //////////////////// performance
 
 // Increase minimum interval between session saves
@@ -372,6 +346,9 @@ user_pref("toolkit.winRegisterApplicationRestart", false);
 // Disable autoplay
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
+
+// Prevent scripts from moving/resizing open windows
+user_pref("dom.disable_window_move_resize", true);
 
 // Disable page close confirmation dialogs
 user_pref("dom.disable_beforeunload", true);
@@ -429,4 +406,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Tue Apr 27 03:24:53 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Tue Apr 27 01:07:57 PM PDT 2021");
