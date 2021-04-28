@@ -68,8 +68,7 @@ output * adaptive_sync on
 set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --command fish'
-bindsym $mod+Backspace exec 'flatpak run --user com.github.tchx84.Flatseal'
-bindsym $mod+Shift+Backspace exec 'GTK_THEME=Adwaita:dark qalculate-gtk'
+bindsym $mod+Backspace exec 'GTK_THEME=Adwaita:dark qalculate-gtk'
 bindsym $mod+Shift+Return exec 'flatpak run --user io.gitlab.librewolf-community --private-window'
 bindsym $mod+Ctrl+Return exec 'flatpak run --user io.gitlab.librewolf-community'
 bindsym $mod+Shift+l exec 'swaylock'
