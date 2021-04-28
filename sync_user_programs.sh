@@ -12,7 +12,6 @@ flatpak install --user flathub-beta org.gimp.GIMP
 flatpak install --user flathub com.rawtherapee.RawTherapee
 flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
-flatpak install --user flathub io.github.Qalculate
 
 # Workaround for https://gitlab.com/librewolf-community/browser/linux/-/issues/128
 curl https://gitlab.com/librewolf-community/browser/flatpak/-/jobs/1200930055/artifacts/raw/LibreWolf-88.0-1.aarch64.flatpak -O

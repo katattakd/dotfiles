@@ -32,7 +32,7 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"alacritty" "mpv" "flatpak"
+"alacritty" "mpv" "qalculate-gtk" "flatpak"
 
 
 # Sway tools
