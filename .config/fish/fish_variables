@@ -16,6 +16,7 @@ SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_abbr:abbr\x20\x2da
 SETUVAR _fish_abbr_cal:cal\x20\x2d\x2dmonths\x209\x20\x2d\x2dspan\x20\x2d\x2dweek
+SETUVAR _fish_abbr_calc:qalc
 SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
 SETUVAR _fish_abbr_chown:chown\x20\x2dhRv
 SETUVAR _fish_abbr_cp:cp\x20\x2diav
