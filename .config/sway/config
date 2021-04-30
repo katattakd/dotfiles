@@ -69,8 +69,8 @@ set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --command fish'
 bindsym $mod+Backspace exec 'GTK_THEME=Adwaita:dark qalculate-gtk'
-bindsym $mod+Shift+Return exec 'flatpak run --user io.gitlab.librewolf-community --private-window'
-bindsym $mod+Ctrl+Return exec 'flatpak run --user io.gitlab.librewolf-community'
+bindsym $mod+Shift+Return exec 'GTK_THEME=Adwaita:dark MOZ_ENABLE_WAYLAND=1 firefox -P kat --private-window'
+bindsym $mod+Ctrl+Return exec 'GTK_THEME=Adwaita:dark MOZ_ENABLE_WAYLAND=1 firefox -P kat'
 bindsym $mod+Shift+l exec 'swaylock'
 bindsym $mod+p exec "grimshot copy output"
 bindsym $mod+Shift+p exec "grimshot copy window"

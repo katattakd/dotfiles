@@ -32,7 +32,11 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"alacritty" "mpv" "qalculate-gtk" "flatpak"
+"alacritty" "mpv" "qalculate-gtk" "firefox" "firefox-ublock-origin"
+
+# External GUI apps
+"flatpak"
+
 
 
 # Sway tools

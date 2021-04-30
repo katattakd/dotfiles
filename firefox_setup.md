@@ -1,17 +1,7 @@
-# LibreWolf setup
-
-## user.js setup
-Run the following command to import the dotfiles user.js:
-```bash
-echo ~/.var/app/io.gitlab.librewolf-community/.librewolf/*.default* | xargs -n 1 cp -f ~/dotfiles/.config/librewolf/user.js
-```
-This is only required after the first time you run the browser. After running this, the `sync_user_programs.sh` script will keep it updated.
+# Firefox setup
 
 ## uBlock Origin setup
 These settings put uBlock Origin into what is essentially a modified "medium mode". This should provide a fairly good balance between privacy (all JS and 3rd party frames are disabled by default), usability (one click to completely disable script blocking), and performance (not using a large number of filter lists).
-
-### about:addons > uBlock Origin
-- Enable "Run in Private Windows"
 
 ### Settings
 - Enable "I am an advanced user".

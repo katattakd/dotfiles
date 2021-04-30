@@ -93,7 +93,7 @@ sh sync_user_programs.sh
 # This requires an active window manager to run properly.
 sh configure_user_additional.sh
 ```
-8. Follow the instructions in [librewolf_setup.md](librewolf_setup.md). Most browser configuration is automated, however, adjusting extension settings must be done manually.
+8. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most browser configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions (Full install)
 
@@ -122,7 +122,7 @@ sh sync_user_programs.sh
 ```
 
 ### Backups
-Before backing up the installed system, export all extension settings to the cloud or to a file. This is documented in the [librewolf_setup.md](librewolf_setup.md) file.
+Before backing up the installed system, export all extension settings to the cloud or to a file. This is documented in the [firefox_setup.md](firefox_setup.md) file.
 
 Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up the installed system (replace `$DEST` with the location to back up to, like `kat@example.com:/home/kat/kattop_backup`):
 ```bash
