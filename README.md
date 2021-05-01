@@ -6,9 +6,8 @@ These should *only* be used for reference, as they are written only to support 1
 - simplify/streamline configs as much as possible
   - simplify/streamline install process as much as possible
   - maybe move back from flatpak to native apps?
-- move back to x86_64 (aarch64 linux is hell)
-  - fully automate system installation process
-  - remove device specific configuration
+- automate system installation process as much as possible
+- separate / remove device specific configuration
 
 ## Setup/update instructions (Partial install)
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
