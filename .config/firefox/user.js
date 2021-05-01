@@ -165,7 +165,7 @@ user_pref("browser.link.open_newwindow.restriction", 0);
 
 
 
-//////////////////// privacy_standard
+//////////////////// privacy_strict
 
 // Disable sendBeacon
 user_pref("beacon.enabled", false);
@@ -187,33 +187,7 @@ user_pref("privacy.firstparty.isolate", true);
 
 
 
-//////////////////// privacy_strict
-
-// Disable live search suggestions
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.urlbar.suggest.searches", false);
-
-// Disable HTTP Alternate Services
-user_pref("network.http.altsvc.enabled", false);
-user_pref("network.http.altsvc.oe", false);
-
-// Only send referer if base domains match
-user_pref("network.http.referer.XOriginPolicy", 1);
-
-// Only send scheme://host:port for cross-origin referers
-user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
-
-// Disable mozAddonManager Web API
-user_pref("extensions.webextensions.restrictedDomains", "");
-user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
-
-
-
-
 //////////////////// security
-
-// Display the full URL in the location bar
-user_pref("browser.urlbar.trimURLs", false);
 
 // Disable media cache from writing to disk in Private Browsing
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
@@ -223,13 +197,10 @@ user_pref("media.memory_cache_max_size", 65536);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 
-// Upgrade mixed content (same behavior as OOTB Chrome)
-user_pref("security.mixed_content.upgrade_display_content", true);
-
 // Enable HTTPS-Only mode in private browsing
 user_pref("dom.security.https_only_mode_pbm", true);
 
-// Display warning text for insecure connections
+// Display additional warning text for insecure connections
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("security.insecure_connection_text.enabled", true);
 
@@ -326,14 +297,6 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 //////////////////// performance
 
-// Increase minimum interval between session saves
-user_pref("browser.sessionstore.interval", 60000);
-
-
-
-
-//////////////////// performance_gpu
-
 // Force enable GPU acceleration
 user_pref("layers.acceleration.force-enabled", true);
 
@@ -419,4 +382,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Fri Apr 30 05:05:15 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Sat May  1 07:37:10 AM PDT 2021");
