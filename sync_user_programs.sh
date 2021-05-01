@@ -24,13 +24,16 @@ find ~/.cache/* -atime +21 -mtime +90 -print -delete
 find ~/.config/* -atime +90 -not -type l -print -delete
 find ~/.ssh/known_hosts -atime +90 -print -delete
 
-# Remove junk/unused files from ~/.local and ~/.ssh
+# Remove junk/unused files from ~/.local, ~/.mozilla and ~/.ssh
 find ~/.local/* -not -path "*/share*" -print -delete
+find ~/.mozilla/* -not -path "*/firefox*" -print -delete
 find ~/.ssh/* -not -name "id_*" -not -name "known_hosts" -print -delete
 
-# Remove empty files/folders and broken symlinks from ~/.config
+# Remove empty files/folders and broken symlinks from ~/.config and ~/.local
 find ~/.config -empty -print -delete
+find ~/.local -empty -not -path "*/share/flatpak/*" -print -delete
 find ~/.config -xtype l -print -delete
+find ~/.local -xtype l -not -path "*/share/flatpak/*" -print -delete
 
 # Remove ".old" files
 find ~/.* -name "*.old" -print -delete
