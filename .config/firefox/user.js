@@ -332,6 +332,19 @@ user_pref("browser.sessionstore.interval", 60000);
 
 
 
+//////////////////// performance_gpu
+
+// Force enable GPU acceleration
+user_pref("layers.acceleration.force-enabled", true);
+
+// Enable WebRender
+user_pref("gfx.webrender.all", true);
+user_pref("gfx.webrender.compositor", true);
+user_pref("gfx.webrender.enabled", true);
+
+
+
+
 //////////////////// sensible
 
 // Disable about:config warning
@@ -406,4 +419,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Tue Apr 27 01:07:57 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Fri Apr 30 05:05:15 PM PDT 2021");
