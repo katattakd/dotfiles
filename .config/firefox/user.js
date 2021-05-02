@@ -193,8 +193,8 @@ user_pref("media.memory_cache_max_size", 65536);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 
-// Enable HTTPS-Only mode in private browsing
-user_pref("dom.security.https_only_mode_pbm", true);
+// Enable HTTPS-Only mode
+user_pref("dom.security.https_only_mode", true);
 
 // Display additional warning text for insecure connections
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
@@ -218,17 +218,6 @@ user_pref("privacy.cpd.sessions", true);
 user_pref("privacy.cpd.siteSettings", false);
 user_pref("privacy.cpd.openWindows", true);
 user_pref("privacy.sanitize.timeSpan", 0);
-
-
-
-
-//////////////////// security_tls
-
-// Make OCSP fetches hard-fail
-user_pref("security.OCSP.require", true);
-
-// Enable HTTPS-Only mode
-user_pref("dom.security.https_only_mode", true);
 
 
 
@@ -361,4 +350,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sun May  2 12:30:29 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Sun May  2 01:00:01 PM PDT 2021");
