@@ -158,10 +158,6 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 // Enable Do Not Track HTTP header
 user_pref("privacy.donottrackheader.enabled", true);
 
-// Open links targeting new windows in a new tab
-user_pref("browser.link.open_newwindow", 3);
-user_pref("browser.link.open_newwindow.restriction", 0);
-
 
 
 
@@ -204,9 +200,6 @@ user_pref("dom.security.https_only_mode_pbm", true);
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("security.insecure_connection_text.enabled", true);
 
-// Prevent websites from overriding Firefox keyboard shortcuts
-user_pref("permissions.default.shortcuts", 2);
-
 // Always show Punycode in domain names
 user_pref("network.IDN_show_punycode", true);
 
@@ -245,15 +238,10 @@ user_pref("dom.security.https_only_mode", true);
 // Make permissions session-only
 user_pref("permissions.memory_only", true);
 
-// Disable Form Autofill
-user_pref("extensions.formautofill.addresses.enabled", false);
-user_pref("extensions.formautofill.available", "off");
-user_pref("extensions.formautofill.creditCards.available", false);
-user_pref("extensions.formautofill.creditCards.enabled", false);
-user_pref("extensions.formautofill.heuristics.enabled", false);
-
-// Don't suggest history entries in location bar
+// Don't suggest history, bookmarks, or topsites in location bar
 user_pref("browser.urlbar.suggest.history", false);
+user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 
 // Disable search and form history
 user_pref("browser.formfill.enable", false);
@@ -267,23 +255,14 @@ user_pref("browser.taskbar.lists.frequent.enabled", false);
 user_pref("browser.taskbar.lists.recent.enabled", false);
 user_pref("browser.taskbar.lists.tasks.enabled", false);
 
-// Disable saving passwords
+// Disable autofill & password saving
 user_pref("signon.rememberSignons", false);
-
-// Disable form/password autofill
-user_pref("signon.autofillForms", false);
-
-// Disable formless login capture
-user_pref("signon.formlessCapture.enabled", false);
 
 // Limit number of tab undo options
 user_pref("browser.sessionstore.max_tabs_undo", 3);
 
 // Disable storing additional session data
 user_pref("browser.sessionstore.privacy_level", 2);
-
-// Disable page thumbnail collection
-user_pref("browser.pagethumbnails.capturing_disabled", true);
 
 // Don't add downloads to "recent documents" list
 user_pref("browser.download.manager.addToRecentDocs", false);
@@ -382,4 +361,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sat May  1 07:37:10 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Sun May  2 12:30:29 PM PDT 2021");
