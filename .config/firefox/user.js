@@ -250,9 +250,6 @@ user_pref("signon.rememberSignons", false);
 // Limit number of tab undo options
 user_pref("browser.sessionstore.max_tabs_undo", 3);
 
-// Disable storing additional session data
-user_pref("browser.sessionstore.privacy_level", 2);
-
 // Don't add downloads to "recent documents" list
 user_pref("browser.download.manager.addToRecentDocs", false);
 
@@ -350,4 +347,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sun May  2 01:00:01 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Sun May  2 09:05:54 PM PDT 2021");
