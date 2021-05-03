@@ -8,10 +8,11 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 flatpak remote-add --user --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
 # Install Flatpak apps
-flatpak install --user flathub-beta org.gimp.GIMP
-flatpak install --user flathub com.rawtherapee.RawTherapee
 flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
+flatpak install --user flathub-beta org.gimp.GIMP
+flatpak install --user flathub com.rawtherapee.RawTherapee
+flatpak install --user flathub com.rafaelmardojai.Blanket
 
 # Update Flatpak apps
 flatpak --user update

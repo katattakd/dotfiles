@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
+SETUVAR --export GTK_THEME:Adwaita\x3adark
 SETUVAR --export LESS:\x2dRi
 SETUVAR --export LESSHISTFILE:/dev/null
 SETUVAR --export LESS_TERMCAP_mb:\x1b\x5b01\x3b31m

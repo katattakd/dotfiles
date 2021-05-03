@@ -11,7 +11,9 @@ if command -v flatpak > /dev/null
 		run flatpak run --user $argv
 	end
 
-	abbr -ga gimp 'flatrun org.gimp.GIMP'
+	abbr -ga flatseal 'flatrun com.github.tchx84.Flatseal'
 	abbr -ga libreoffice 'flatrun org.libreoffice.LibreOffice'
+	abbr -ga gimp 'flatrun org.gimp.GIMP'
 	abbr -ga rawtherapee 'flatrun com.rawtherapee.RawTherapee'
+	abbr -ga blanket 'flatrun com.rafaelmardojai.Blanket'
 end
