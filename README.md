@@ -4,8 +4,8 @@ These should *only* be used for reference, as they are written only to support 1
 
 # todo
 - improve backup/restore process
-- further automate firefox setup
 - switch from manjaro to arch
+  - automate most (if not all) of arch installation process
 - limit / separate / remove device specific configuration
 
 ## Setup/update instructions (Partial install)
