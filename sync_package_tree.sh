@@ -11,7 +11,7 @@ declare -a explicit_packages=(
 # Program documentation
 "man-db" "man-pages" "texinfo"
 
-# Maintance essentials
+# Maintenance essentials
 "logrotate"
 
 # Networking essentials
@@ -79,6 +79,7 @@ declare -a dependency_packages=(
 "xdg-desktop-portal-gtk"
 
 )
+
 if [ -f ~/packages.txt ]; then
 	declare -a user_packages=($(cat ~/packages.txt))
 else
@@ -86,7 +87,7 @@ else
 fi
 
 # Update mirror list (Manjaro specific tool)
-if [[ $(find /etc/pacman.d/mirrorlist -mtime +15 -print) ]] || [[ $(pacman-mirrors --get-branch) != *"unstable" ]]; then
+if [[ $(find /etc/pacman.d/mirrorlist -mtime +30 -print) ]] || [[ $(pacman-mirrors --get-branch) != *"unstable" ]]; then
 	sudo pacman-mirrors --api --protocols https --set-branch unstable --country all
 	sudo pacman -Syyuu
 fi

@@ -4,11 +4,9 @@ These should *only* be used for reference, as they are written only to support 1
 
 # todo
 - improve backup/restore process
-- simplify/streamline configs as much as possible
-  - simplify/streamline install process as much as possible
-  - maybe move back from flatpak to native apps?
-- automate system installation process as much as possible
-- separate / remove device specific configuration
+- further automate firefox setup
+- switch from manjaro to arch
+- limit / separate / remove device specific configuration
 
 ## Setup/update instructions (Partial install)
 1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
