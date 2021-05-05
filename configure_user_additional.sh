@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Remove old user dirs
-rm -r ~/Desktop ~/Templates ~/Public
-
 # Configure Firefox
 firefox --CreateProfile kat
 echo ~/.mozilla/firefox/*.kat | xargs -n 1 ln -svf ~/dotfiles/.config/firefox/*

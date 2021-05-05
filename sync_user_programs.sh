@@ -39,6 +39,9 @@ find ~/.local -xtype l -not -path "*/share/flatpak/*" -print -delete
 # Remove ".old" files
 find ~/.* -name "*.old" -print -delete
 
+# Remove bash-specific files
+rm -rv ~/.bash*
+
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
 find ~/.ssh/* -mtime +365 -exec rm -ir {} \;
 

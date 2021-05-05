@@ -47,7 +47,7 @@ sh partial_user_sync_configure.sh
 
 ## Setup instructions (Full install)
 1. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
-2. Boot the device and login as root.
+2. Boot the device and login as root. Connect the device to the internet using an Ethernet adapter or USB tethering.
 3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
 ```bash
 # Remove old user
@@ -56,10 +56,14 @@ userdel -r $NON_ROOT_USER
 # Enable fscrypt
 tune2fs -O encrypt $(df -P / | tail -1 | cut -d' ' -f 1)
 
+# Update the system (to prevent a partial upgrade) and install a few necessary packages
+pacman -Syu
+pacman -S git fish
+
 # Create new user with encrypted home directory
 homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
 ```
-4. Login with the "kat" user. Connect the device to the internet using an Ethernet adapter or USB tethering.
+4. Login with the "kat" user.
 5. Run the below commands:
 ```bash
 # Download the dotfiles repo.
