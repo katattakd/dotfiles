@@ -265,6 +265,13 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 // Force enable GPU acceleration
 user_pref("layers.acceleration.force-enabled", true);
 
+// Force enable hardware video decoding
+user_pref("media.hardware-video-decoding.force-enabled", true);
+
+// Enable per-tab content processes
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+user_pref("dom.ipc.processCount", -1);
+
 // Enable WebRender
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.compositor", true);
@@ -347,4 +354,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Sun May  2 09:05:54 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 03:46:45 PM PDT 2021");
