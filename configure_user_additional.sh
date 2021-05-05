@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Cleanup old files from Bash
-rm  ~/.bash*
+# Remove old user dirs
+rm ~/Desktop ~/Templates ~/Public
 
 # Configure Firefox
 firefox --CreateProfile kat

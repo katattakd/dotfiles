@@ -42,8 +42,6 @@ SETUVAR _fish_abbr_rg:rg\x20\x2d\x2dstats\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x2
 SETUVAR _fish_abbr_rgi:rg\x20\x2d\x2dpretty\x20\x2d\x2dsmart\x2dcase\x20\x2d\x2dcontext\x2025
 SETUVAR _fish_abbr_rm:rm\x20\x2dIrv
 SETUVAR _fish_abbr_set:set\x20\x2daUx
-SETUVAR _fish_abbr_su:sudo\x20su
-SETUVAR _fish_abbr_sud:sudo\x20\x2dE
 SETUVAR _fish_abbr_top:htop
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de

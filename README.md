@@ -54,10 +54,10 @@ sh partial_user_sync_configure.sh
 userdel -r $NON_ROOT_USER
 
 # Enable fscrypt
-sudo tune2fs -O encrypt $(df -P / | tail -1 | cut -d' ' -f 1)
+tune2fs -O encrypt $(df -P / | tail -1 | cut -d' ' -f 1)
 
 # Create new user with encrypted home directory
-homectl create kat --member-of=wheel --storage=fscrypt
+homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
 ```
 4. Login with the "kat" user. Connect the device to the internet using an Ethernet adapter or USB tethering.
 5. Run the below commands:

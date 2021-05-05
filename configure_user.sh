@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# Create user directories
-mkdir -p ~/.config ~/Downloads ~/Projects ~/Documents ~/Music ~/Pictures ~/Videos
+# Create new user directories
+mkdir -p ~/Projects
 
 # Create symlinks to config files
 cp ~/dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs
-ln -s ~/dotfiles/.config/* ~/.config
+ln -sf ~/dotfiles/.config/* ~/.config
 
-# Configure user account
-sudo homectl update $USER --shell=/usr/bin/fish --nice=-2
+# Cleanup old files from Bash
+rm ~/.bash*
