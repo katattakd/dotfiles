@@ -129,5 +129,8 @@ Assuming all files are being properly managed by the repo's scripts, the followi
 sh backup.sh $DEST
 ```
 
+### Additional notes
+The Pinebook Pro's performance can be improved by ~5% by adding `cpufreq.default_governor=performance` to the kernel command line (can be modified by editing `/boot/extlinux/extlinux.conf`)
+
 ## Screenshots
 ![](screenshot-1.png) ![](screenshot-2.png) ![](screenshot-3.png)
