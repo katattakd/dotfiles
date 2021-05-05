@@ -9,6 +9,9 @@ printf '[device]\nwifi.backend=iwd\n' | sudo tee /etc/NetworkManager/conf.d/wifi
 # Configure automatic pacman cache management
 sudo systemctl enable paccache.timer
 
+# Configure automatic log rotation
+sudo systemctl enable logrotate.timer
+
 # Configure system flatpak
 sudo rm -rf /var/lib/flatpak
 sudo flatpak remote-delete --system flathub

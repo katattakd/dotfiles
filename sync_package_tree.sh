@@ -11,6 +11,9 @@ declare -a explicit_packages=(
 # Program documentation
 "man-db" "man-pages" "texinfo"
 
+# Maintance essentials
+"logrotate"
+
 # Networking essentials
 "networkmanager"
 

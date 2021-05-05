@@ -3,6 +3,7 @@ Kat's dotfiles.
 These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
 
 # todo
+- improve backup/restore process
 - simplify/streamline configs as much as possible
   - simplify/streamline install process as much as possible
   - maybe move back from flatpak to native apps?
@@ -57,8 +58,7 @@ userdel -r $NON_ROOT_USER
 tune2fs -O encrypt $(df -P / | tail -1 | cut -d' ' -f 1)
 
 # Update the system (to prevent a partial upgrade) and install a few necessary packages
-pacman -Syu
-pacman -S git fish
+pacman -Syu fish git
 
 # Create new user with encrypted home directory
 homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
