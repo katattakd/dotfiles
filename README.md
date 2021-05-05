@@ -63,7 +63,6 @@ homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
 5. Run the below commands:
 ```bash
 # Download the dotfiles repo.
-cd ~
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
 

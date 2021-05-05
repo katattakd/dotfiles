@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Remove old user dirs
-rm ~/Desktop ~/Templates ~/Public
+rm -r ~/Desktop ~/Templates ~/Public
 
 # Configure Firefox
 firefox --CreateProfile kat
