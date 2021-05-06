@@ -185,9 +185,11 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 //////////////////// performance
 
-// Increase cache sizes to ~400MB total
-user_pref("browser.cache.memory.capacity", 262144);
-user_pref("media.memory_cache_max_size", 131072);
+// Tune memory cache
+user_pref("browser.cache.memory.capacity", 256000);
+user_pref("browser.cache.memory.max_entry_size", 51200);
+user_pref("media.memory_cache_max_size", 128000);
+user_pref("network.dnsCacheEntries", 10000);
 
 // Force enable GPU acceleration
 user_pref("layers.acceleration.force-enabled", true);
@@ -282,4 +284,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 06:06:11 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 06:13:56 PM PDT 2021");
