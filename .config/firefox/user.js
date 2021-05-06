@@ -146,9 +146,7 @@ user_pref("privacy.donottrackheader.enabled", true);
 
 // Make cache session-only
 user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.memory.capacity", 65536);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
-user_pref("media.memory_cache_max_size", 65536);
 
 
 
@@ -186,6 +184,10 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 
 //////////////////// performance
+
+// Increase cache sizes to ~400MB total
+user_pref("browser.cache.memory.capacity", 262144);
+user_pref("media.memory_cache_max_size", 131072);
 
 // Force enable GPU acceleration
 user_pref("layers.acceleration.force-enabled", true);
@@ -280,4 +282,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 05:46:12 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 06:06:11 PM PDT 2021");
