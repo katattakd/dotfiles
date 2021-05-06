@@ -124,20 +124,6 @@ user_pref("signon.rememberSignons", false);
 
 
 
-//////////////////// nomozilla_strict
-
-// Disable auto checking for extension/theme updates
-user_pref("extensions.update.enabled", false);
-
-// Disable Captive Portal detection
-user_pref("network.captive-portal-service.enabled", false);
-
-// Disable Network Connectivity checks
-user_pref("network.connectivity-service.enabled", false);
-
-
-
-
 //////////////////// privacy
 
 // Disable prefetching
@@ -160,6 +146,7 @@ user_pref("privacy.donottrackheader.enabled", true);
 
 // Make cache session-only
 user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.memory.capacity", 65536);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("media.memory_cache_max_size", 65536);
 
@@ -170,9 +157,6 @@ user_pref("media.memory_cache_max_size", 65536);
 
 // Disable location bar suggestions
 user_pref("browser.urlbar.maxRichResults", 0);
-
-// Disable sendBeacon
-user_pref("beacon.enabled", false);
 
 // Enable HTTPS-Only mode
 user_pref("dom.security.https_only_mode", true);
@@ -229,9 +213,6 @@ user_pref("browser.aboutConfig.showWarning", false);
 // Disable default browser check
 user_pref("browser.shell.checkDefaultBrowser", false);
 
-// Disable automatic start after reboot
-user_pref("toolkit.winRegisterApplicationRestart", false);
-
 // Disable autoplay
 user_pref("media.autoplay.default", 5);
 user_pref("media.autoplay.blocking_policy", 2);
@@ -281,9 +262,6 @@ user_pref("alerts.showFavicons", false);
 user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
 
-// Map backspace to "previous page"
-user_pref("browser.backspace_action", 0);
-
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
 
@@ -302,4 +280,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 05:09:38 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 05:46:12 PM PDT 2021");
