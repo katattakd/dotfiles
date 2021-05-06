@@ -28,9 +28,6 @@ user_pref("browser.region.update.enabled", false);
 // Disable automatically *installing* Firefox updates
 user_pref("app.update.auto", false);
 
-// Disable sending plugin crash reports
-user_pref("dom.ipc.plugins.reportCrashURL", false);
-
 // Disable about:addons recommendations
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
@@ -121,6 +118,9 @@ user_pref("extensions.pocket.enabled", false);
 // Disable Firefox Accounts & Sync
 user_pref("identity.fxaccounts.enabled", false);
 
+// Disable login saving (fairly useless without FF Sync)
+user_pref("signon.rememberSignons", false);
+
 
 
 
@@ -145,30 +145,42 @@ user_pref("network.prefetch-next", false);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.predictor.enabled", false);
 user_pref("network.http.speculative-parallel-limit", 0);
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
 // Disable domain guessing
 user_pref("browser.fixup.alternate.enabled", false);
-
-// Disable location bar speculative connections
-user_pref("browser.urlbar.speculativeConnect.enabled", false);
-
-// Disable DNS word resolving (huge privacy leak)
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
+
+// Use CRLite instead of OCSP when possible
+user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.pki.crlite_mode", 2);
 
 // Enable Do Not Track HTTP header
 user_pref("privacy.donottrackheader.enabled", true);
+
+// Make cache session-only
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+user_pref("media.memory_cache_max_size", 65536);
 
 
 
 
 //////////////////// privacy_strict
 
+// Disable location bar suggestions
+user_pref("browser.urlbar.maxRichResults", 0);
+
 // Disable sendBeacon
 user_pref("beacon.enabled", false);
 
-// Make third-party cookies session only
+// Enable HTTPS-Only mode
+user_pref("dom.security.https_only_mode", true);
+
+// Make third-party cookies & permissions session only
 user_pref("network.cookie.thirdparty.sessionOnly", true);
 user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
+user_pref("permissions.memory_only", true);
 
 // Enable strict content blocking
 user_pref("browser.contentblocking.category", "strict");
@@ -180,80 +192,9 @@ user_pref("browser.startup.blankWindow", false);
 // Enable First Party Isolation
 user_pref("privacy.firstparty.isolate", true);
 
-
-
-
-//////////////////// security
-
-// Disable media cache from writing to disk in Private Browsing
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
-user_pref("media.memory_cache_max_size", 65536);
-
-// Enforce CRLite
-user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.pki.crlite_mode", 2);
-
-// Enable HTTPS-Only mode
-user_pref("dom.security.https_only_mode", true);
-
-// Display additional warning text for insecure connections
-user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
-user_pref("security.insecure_connection_text.enabled", true);
-
-// Always show Punycode in domain names
-user_pref("network.IDN_show_punycode", true);
-
-// Disable permissions delegation
-user_pref("permissions.delegation.enabled", false);
-
-// Set default items to clear when clearing history
-user_pref("privacy.cpd.cache", true);
-user_pref("privacy.cpd.cookies", true);
-user_pref("privacy.cpd.downloads", true);
-user_pref("privacy.cpd.formdata", true);
-user_pref("privacy.cpd.history", true);
-user_pref("privacy.cpd.offlineApps", true);
-user_pref("privacy.cpd.passwords", false);
-user_pref("privacy.cpd.sessions", true);
-user_pref("privacy.cpd.siteSettings", false);
-user_pref("privacy.cpd.openWindows", true);
-user_pref("privacy.sanitize.timeSpan", 0);
-
-
-
-
-//////////////////// security_data
-
-// Make permissions session-only
-user_pref("permissions.memory_only", true);
-
-// Don't suggest history, bookmarks, or topsites in location bar
-user_pref("browser.urlbar.suggest.history", false);
-user_pref("browser.urlbar.suggest.bookmark", false);
-user_pref("browser.urlbar.suggest.topsites", false);
-
-// Disable search and form history
-user_pref("browser.formfill.enable", false);
-
-// Disable browsing and download history
+// Disable all history
 user_pref("places.history.enabled", false);
-
-// Disable Windows jumplist
-user_pref("browser.taskbar.lists.enabled", false);
-user_pref("browser.taskbar.lists.frequent.enabled", false);
-user_pref("browser.taskbar.lists.recent.enabled", false);
-user_pref("browser.taskbar.lists.tasks.enabled", false);
-
-// Disable autofill & password saving
-user_pref("signon.rememberSignons", false);
-
-// Limit number of tab undo options
-user_pref("browser.sessionstore.max_tabs_undo", 3);
-
-// Don't add downloads to "recent documents" list
-user_pref("browser.download.manager.addToRecentDocs", false);
-
-// Disable Top Sites and Highlights
+user_pref("browser.formfill.enabled", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
@@ -268,7 +209,7 @@ user_pref("layers.acceleration.force-enabled", true);
 // Force enable hardware video decoding
 user_pref("media.hardware-video-decoding.force-enabled", true);
 
-// Enable per-tab content processes
+// Disable content process limit (also marginally improves security)
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
 user_pref("dom.ipc.processCount", -1);
 
@@ -301,6 +242,19 @@ user_pref("dom.disable_window_move_resize", true);
 // Disable page close confirmation dialogs
 user_pref("dom.disable_beforeunload", true);
 
+// Set default items to clear when clearing history
+user_pref("privacy.cpd.cache", true);
+user_pref("privacy.cpd.cookies", true);
+user_pref("privacy.cpd.downloads", true);
+user_pref("privacy.cpd.formdata", true);
+user_pref("privacy.cpd.history", true);
+user_pref("privacy.cpd.offlineApps", true);
+user_pref("privacy.cpd.passwords", false);
+user_pref("privacy.cpd.sessions", true);
+user_pref("privacy.cpd.siteSettings", false);
+user_pref("privacy.cpd.openWindows", true);
+user_pref("privacy.sanitize.timeSpan", 0);
+
 // Disable unnecessary warnings
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
@@ -319,9 +273,6 @@ user_pref("ui.key.menuAccessKey", 0);
 
 //////////////////// katprefs
 
-// Disable location bar dropdown
-user_pref("browser.urlbar.maxRichResults", 0);
-
 // Disable favicons
 user_pref("browser.chrome.site_icons", false);
 user_pref("alerts.showFavicons", false);
@@ -329,9 +280,6 @@ user_pref("alerts.showFavicons", false);
 // Disable Web Notifications
 user_pref("dom.webnotifications.enabled", false);
 user_pref("dom.webnotifications.serviceworker.enabled", false);
-
-// Enable "Find As You Type"
-user_pref("accessibility.typeaheadfind", true);
 
 // Map backspace to "previous page"
 user_pref("browser.backspace_action", 0);
@@ -354,4 +302,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 03:46:45 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 05:09:38 PM PDT 2021");
