@@ -186,11 +186,11 @@ user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 //////////////////// performance
 
 // Tune memory cache
-user_pref("browser.cache.memory.capacity", 256000);
+user_pref("browser.cache.memory.capacity", 512000);
 user_pref("browser.cache.memory.max_entry_size", 51200);
 user_pref("media.memory_cache_max_size", 128000);
-user_pref("network.dnsCacheEntries", 40000);
-user_pref("network.dnsCacheExpiration", 6000);
+user_pref("network.dnsCacheEntries", 50000);
+user_pref("network.dnsCacheExpiration", 3600);
 
 // Force enable GPU acceleration
 user_pref("layers.acceleration.force-enabled", true);
@@ -285,4 +285,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 06:21:31 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed May  5 06:33:53 PM PDT 2021");
