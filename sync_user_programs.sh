@@ -27,7 +27,7 @@ find ~/.ssh/known_hosts -atime +90 -print -delete
 
 # Remove junk/unused files from ~/.local, ~/.mozilla and ~/.ssh
 find ~/.local/* -not -path "*/share*" -print -delete
-find ~/.mozilla/* -not -path "*/firefox*" -print -delete
+find ~/.mozilla/* -not -path "*/firefox" -not -path "*/firefox/installs.ini" -not -path "*/firefox/profiles.ini" -not -path "*/firefox/*kat*" -print -delete
 find ~/.ssh/* -not -name "id_*" -not -name "known_hosts" -print -delete
 
 # Remove empty files/folders and broken symlinks from ~/.config and ~/.local
@@ -40,7 +40,7 @@ find ~/.local -xtype l -not -path "*/share/flatpak/*" -print -delete
 find ~/.* -name "*.old" -print -delete
 
 # Remove bash-specific files
-rm -rvf ~/.bash*
+find ~/.bash* -print -delete
 
 # Prompt to remove known_hosts and/or ssh keys if they're outdated
 find ~/.ssh/* -mtime +365 -exec rm -ir {} \;
