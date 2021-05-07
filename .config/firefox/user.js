@@ -21,7 +21,7 @@ user_pref("browser.newtabpage.activity-stream.default.sites", "");
 // Use Mozilla geolocation instead of Google
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
 
-// Disable region updates
+// Disable region detection
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 
@@ -64,6 +64,10 @@ user_pref("browser.discovery.enabled", false);
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
 
+// Disable remote Safe Browsing look-ups for downloaded files
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", ");
+
 // Disable Normandy/Shield
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
@@ -75,13 +79,11 @@ user_pref("extensions.systemAddon.update.url", "");
 // Disable PingCentre telemetry
 user_pref("browser.ping-centre.telemetry", false);
 
+// Disable Web Compatibility Reporter
+user_pref("extensions.webcompat-reporter.enabled", false);
+
 // Disable Welcome / What's New notices
 user_pref("browser.startup.homepage_override.mstone", "ignore");
-user_pref("startup.homepage_welcome_url", "");
-user_pref("startup.homepage_welcome_url.additional", "");
-user_pref("startup.homepage_override_url", "");
-
-// Disable "What's New" toolbar icon
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 
 // Disable CFR
@@ -95,18 +97,6 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 
 // Disable automatically installing extension/theme updates
 user_pref("extensions.update.autoUpdateDefault", false);
-
-// Disable Safe Browsing
-user_pref("browser.safebrowsing.malware.enabled", false);
-user_pref("browser.safebrowsing.phishing.enabled", false);
-user_pref("browser.safebrowsing.downloads.enabled", false);
-user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-user_pref("browser.safebrowsing.downloads.remote.url", "");
-user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
-user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
-
-// Disable Web Compatibility Reporter
-user_pref("extensions.webcompat-reporter.enabled", false);
 
 // Disable Pocket Account
 user_pref("extensions.pocket.enabled", false);
@@ -133,16 +123,16 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 
+// Make cache session-only
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+
 // Use CRLite instead of OCSP when possible
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 
 // Enable Do Not Track HTTP header
 user_pref("privacy.donottrackheader.enabled", true);
-
-// Make cache session-only
-user_pref("browser.cache.disk.enable", false);
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 
 
 
@@ -152,17 +142,15 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 // Disable location bar suggestions
 user_pref("browser.urlbar.maxRichResults", 0);
 
-// Disable autoplay
-user_pref("media.autoplay.default", 5);
-user_pref("media.autoplay.blocking_policy", 2);
+// Disable all history
+user_pref("places.history.enabled", false);
+user_pref("browser.formfill.enable", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("permissions.memory_only", true);
 
 // Enable HTTPS-Only mode
 user_pref("dom.security.https_only_mode", true);
-
-// Make third-party cookies & permissions session only
-user_pref("network.cookie.thirdparty.sessionOnly", true);
-user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
-user_pref("permissions.memory_only", true);
 
 // Enable strict content blocking
 user_pref("browser.contentblocking.category", "strict");
@@ -173,12 +161,6 @@ user_pref("browser.startup.blankWindow", false);
 
 // Enable First Party Isolation
 user_pref("privacy.firstparty.isolate", true);
-
-// Disable all history
-user_pref("places.history.enabled", false);
-user_pref("browser.formfill.enabled", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 
 
 
@@ -215,6 +197,14 @@ user_pref("gfx.webrender.enabled", true);
 // Disable default browser check
 user_pref("browser.shell.checkDefaultBrowser", false);
 
+// Disable unnecessary warnings
+user_pref("browser.aboutConfig.showWarning", false);
+user_pref("browser.tabs.warnOnClose", false);
+user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+user_pref("browser.tabs.warnOnOpen", false);
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
 // Set default items to clear when clearing history
 user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.cookies", true);
@@ -227,14 +217,6 @@ user_pref("privacy.cpd.sessions", true);
 user_pref("privacy.cpd.siteSettings", false);
 user_pref("privacy.cpd.openWindows", true);
 user_pref("privacy.sanitize.timeSpan", 0);
-
-// Disable unnecessary warnings
-user_pref("browser.aboutConfig.showWarning", false);
-user_pref("browser.tabs.warnOnClose", false);
-user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-user_pref("browser.tabs.warnOnOpen", false);
-user_pref("full-screen-api.warning.delay", 0);
-user_pref("full-screen-api.warning.timeout", 0);
 
 // Open bookmarks in a new tab
 user_pref("browser.tabs.loadBookmarksInTabs", true);
@@ -249,7 +231,6 @@ user_pref("ui.key.menuAccessKey", 0);
 
 // Disable favicons
 user_pref("browser.chrome.site_icons", false);
-user_pref("alerts.showFavicons", false);
 
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
@@ -269,4 +250,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Fri May  7 01:02:42 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Fri May  7 03:45:28 PM PDT 2021");
