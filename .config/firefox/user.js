@@ -139,12 +139,11 @@ user_pref("privacy.donottrackheader.enabled", true);
 
 //////////////////// privacy_strict
 
-// Disable location bar suggestions
-user_pref("browser.urlbar.maxRichResults", 0);
-
 // Disable all history
 user_pref("places.history.enabled", false);
 user_pref("browser.formfill.enable", false);
+user_pref("browser.urlbar.suggest.history", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 user_pref("permissions.memory_only", true);
@@ -238,6 +237,9 @@ user_pref("ui.prefersReducedMotion", 1);
 // Hide bookmarks toolbar
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 
+// Disable location bar suggestions
+user_pref("browser.urlbar.maxRichResults", 0);
+
 // Set dark compact theme
 user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 user_pref("devtools.theme", "dark");
@@ -250,4 +252,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Fri May  7 03:45:28 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Fri May  7 04:55:00 PM PDT 2021");
