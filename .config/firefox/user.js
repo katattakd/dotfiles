@@ -108,10 +108,6 @@ user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 // Disable Web Compatibility Reporter
 user_pref("extensions.webcompat-reporter.enabled", false);
 
-// Disable Mozilla Push Server
-user_pref("dom.push.enabled", false);
-user_pref("dom.push.userAgentID", "");
-
 // Disable Pocket Account
 user_pref("extensions.pocket.enabled", false);
 
@@ -155,6 +151,10 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 
 // Disable location bar suggestions
 user_pref("browser.urlbar.maxRichResults", 0);
+
+// Disable autoplay
+user_pref("media.autoplay.default", 5);
+user_pref("media.autoplay.blocking_policy", 2);
 
 // Enable HTTPS-Only mode
 user_pref("dom.security.https_only_mode", true);
@@ -212,21 +212,8 @@ user_pref("gfx.webrender.enabled", true);
 
 //////////////////// sensible
 
-// Disable about:config warning
-user_pref("browser.aboutConfig.showWarning", false);
-
 // Disable default browser check
 user_pref("browser.shell.checkDefaultBrowser", false);
-
-// Disable autoplay
-user_pref("media.autoplay.default", 5);
-user_pref("media.autoplay.blocking_policy", 2);
-
-// Prevent scripts from moving/resizing open windows
-user_pref("dom.disable_window_move_resize", true);
-
-// Disable page close confirmation dialogs
-user_pref("dom.disable_beforeunload", true);
 
 // Set default items to clear when clearing history
 user_pref("privacy.cpd.cache", true);
@@ -242,6 +229,7 @@ user_pref("privacy.cpd.openWindows", true);
 user_pref("privacy.sanitize.timeSpan", 0);
 
 // Disable unnecessary warnings
+user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 user_pref("browser.tabs.warnOnOpen", false);
@@ -263,10 +251,6 @@ user_pref("ui.key.menuAccessKey", 0);
 user_pref("browser.chrome.site_icons", false);
 user_pref("alerts.showFavicons", false);
 
-// Disable Web Notifications
-user_pref("dom.webnotifications.enabled", false);
-user_pref("dom.webnotifications.serviceworker.enabled", false);
-
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
 
@@ -285,4 +269,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed May  5 09:14:58 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Fri May  7 01:02:42 PM PDT 2021");
