@@ -69,9 +69,6 @@ declare -a dependency_packages=(
 # Clipboard support
 "wl-clipboard"
 
-# Wireless networking backend
-"iwd"
-
 # Pipewire screen capture backend
 "xdg-desktop-portal-wlr"
 
