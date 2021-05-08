@@ -66,7 +66,7 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
 
 // Disable remote Safe Browsing look-ups for downloaded files
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-user_pref("browser.safebrowsing.downloads.remote.url", ");
+user_pref("browser.safebrowsing.downloads.remote.url", "");
 
 // Disable Normandy/Shield
 user_pref("app.normandy.enabled", false);
@@ -252,4 +252,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Fri May  7 04:55:00 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Fri May  7 04:59:42 PM PDT 2021");
