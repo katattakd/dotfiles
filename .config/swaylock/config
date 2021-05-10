@@ -4,15 +4,15 @@ disable-caps-lock-text
 indicator-radius=100
 indicator-thickness=6
 
-color=1d2021
+color=000000
 
 bs-hl-color=cc241d
 key-hl-color=98971a
 
-inside-color=1d2021
-inside-clear-color=1d2021
-inside-ver-color=1d2021
-inside-wrong-color=1d2021
+inside-color=000000
+inside-clear-color=000000
+inside-ver-color=000000
+inside-wrong-color=000000
 
 ring-color=282828
 ring-clear-color=d79921
@@ -22,7 +22,4 @@ line-uses-inside
 
 separator-color=282828
 
-text-color=ebdbb2
-text-clear-color=1d2021
-text-ver-color=1d2021
-text-wrong-color=1d2021
+text-color=000000
