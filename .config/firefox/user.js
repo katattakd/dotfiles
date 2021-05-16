@@ -164,33 +164,6 @@ user_pref("privacy.firstparty.isolate", true);
 
 
 
-//////////////////// performance
-
-// Tune memory cache
-user_pref("browser.cache.memory.capacity", 512000);
-user_pref("browser.cache.memory.max_entry_size", 51200);
-user_pref("media.memory_cache_max_size", 128000);
-user_pref("network.dnsCacheEntries", 256000);
-user_pref("network.dnsCacheExpiration", 3600);
-
-// Force enable GPU acceleration
-user_pref("layers.acceleration.force-enabled", true);
-
-// Force enable hardware video decoding
-user_pref("media.hardware-video-decoding.force-enabled", true);
-
-// Disable content process limit (also marginally improves security)
-user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
-user_pref("dom.ipc.processCount", -1);
-
-// Enable WebRender
-user_pref("gfx.webrender.all", true);
-user_pref("gfx.webrender.compositor", true);
-user_pref("gfx.webrender.enabled", true);
-
-
-
-
 //////////////////// sensible
 
 // Disable default browser check
@@ -252,4 +225,4 @@ user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark
 
 
 
-user_pref("_katfox_user", "User.js generated on Fri May  7 04:59:42 PM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Thu May 13 11:25:06 AM PDT 2021");
