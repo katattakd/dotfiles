@@ -85,6 +85,9 @@ let NERDTreeHijackNetrw=1
 let NERDTreeShowHidden=1
 let NERDTreeCascadeSingleChildDir=1
 let NERDTreeCascadeOpenSingleChildDir=1
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", '<':'>'}
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutFastWrap = '<C-w>'
 colorscheme gruvbox
 
 " Use the same indentation settings regardless of file type and configure folding
