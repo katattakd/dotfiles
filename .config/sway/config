@@ -69,6 +69,7 @@ set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --command fish'
 bindsym $mod+Backspace exec 'alacritty --command qalc'
+bindsym $mod+Shift+Backspace exec 'alacritty --command htop'
 bindsym $mod+Shift+Return exec 'firefox -P kat --private-window'
 bindsym $mod+Ctrl+Return exec 'firefox -P kat'
 bindsym $mod+Shift+l exec 'swaylock'
