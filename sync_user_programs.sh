@@ -3,6 +3,9 @@
 # Install/update Neovim plugins
 nvim -u ~/.config/nvim/init.vim -i NONE -c "PlugUpdate!" -c "PlugClean" -c "qa"
 
+# Update qalc exchange rates
+qalc -e 0
+
 # Setup Flatpak repos
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --user --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
@@ -13,6 +16,7 @@ flatpak install --user flathub org.libreoffice.LibreOffice
 flatpak install --user flathub-beta org.gimp.GIMP
 flatpak install --user flathub com.rawtherapee.RawTherapee
 flatpak install --user flathub com.rafaelmardojai.Blanket
+flatpak install --user flathub io.github.Qalculate
 
 # Update Flatpak apps
 flatpak --user update

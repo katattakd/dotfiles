@@ -27,7 +27,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "gping" "lazygit" "htop" "ncdu" "ripgrep"
+"fd" "gping" "libqalculate" "lazygit" "htop" "ncdu" "ripgrep"
 
 
 
@@ -35,7 +35,7 @@ declare -a explicit_packages=(
 "sway" "swaylock" "i3status" "brightnessctl" "grimshot"
 
 # GUI essentials
-"alacritty" "mpv" "qalculate-gtk" "firefox" "firefox-ublock-origin"
+"alacritty" "mpv" "firefox" "firefox-ublock-origin"
 
 # External GUI apps
 "flatpak"

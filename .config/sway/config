@@ -68,7 +68,7 @@ output * adaptive_sync on
 set $mod Mod4
 
 bindsym $mod+Return exec 'alacritty --command fish'
-bindsym $mod+Backspace exec 'qalculate-gtk'
+bindsym $mod+Backspace exec 'alacritty --command qalc'
 bindsym $mod+Shift+Return exec 'firefox -P kat --private-window'
 bindsym $mod+Ctrl+Return exec 'firefox -P kat'
 bindsym $mod+Shift+l exec 'swaylock'
