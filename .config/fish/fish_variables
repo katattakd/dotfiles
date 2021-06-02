@@ -16,6 +16,7 @@ SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR --export PAGER:less
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr__2C_:cd
 SETUVAR _fish_abbr_abbr:abbr\x20\x2da
 SETUVAR _fish_abbr_cal:cal\x20\x2d\x2dmonths\x209\x20\x2d\x2dspan\x20\x2d\x2dweek
 SETUVAR _fish_abbr_calc:qalc
