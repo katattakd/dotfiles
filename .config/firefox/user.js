@@ -4,16 +4,9 @@
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 
-// Disable Activity Stream Snippets
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-
 // Activity Stream Top Stories, Pocket-based and/or sponsored content
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
-user_pref("browser.urlbar.sponsoredTopSites", false);
 
 // Clear default topsites
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
@@ -79,9 +72,6 @@ user_pref("extensions.systemAddon.update.url", "");
 // Disable PingCentre telemetry
 user_pref("browser.ping-centre.telemetry", false);
 
-// Disable Web Compatibility Reporter
-user_pref("extensions.webcompat-reporter.enabled", false);
-
 // Disable Welcome / What's New notices
 user_pref("browser.startup.homepage_override.mstone", "ignore");
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
@@ -106,6 +96,8 @@ user_pref("identity.fxaccounts.enabled", false);
 
 // Disable login saving (fairly useless without FF Sync)
 user_pref("signon.rememberSignons", false);
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
 
 
 
@@ -145,8 +137,6 @@ user_pref("browser.formfill.enable", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("permissions.memory_only", true);
 
 // Enable HTTPS-Only mode
 user_pref("dom.security.https_only_mode", true);
@@ -172,22 +162,13 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 // Disable unnecessary warnings
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.tabs.warnOnClose", false);
-user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 
 // Set default items to clear when clearing history
-user_pref("privacy.cpd.cache", true);
-user_pref("privacy.cpd.cookies", true);
-user_pref("privacy.cpd.downloads", true);
-user_pref("privacy.cpd.formdata", true);
-user_pref("privacy.cpd.history", true);
 user_pref("privacy.cpd.offlineApps", true);
-user_pref("privacy.cpd.passwords", false);
-user_pref("privacy.cpd.sessions", true);
-user_pref("privacy.cpd.siteSettings", false);
-user_pref("privacy.cpd.openWindows", true);
+user_pref("privacy.cpd.siteSettings", true);
 user_pref("privacy.sanitize.timeSpan", 0);
 
 // Open bookmarks in a new tab
@@ -203,6 +184,7 @@ user_pref("ui.key.menuAccessKey", 0);
 
 // Disable favicons
 user_pref("browser.chrome.site_icons", false);
+user_pref("browser.tabs.tabMinWidth", 200);
 
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
@@ -219,10 +201,9 @@ user_pref("devtools.theme", "dark");
 user_pref("browser.uidensity", 1);
 
 // Tweak visible UI elements
-user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["ublock0_raymondhill_net-browser-action","developer-button"],"dirtyAreaCache":["nav-bar"],"currentVersion":16,"newElementCount":3}');
-user_pref("browser.pageActions.persistedActions", '{"version":1,"ids":["bookmark","pinTab","bookmarkSeparator","copyURL","emailLink","addSearchEngine","screenshots_mozilla_org"],"idsInUrlbar":[]}');
+user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"PersonalToolbar":[]},"seen":["ublock0_raymondhill_net-browser-action","developer-button"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar"],"currentVersion":17,"newElementCount":7}');
 
 
 
 
-user_pref("_katfox_user", "User.js generated on Thu May 13 11:25:06 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Wed Jun  2 10:42:43 AM PDT 2021");
