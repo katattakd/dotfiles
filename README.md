@@ -131,6 +131,9 @@ sh backup.sh $DEST
 
 ## Additional notes
 
+### firefox experimental prefs tweaks (about:config)
+`gfx.webrender.force-disabled`: `true` - workaround for webrender related issues
+
 ### kernel command line tweaks (`/boot/extlinux/extlinux.conf`)
 `cpufreq.default_governor=performance` - ~10% performance boost, increased power usage
 `loglevel=2` - faster boot time
