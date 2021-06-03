@@ -184,7 +184,7 @@ user_pref("ui.key.menuAccessKey", 0);
 
 // Disable favicons
 user_pref("browser.chrome.site_icons", false);
-user_pref("browser.tabs.tabMinWidth", 200);
+user_pref("browser.tabs.tabMinWidth", 225);
 
 // Disable browser animations
 user_pref("ui.prefersReducedMotion", 1);
@@ -206,4 +206,4 @@ user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixe
 
 
 
-user_pref("_katfox_user", "User.js generated on Wed Jun  2 10:42:43 AM PDT 2021");
+user_pref("_katfox_user", "User.js generated on Thu Jun  3 03:01:27 AM PDT 2021");
