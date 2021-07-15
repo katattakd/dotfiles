@@ -42,9 +42,6 @@ declare -a explicit_packages=(
 
 
 
-# Sway tools
-"wf-recorder"
-
 # File tools
 "rsync"
 
@@ -68,12 +65,6 @@ declare -a dependency_packages=(
 
 # Clipboard support
 "wl-clipboard"
-
-# Pipewire screen capture backend
-"xdg-desktop-portal-wlr"
-
-# Workaround for https://github.com/flatpak/flatpak/issues/2861
-"xdg-desktop-portal-gtk"
 
 )
 
