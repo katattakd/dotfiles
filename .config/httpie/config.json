@@ -1,8 +1,0 @@
-{
-	"default_options": [
-		"--verbose",
-		"--follow",
-		"--path-as-is",
-		"--default-scheme=https"
-	]
-}

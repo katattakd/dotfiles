@@ -31,6 +31,8 @@ SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
 SETUVAR _fish_abbr_fd:fd\x20\x2d\x2dhidden\x20\x2d\x2dfollow
 SETUVAR _fish_abbr_gp:gping\x20\x2d\x2dbuffer\x208\x20\x2d\x2dwatch\x2dinterval\x200
+SETUVAR _fish_abbr_http:curlie\x20\x2dkLvvv
+SETUVAR _fish_abbr_https:curlie\x20\x2dLZvvv\x20\x2d\x2dcompressed\x20\x2d\x2dproto\x2ddefault\x20https
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
 SETUVAR _fish_abbr_ln:ln\x20\x2disv

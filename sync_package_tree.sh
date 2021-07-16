@@ -46,7 +46,7 @@ declare -a explicit_packages=(
 "rsync"
 
 # Developer tools
-"github-cli" "httpie"
+"github-cli" "curlie"
 
 ### Rust tools
 "gcc" "rust" "rust-docs" "cargo-watch"
