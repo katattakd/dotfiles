@@ -15,8 +15,6 @@ flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
 flatpak install --user flathub-beta org.gimp.GIMP
 flatpak install --user flathub com.rawtherapee.RawTherapee
-flatpak install --user flathub com.rafaelmardojai.Blanket
-flatpak install --user flathub io.github.Qalculate
 
 # Update Flatpak apps
 flatpak --user update

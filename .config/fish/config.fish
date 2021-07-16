@@ -15,6 +15,4 @@ if command -v flatpak > /dev/null
 	abbr -ga libreoffice 'flatrun org.libreoffice.LibreOffice'
 	abbr -ga gimp 'flatrun org.gimp.GIMP'
 	abbr -ga rawtherapee 'flatrun com.rawtherapee.RawTherapee'
-	abbr -ga blanket 'flatrun com.rafaelmardojai.Blanket'
-	abbr -ga qalculate 'flatrun io.github.Qalculate'
 end

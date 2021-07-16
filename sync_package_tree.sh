@@ -27,7 +27,7 @@ declare -a explicit_packages=(
 "exa" "fish" "neovim"
 
 # CLI essentials
-"fd" "gping" "libqalculate" "lazygit" "htop" "ncdu" "ripgrep"
+"curlie" "fd" "libqalculate" "lazygit" "htop" "ncdu" "ripgrep"
 
 
 
@@ -46,7 +46,7 @@ declare -a explicit_packages=(
 "rsync"
 
 # Developer tools
-"github-cli" "curlie"
+"github-cli"
 
 ### Rust tools
 "gcc" "rust" "rust-docs" "cargo-watch"
