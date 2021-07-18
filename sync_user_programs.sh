@@ -15,6 +15,7 @@ flatpak install --user flathub com.github.tchx84.Flatseal
 flatpak install --user flathub org.libreoffice.LibreOffice
 flatpak install --user flathub-beta org.gimp.GIMP
 flatpak install --user flathub com.rawtherapee.RawTherapee
+flatpak install --user flathub website.i2pd.i2pd
 
 # Update Flatpak apps
 flatpak --user update
