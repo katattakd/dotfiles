@@ -43,6 +43,7 @@ SETUVAR _fish_abbr_lsd:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x2
 SETUVAR _fish_abbr_m:mv\x20\x2div
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dpv
 SETUVAR _fish_abbr_n:nmcli
+SETUVAR _fish_abbr_o:cat
 SETUVAR _fish_abbr_p:ping\x20\x2dAl\x203
 SETUVAR _fish_abbr_q:qalc
 SETUVAR _fish_abbr_r:rm\x20\x2dIrv
