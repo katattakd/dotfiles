@@ -87,9 +87,7 @@ sh sync_user_programs.sh
 ```
 
 ### Backups
-Before backing up the installed system, export all extension settings to the cloud or to a file. This is documented in the [firefox_setup.md](firefox_setup.md) file.
-
-Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up the installed system (replace `$DEST` with the location to back up to, like `kat@example.com:/home/kat/kattop_backup`):
+Assuming all files are being properly managed by the repo's scripts, the following command should be sufficient to back up all important files on the installed system (replace `$DEST` with the location to back up to, like `kat@example.com:/home/kat/kattop_backup`):
 ```bash
 sh backup.sh $DEST
 ```
