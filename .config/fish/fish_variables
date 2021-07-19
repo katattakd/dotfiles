@@ -17,12 +17,13 @@ SETUVAR --export PAGER:less
 SETUVAR --export RUST_BACKTRACE:full
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3100
-SETUVAR _fish_abbr__2C_:cd
+SETUVAR _fish_abbr_a:hear
 SETUVAR _fish_abbr_abbr:abbr\x20\x2da
 SETUVAR _fish_abbr_c:cp\x20\x2diav
 SETUVAR _fish_abbr_cal:cal\x20\x2d\x2dmonths\x209\x20\x2d\x2dspan\x20\x2d\x2dweek
 SETUVAR _fish_abbr_cargo_2D_watch:cargo\x2dwatch\x20\x2dx\x20\x27run\x27
 SETUVAR _fish_abbr_chown:chown\x20\x2dhRv
+SETUVAR _fish_abbr_d:cd
 SETUVAR _fish_abbr_dd:sudo\x20dd\x20bs\x3d1M\x20conv\x3dfsync\x20oflag\x3ddirect\x20status\x3dprogress
 SETUVAR _fish_abbr_df:df\x20\x2d\x2dsi\x20\x2d\x2dprint\x2dtype
 SETUVAR _fish_abbr_diff:nvim\x20\x2dd
@@ -31,13 +32,14 @@ SETUVAR _fish_abbr_doc_2D_watch:cargo\x2dwatch\x20\x2dd\x205\x20\x2dw\x20Cargo\x
 SETUVAR _fish_abbr_du:ncdu\x20\x2de\x20\x2d\x2dsi\x20\x2d\x2dexclude\x2dkernfs\x20\x2d\x2dcolor\x20dark
 SETUVAR _fish_abbr_fd:fd\x20\x2d\x2dhidden\x20\x2d\x2dfollow
 SETUVAR _fish_abbr_h:curlie\x20\x2dLvvv
+SETUVAR _fish_abbr_i:view
 SETUVAR _fish_abbr_ip:ip\x20\x2d\x2dcolor\x20addr
-SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
+SETUVAR _fish_abbr_l:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_ll:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended
 SETUVAR _fish_abbr_ln:ln\x20\x2disv
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
 SETUVAR _fish_abbr_lsblk:lsblk\x20\x2d\x2doutput\x20NAME\x2cSIZE\x2cFSUSED\x2cFSUSE\x25\x2cTYPE\x2cFSTYPE\x2cMOUNTPOINT\x2cLABEL
 SETUVAR _fish_abbr_lsd:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dgrid\x20\x2d\x2donly\x2ddirs
-SETUVAR _fish_abbr_ltree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_m:mv\x20\x2div
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dpv
 SETUVAR _fish_abbr_p:ping\x20\x2dAl\x203
@@ -45,9 +47,10 @@ SETUVAR _fish_abbr_q:qalc
 SETUVAR _fish_abbr_r:rm\x20\x2dIrv
 SETUVAR _fish_abbr_rg:rg\x20\x2d\x2dstats\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dsmart\x2dcase\x20\x2d\x2dcontext\x202
 SETUVAR _fish_abbr_rgi:rg\x20\x2d\x2dpretty\x20\x2d\x2dsmart\x2dcase\x20\x2d\x2dcontext\x2025
+SETUVAR _fish_abbr_s:play
 SETUVAR _fish_abbr_set:set\x20\x2daUx
 SETUVAR _fish_abbr_t:htop
-SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dclassify\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
+SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dall\x20\x2d\x2dtree\x20\x2d\x2dlevel\x3d4\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dheader\x20\x2d\x2dextended\x20\x2d\x2dgit\x2dignore
 SETUVAR _fish_abbr_unabbr:abbr\x20\x2de
 SETUVAR _fish_abbr_unset:set\x20\x2deU
 SETUVAR _fish_abbr_v:nvim\x20\x2dp

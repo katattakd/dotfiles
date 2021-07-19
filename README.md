@@ -8,42 +8,6 @@ These should *only* be used for reference, as they are written only to support 1
   - automate most (if not all) of arch installation process
 - limit / separate / remove device specific configuration
 
-## Setup/update instructions (Partial install)
-1. Install the following programs (or a subset of the following). Dependencies of configs are listed in nested form:
-   - Alacritty (terminal emulator)
-     - noto-fonts
-   - Fish (CLI shell)
-     - Alacritty
-     - GNU Coreutils
-     - man-db (Manual page tools)
-     - Less (text pager)
-     - Neovim (CLI code/text editor)
-     - Exa (ls alternative)
-     - Ncdu (du alternative)
-       - Optional deps:
-         - ldns, fd, gping, lazygit, ripgrep, htop, github cli (Useful tools)
-   - Rust (Rust programming language)
-     - Cargo-watch (automatically rebuilds Rust code)
-   - mpv (media player)
-     - youtube-dl (streaming media downloader)
-     - noto-fonts
-
-   Note: Updates will need to be handled by your distro's package manager, and should be performed often.
-2. Run the following commands:
-```bash
-# Download the dotfiles repo.
-cd ~
-git clone https://github.com/katattakd/dotfiles
-cd dotfiles
-# If you're only updating the repo, do `cd ~/dotfiles && git pull` instead!
-
-# Install/update configuration files and managed programs
-# Warn: This may interfere with other existing programs on your device. Use with caution, and review the repo's contents before continuing.
-sh partial_user_sync_configure.sh
-
-# Note: Updating the dotfiles may leave broken symlinks on your system, which will need to be removed manually.
-```
-
 ## Setup instructions (Full install)
 1. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
 2. Boot the device and login as root. Connect the device to the internet using an Ethernet adapter or USB tethering.
