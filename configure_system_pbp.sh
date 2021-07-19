@@ -19,5 +19,6 @@ manjaro-system" > ~/packages.txt
 
 # Pinebook Pro specific packages
 echo "ap6256-firmware
-uboot-pinebookpro
+uboot-pinebookpro-bsp
+pinebook-post-install
 zswap-arm" >> ~/packages.txt

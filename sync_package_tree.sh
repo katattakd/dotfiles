@@ -12,7 +12,7 @@ declare -a explicit_packages=(
 "man-db" "man-pages" "texinfo"
 
 # Maintenance essentials
-"logrotate"
+"logrotate" "lostfiles"
 
 # Networking essentials
 "networkmanager"
