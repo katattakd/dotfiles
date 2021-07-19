@@ -4,9 +4,6 @@ These should *only* be used for reference, as they are written only to support 1
 
 # todo
 - improve backup/restore process
-- switch from manjaro to arch
-  - automate most (if not all) of arch installation process
-- limit / separate / remove device specific configuration
 
 ## Setup instructions (Full install)
 1. Install [Tow-Boot](https://github.com/Tow-Boot/Tow-Boot/releases/) to your device.
@@ -36,7 +33,7 @@ homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
 git clone https://github.com/katattakd/dotfiles
 cd dotfiles
 
-# Configures Pinebook Pro / Manjaro (ARM) specific parts of the system.
+# Configures Pinebook Pro specific parts of the system.
 # This must be run before all other scripts.
 sh configure_system_pbp.sh
 
