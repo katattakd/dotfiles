@@ -1,6 +1,6 @@
 # dotfiles
 Kat's dotfiles.
-These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer.
+These should *only* be used for reference, as they are written only to support 1 user's needs: Kat. I will not modify these to suit your needs, as you should not be using them directly. The setup instructions are just to guide you on how the dotfiles repo works, they're only intended to be run by Kat on Kat's computer (currently a Pinebook Pro).
 
 # todo
 - improve backup/restore process
@@ -9,10 +9,14 @@ These should *only* be used for reference, as they are written only to support 1
 - limit / separate / remove device specific configuration
 
 ## Setup instructions (Full install)
-1. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
-2. Boot the device and login as root. Connect the device to the internet using an Ethernet adapter or USB tethering.
-3. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
+1. Install [Tow-Boot](https://github.com/Tow-Boot/Tow-Boot/releases/) to your device.
+2. Install [Manjaro ARM Minimal](https://manjaro.org/download/#pinebook-pro-minimal) to your device.
+3. Boot the device and login as root. Connect the device to the internet using an Ethernet adapter or USB tethering.
+4. Run the below commands (replace `$NON_ROOT_USER` with the account created during setup):
 ```bash
+# Disable SSH
+systemctl disable --now sshd
+
 # Remove old user
 userdel -r $NON_ROOT_USER
 
@@ -20,13 +24,13 @@ userdel -r $NON_ROOT_USER
 tune2fs -O encrypt $(df -P / | tail -1 | cut -d' ' -f 1)
 
 # Update the system (to prevent a partial upgrade) and install a few necessary packages
-pacman -Syu fish git
+pacman -Syu fish
 
 # Create new user with encrypted home directory
 homectl create kat --shell=/usr/bin/fish --member-of=wheel --storage=fscrypt
 ```
-4. Login with the "kat" user.
-5. Run the below commands:
+5. Login with the "kat" user.
+6. Run the below commands:
 ```bash
 # Download the dotfiles repo.
 git clone https://github.com/katattakd/dotfiles
@@ -50,14 +54,14 @@ sh configure_user.sh
 # This also performs maintenance tasks and can be used to upgrade the system.
 sh sync_user_programs.sh
 ```
-6. Reboot
-7. Login to "kat" and run the below commands:
+7. Reboot
+8. Login to "kat" and run the below commands:
 ```bash
 # Creates/updates user configuration as necessary.
 # This requires an active window manager to run properly.
 sh configure_user_additional.sh
 ```
-8. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most browser configuration is automated, however, adjusting extension settings must be done manually.
+9. Follow the instructions in [firefox_setup.md](firefox_setup.md). Most browser configuration is automated, however, adjusting extension settings must be done manually.
 
 ## Update intructions (Full install)
 

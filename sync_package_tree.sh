@@ -6,6 +6,10 @@ declare -a explicit_packages=(
 # Core system packages
 "base" "linux" "sudo"
 
+# Core Manjaro packages
+"manjaro-system" "plymouth-theme-manjaro"
+
+
 
 
 # Program documentation
